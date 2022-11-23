@@ -241,31 +241,31 @@ header li > a {
 }
 
 .card--bg-img-graphic-design {
-  background-image: url(/images/mobile/image-graphic-design.jpg);
+  background-image: url(images/mobile/image-graphic-design.jpg);
   background-size: cover;
   background-position: center center;
   height: 600px;
 }
 .card--bg-img-photography {
-  background-image: url(/images/mobile/image-photography.jpg);
+  background-image: url(images/mobile/image-photography.jpg);
   background-size: cover;
   background-position: center center;
   height: 600px;
 }
 .card--bg-img-standout {
-  background-image: url(/images/mobile/image-stand-out.jpg);
+  background-image: url(images/mobile/image-stand-out.jpg);
   background-size: cover;
   background-position: center center;
   height: 330px;
 }
 .card--bg-img-transform {
-  background-image: url(/images/mobile/image-transform.jpg);
+  background-image: url(images/mobile/image-transform.jpg);
   background-size: cover;
   background-position: center center;
   height: 330px;
 }
 .card--bg-img-hero {
-  background-image: url(/images/mobile/image-header.jpg);
+  background-image: url(images/mobile/image-header.jpg);
   background-size: cover;
   background-position: center bottom;
   height: 538px;
@@ -351,16 +351,16 @@ header li > a {
   grid-template-columns: 1fr 1fr;
 }
 .gallery--bg-milkbottles {
-  background-image: url(/images/mobile/image-gallery-milkbottles.jpg);
+  background-image: url(images/mobile/image-gallery-milkbottles.jpg);
 }
 .gallery--bg-orange {
-  background-image: url(/images/mobile/image-gallery-orange.jpg);
+  background-image: url(images/mobile/image-gallery-orange.jpg);
 }
 .gallery--bg-cone {
-  background-image: url(/images/mobile/image-gallery-cone.jpg);
+  background-image: url(images/mobile/image-gallery-cone.jpg);
 }
 .gallery--bg-sugar-cubes {
-  background-image: url(/images/mobile/image-gallery-sugar-cubes.jpg);
+  background-image: url(images/mobile/image-gallery-sugar-cubes.jpg);
 }
 
 /*********************************************
@@ -533,21 +533,21 @@ header li > a {
     height: 600px;
   }
   .card--bg-img-graphic-design {
-    background-image: url(/images/desktop/image-graphic-design.jpg);
+    background-image: url(images/desktop/image-graphic-design.jpg);
   }
   .card--bg-img-photography {
-    background-image: url(/images/desktop/image-photography.jpg);
+    background-image: url(images/desktop/image-photography.jpg);
   }
   .card--bg-img-standout {
-    background-image: url(/images/desktop/image-stand-out.jpg);
+    background-image: url(images/desktop/image-stand-out.jpg);
     grid-column: 1 / 2;
   }
   .card--bg-img-transform {
-    background-image: url(/images/desktop/image-transform.jpg);
+    background-image: url(images/desktop/image-transform.jpg);
     grid-column: 2 / -1;
   }
   .card--bg-img-hero {
-    background-image: url(/images/desktop/image-header.jpg);
+    background-image: url(images/desktop/image-header.jpg);
     background-size: cover;
     background-position: center bottom;
     height: 800px;
