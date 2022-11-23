@@ -490,6 +490,10 @@ header li > a {
  *********************************************/
 @media screen and (min-width: 35rem) {
   /*************** Header **********************/
+  .header-nav__backdrop {
+    all: unset;
+  }
+
   .header-nav__toggle-label {
     display: none;
   }
