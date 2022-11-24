@@ -64,9 +64,10 @@ img {
   --clr-neutral-500: hsl(232 10% 55%);
   --clr-neutral-700: hsl(213 9% 39%);
   --clr-neutral-900: hsl(212 27% 19%);
+  --clr-neutral-900-75: hsl(212 27% 19% / 75%);
 
-  --clr-footer-bg: hsl(168, 36%, 72%);
-  --clr-footer-icon: hsl(165, 27%, 35%);
+  --clr-footer-bg: hsl(168, 44%, 70%);
+  --clr-footer-icon: hsl(165, 46%, 31%);
   --clr-header-bg: hsl(205, 92%, 69%);
 }
 
@@ -88,6 +89,109 @@ li a {
 
 .modal {
   overflow: hidden;
+}
+
+/************* Text Styles ****************/
+
+h1 {
+  font-family: var(--ff-display);
+  font-style: normal;
+  font-weight: var(--fw-display-900);
+  font-size: 2.5rem;
+  line-height: 1.225;
+  letter-spacing: 6.25px;
+  text-transform: uppercase;
+  color: var(--clr-neutral-100);
+}
+
+h2 {
+  font-family: var(--ff-display);
+  font-style: normal;
+  font-weight: var(--fw-display-900);
+  font-size: 2rem;
+  line-height: 1.2188;
+  letter-spacing: -0.229px;
+  color: var(--clr-neutral-900);
+  padding-inline: 0.5rem;
+}
+
+h3 {
+  font-family: var(--ff-display);
+  font-style: normal;
+  font-weight: var(--fw-display-900);
+  font-size: 1.75rem;
+  line-height: 1.25;
+  letter-spacing: -0.2px;
+  color: var(--clr-neutral-900-75);
+  text-transform: capitalize;
+}
+
+h4 {
+  font-family: var(--ff-display);
+  font-style: normal;
+  font-weight: var(--fw-display-900);
+  font-size: 1rem;
+  line-height: 1.25;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--clr-neutral-300);
+}
+
+p {
+  font-family: var(--ff-base);
+  font-style: normal;
+  font-weight: var(--fw-base-600);
+  color: var(--clr-neutral-500);
+  text-align: center;
+}
+
+.p1 {
+  font-size: 1.125rem;
+  line-height: 1.6667;
+  letter-spacing: -0.129px;
+  padding-inline: 0.75rem;
+}
+
+.p2 {
+  font-size: 1rem;
+  line-height: 1.6875;
+  letter-spacing: -0.114px;
+  color: var(--clr-neutral-900-75);
+}
+
+.p3 {
+  font-size: 1.125rem;
+  line-height: 1.778;
+  letter-spacing: -0.129px;
+}
+.byline1 {
+  font-family: var(--ff-display);
+  font-style: normal;
+  font-weight: var(--fw-display-900);
+  font-size: 1.125rem;
+  line-height: 1.222;
+  letter-spacing: -0.129px;
+  text-align: center;
+  color: var(--clr-neutral-900);
+}
+.byline2 {
+  font-family: var(--ff-base);
+  font-style: normal;
+  font-weight: var(--fw-base-600);
+  font-size: 0.875rem;
+  line-height: 1.786;
+  letter-spacing: -0.1px;
+  color: var(--clr-neutral-300);
+}
+.menu {
+  font-family: var(--ff-base);
+  font-style: normal;
+  font-weight: var(--fw-base-600);
+  font-size: 1.25rem;
+  line-height: 1.25;
+  letter-spacing: -0.143px;
+  color: var(--clr-neutral-300);
 }
 
 /*********************************************
@@ -115,9 +219,6 @@ header {
   width: 100vw;
 }
 
-header li > a {
-  color: var(--clr-neutral-100);
-}
 .header-nav {
   position: absolute;
   top: 7rem;
@@ -135,9 +236,6 @@ header li > a {
   border: 2rem solid var(--clr-neutral-100);
   border-left: 2rem solid transparent;
   border-top: 2rem solid transparent;
-}
-.header-nav a {
-  color: var(--clr-neutral-500);
 }
 .header-nav li + li {
   margin-top: 2rem;
@@ -158,6 +256,7 @@ header li > a {
   fill: var(--clr-neutral-100);
   width: 124px;
   height: 24px;
+  zoom: 1.33;
 }
 .icon--hamburger {
   fill: var(--clr-neutral-100);
@@ -185,12 +284,6 @@ header li > a {
   padding-inline: inherit;
 }
 .card--intro h1 {
-  color: var(--clr-neutral-100);
-  font-family: var(--ff-display);
-  font-weight: var(--fw-display-900);
-  letter-spacing: 0.2em;
-  font-size: 2em;
-  text-transform: uppercase;
   text-align: inherit;
   padding-inline: inherit;
 }
@@ -199,35 +292,26 @@ header li > a {
   justify-items: center;
   align-content: center;
   gap: 0.8rem;
-  margin-block: 3rem;
+  margin-block: 4rem;
   text-align: inherit;
   max-width: 444px;
   margin-inline: auto;
-  padding-inline: 0.5em;
+  padding-inline: 0.9rem;
 }
-.card--text-only h1 {
-  font-family: var(--ff-display);
-  font-weight: var(--fw-display-900);
-  font-size: 1.6em;
-  color: var(--clr-neutral-900);
-  padding-inline: inherit;
-  text-align: inherit;
-}
-.card--text-only h2 {
+.card--text-only .btn--underline {
   font-family: var(--ff-display);
   color: var(--clr-neutral-900);
   text-align: inherit;
   text-transform: uppercase;
   font-size: 0.8em;
   padding-inline: 0.5em;
+  /*
   margin-inline: 1.5em;
+  */
   width: fit-content;
 }
 .card--text-only p {
-  line-height: 1.6;
-  text-align: inherit;
-  padding-inline: inherit;
-  padding-block: 2em;
+  padding-block: 1.25rem;
 }
 
 .card--image-and-text {
@@ -235,23 +319,9 @@ header li > a {
   padding-top: 24rem;
 }
 
-.card--image-and-text h1 {
-  color: var(--clr-neutral-900);
-  font-family: var(--ff-display);
-  font-size: 1.5em;
-  text-align: center;
-  opacity: 0.8;
-  font-weight: var(--fw-display-900);
-}
-
 .card--image-and-text p {
-  color: var(--clr-neutral-900);
   margin-top: 2em;
-  line-height: 1.6;
   padding-inline: 1em;
-  text-align: center;
-  font-size: 0.9em;
-  opacity: 0.8;
 }
 
 .card--bg-img-graphic-design {
@@ -270,13 +340,13 @@ header li > a {
   background-image: url(images/mobile/image-stand-out.jpg);
   background-size: cover;
   background-position: center center;
-  height: 330px;
+  height: 312px;
 }
 .card--bg-img-transform {
   background-image: url(images/mobile/image-transform.jpg);
   background-size: cover;
   background-position: center center;
-  height: 330px;
+  height: 312px;
 }
 .card--bg-img-hero {
   background-image: url(images/mobile/image-header.jpg);
@@ -293,27 +363,14 @@ header li > a {
 /********* Client Testimonials ***************/
 
 .client-testimonials {
-  padding-block: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 5.375rem;
 }
 .client-list {
   display: flex;
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
-}
-.client-testimonials h1 {
-  font-size: 1em;
-  letter-spacing: 0.3em;
-
-  margin: 0;
-  padding: 0;
-  margin-bottom: 2em;
-
-  font-family: var(--ff-display);
-  font-weight: var(--fw-display-700);
-  color: var(--clr-neutral-300);
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .client {
@@ -325,8 +382,6 @@ header li > a {
 .client p {
   margin-inline: 1.5em;
   margin-block: 2em;
-  line-height: 1.6;
-  text-align: center;
 }
 
 .client h2 {
@@ -345,10 +400,6 @@ header li > a {
   font-weight: var(--fw-base-600);
   font-size: 0.8em;
   margin-top: 0.8em;
-}
-
-.client + .client {
-  margin-top: 2rem;
 }
 
 .client__photo {
@@ -388,7 +439,8 @@ header li > a {
   justify-items: center;
   gap: 2rem;
 
-  padding-block: 5rem;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
 }
 
 .footer__logo {
@@ -396,11 +448,12 @@ header li > a {
 
   width: 124px;
   height: 24px;
+  zoom: 1.25;
 }
 
 .footer__nav ul {
   display: flex;
-  gap: 1em;
+  gap: 3rem;
 }
 
 .footer a {
@@ -411,6 +464,7 @@ header li > a {
   display: flex;
   gap: 2rem;
 
+  padding-top: 4rem;
   padding-inline: 6rem;
 }
 
@@ -426,22 +480,26 @@ header li > a {
  *********************************************/
 
 .btn {
-  position: relative;
   font-family: var(--ff-display);
-  font-size: 0.8em;
   font-weight: var(--fw-display-700);
+  font-size: 0.9375rem;
+  line-height: 1.6667;
+  letter-spacing: -0.107px;
   text-transform: uppercase;
+  color: var(--clr-neutral-900);
+
+  position: relative;
 
   border: none;
   border-radius: 4em;
 
-  padding-inline: 2em;
-  padding-block: 1.2em;
+  padding-inline: 2rem;
+  padding-block: 1rem;
 
-  color: var(--clr-neutral-900);
   background-color: var(--clr-primary-yellow);
 }
 .btn--underline {
+  letter-spacing: 1px;
   position: relative;
   padding: 0;
   cursor: pointer;
@@ -489,9 +547,51 @@ header li > a {
  Desktop Variations
  *********************************************/
 @media screen and (min-width: 35rem) {
+  /*************** Text Styles **********************/
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.2321;
+    letter-spacing: 8.75px;
+  }
+  h2 {
+    font-size: 2.5rem;
+    line-height: 1.225;
+    letter-spacing: -0.286px;
+    text-align: left;
+    padding-inline: 0;
+  }
+  h4 {
+    font-size: 1.25rem;
+    letter-spacing: 5px;
+  }
+  p {
+    text-align: left;
+  }
+  .p1 {
+    padding-inline: 0;
+  }
+  .p2 {
+    max-width: 40ch;
+    text-align: center;
+    margin-inline: auto;
+  }
+  .p3 {
+    padding-block: 2.5rem;
+  }
+  .menu {
+    font-size: 1.125rem;
+    line-height: 1.3889;
+    letter-spacing: -0.129px;
+    color: var(--clr-neutral-100);
+  }
+
   /*************** Header **********************/
+  header {
+    padding-inline: 3rem;
+  }
   .header-nav__backdrop {
     all: unset;
+    width: fit-content;
   }
 
   .header-nav__toggle-label {
@@ -502,11 +602,11 @@ header li > a {
   }
   .header-nav {
     position: relative;
-    top: auto;
+    top: 0;
+    left: 0;
     display: block;
     background-color: transparent;
     padding: 0;
-    margin-right: 2em;
   }
   .header-nav ul {
     display: flex;
@@ -517,7 +617,6 @@ header li > a {
     margin-left: 2.5em;
   }
   .header-nav a {
-    color: var(--clr-neutral-100);
     opacity: 0.8;
   }
   .header-nav a:hover {
@@ -527,11 +626,13 @@ header li > a {
   /**************** Cards **********************/
   .cards {
     grid-template-columns: 1fr 1fr;
-    text-align: left;
     padding-inline: 0;
   }
   .card--intro {
     grid-column: 1 / -1;
+    align-content: flex-start;
+    padding-top: 12.2rem;
+    gap: 6rem;
   }
   .card--transform {
     grid-row: 2 / 3;
@@ -571,6 +672,9 @@ header li > a {
   }
 
   /********* Client Testimonials ***************/
+  .client-testimonials {
+    padding-block: 10rem;
+  }
   .client-list {
     flex-direction: row;
   }
