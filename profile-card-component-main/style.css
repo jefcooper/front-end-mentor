@@ -1,0 +1,173 @@
+/* Global Variables */
+:root {
+  /*
+  */
+  --ff-base: "Kumbh Sans", sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --clr-primary-400: hsl(185, 74.9%, 39%); /* Background */
+
+  --clr-neutral-100: hsl(0, 0%, 100%); /* Background */
+  --clr-neutral-500: hsl(225, 10%, 92%); /* horizontal rule */
+  --clr-neutral-600: hsl(227, 9.7%, 46.5%); /* subtitle text */
+  --clr-neutral-800: hsl(229, 22.7%, 23.3%); /* Heading text */
+}
+
+/* CSS Resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+button,
+body {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  color: var(--clr-neutral-100);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 1.125rem;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+  line-height: 1.21;
+
+  color: var(--clr-neutral-600);
+  background-color: var(--clr-primary-400);
+
+  height: 100vh;
+}
+
+/* General */
+main {
+  height: inherit;
+
+  display: grid;
+  place-items: center;
+}
+
+/* Title line, regular text */
+.heading--1 {
+  font-size: 1.125rem;
+}
+/* Subtitle text */
+.heading--2 {
+  font-size: 0.875rem;
+}
+.heading--bold {
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-800);
+}
+/* Stats label */
+.label--1 {
+  font-size: 0.625rem;
+  letter-spacing: 1.5px;
+}
+
+/* Card Specific Styles */
+
+.card {
+  --card-background-height: 140px;
+  --picture-width: 96px;
+  --picture-outline: 5px;
+
+  display: grid;
+  /* within the card, horizontally center the items */
+  /* justify-content: stretch is default which makes it full width */
+  justify-items: center;
+
+  /* push everything to top of card and use margin-top to pad downward */
+  align-content: flex-start;
+
+  background-color: var(--clr-neutral-100);
+  background-image: url(images/bg-pattern-card.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+
+  width: 326px;
+  height: 374px;
+}
+.card__picture {
+  width: var(--picture-width);
+  border-radius: 50%;
+  outline: var(--picture-outline) solid var(--clr-neutral-100);
+
+  /* calculate top margin based on card background and image sizes */
+  margin-top: calc(
+    var(--card-background-height) - var(--picture-width) / 2 -
+      var(--picture-outline)
+  );
+}
+/* consistently use margin-top to space downward, it requires
+   more classes, but is more resilient to change and reduces
+   confusion.
+ */
+.card__title {
+  margin-top: 1.5rem;
+}
+.card__subtitle {
+  margin-top: 0.5rem;
+}
+.card__divider {
+  width: 100%;
+  height: 1px;
+
+  border-top: 1px;
+  border-color: var(--clr-neutral-500);
+
+  margin-top: 1.5rem;
+}
+.card__stats {
+  display: grid;
+  grid-auto-flow: column;
+  width: 100%;
+
+  margin-top: 1.5rem;
+}
+.card__statistic {
+  display: grid;
+  justify-items: center;
+  gap: 0.31rem;
+}
