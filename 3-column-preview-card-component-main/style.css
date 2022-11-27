@@ -1,0 +1,170 @@
+:root {
+  --clr-primary-400: hsla(31, 76.5%, 51.6%, 1); /* Sedans section */
+  --clr-secondary-400: hsla(184, 100%, 22.2%, 1); /* SUVs section */
+  --clr-secondary-700: hsla(179, 100%, 12.7%, 1); /* Luxury section */
+
+  --clr-neutral-100: hsl(0 0% 100%);
+
+  --ff-base: "Lexend Deca", sans-serif;
+  --ff-display: "Big Shoulders Display", cursive;
+
+  --fs-base: 0.938rem;
+  --fs-display: 2.5rem;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+/* CSS Resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* General */
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-base);
+
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+button {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Section heading for card */
+.card__title {
+  font-size: var(--fs-display);
+  font-family: var(--ff-display);
+  font-weight: var(--fw-bold);
+  font-style: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: var(--clr-neutral-100);
+
+  margin-top: 2rem;
+  margin-bottom: 1.5625rem;
+}
+
+/* Paragraph text */
+p {
+  font-size: var(--fs-base);
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-style: normal;
+  line-height: 1.667;
+  text-decoration: none;
+  text-transform: none;
+
+  color: var(--clr-neutral-100);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 4rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.card {
+  position: relative;
+
+  max-width: 307px;
+  padding: 3rem;
+  height: 442px;
+}
+
+.card--sedans {
+  --section-color: var(--clr-primary-400);
+
+  background-color: var(--section-color);
+}
+
+.card--suvs {
+  --section-color: var(--clr-secondary-400);
+
+  background-color: var(--section-color);
+}
+
+.card--luxury {
+  --section-color: var(--clr-secondary-700);
+
+  background-color: var(--section-color);
+}
+
+.btn {
+  font-size: var(--fs-base);
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-style: normal;
+  line-height: 1.667;
+  text-decoration: none;
+  text-transform: none;
+  cursor: pointer;
+
+  background-color: var(--clr-neutral-100);
+  color: var(--section-color);
+
+  border: 0;
+  border-radius: 1.5rem;
+  padding-inline: 2.2em;
+  padding-block: 0.75em;
+
+  position: absolute;
+  left: 3rem;
+  bottom: 3rem;
+}
+
+.btn:is(:hover, :focus) {
+  background-color: var(--section-color);
+  color: var(--clr-neutral-100);
+  outline: 2px solid var(--clr-neutral-100);
+}
+
+.attribution {
+  position: fixed;
+  z-index: -1;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* breakpoint for wide display */
+@media screen and (min-width: 1000px) {
+  .container {
+    flex-direction: row;
+  }
+  .card {
+    height: 500px;
+  }
+}
