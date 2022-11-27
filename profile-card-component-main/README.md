@@ -24,9 +24,8 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Screenshot
 
-![Screenshot of solution](./screenshot.png)
-
-Note: solution includes both mobile and desktop responsive, but since they're the same included only desktop screenshot.
+![Screenshot of desktop solution](./screenshot-desktop.png)
+![Screenshot of mobile solution](./screenshot-mobile.png)
 
 ### Links
 
@@ -69,6 +68,20 @@ I used CSS variables within the card for positioning the image at the background
 }
 
 ```
+
+Positioning the background circles took a while.  Learned from another solution to use vw/vh on background-position to get the offset correct.
+
+```CSS
+body {
+	...
+	background-image: 
+		url(images/bg-pattern-top.svg),
+		url(images/bg-pattern-bottom.svg);
+	background-position: right 51vw bottom 37vh, 45vw 52vh;
+	background-repeat: no-repeat, no-repeat;
+}
+```
+Prior to this, I had tried negative offsets from the left and top.  These both failed miserably. The trick seems to be offseting in vw and avoiding negative offsets.
 
 ### Continued development
 

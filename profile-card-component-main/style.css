@@ -76,6 +76,11 @@ body {
   color: var(--clr-neutral-600);
   background-color: var(--clr-primary-400);
 
+  background-image: url(images/bg-pattern-top.svg),
+    url(images/bg-pattern-bottom.svg);
+  background-position: right 51vw bottom 37vh, 45vw 52vh;
+  background-repeat: no-repeat, no-repeat;
+
   height: 100vh;
 }
 
@@ -83,6 +88,7 @@ body {
 main {
   height: inherit;
 
+  /* Center the card in the page */
   display: grid;
   place-items: center;
 }
