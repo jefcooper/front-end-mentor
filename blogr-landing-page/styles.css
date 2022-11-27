@@ -77,16 +77,17 @@ ul {
   --clr-neutral-900: hsl(240 10% 16%);
 
   /* Background gradient - Intro/CTA mobile nav */
+  --gradient-test: linear-gradient(to bottom right, red, blue);
   --gradient-cta: linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
   --gradient-button: linear-gradient(
-    90deg,
+    to bottom right,
     hsl(13, 100%, 72%),
     hsl(353, 100%, 62%)
   );
 
   /* Background gradient - body */
   --gradient-body: linear-gradient(
-    135deg,
+    to bottom right,
     hsl(237, 17%, 21%) 0%,
     hsl(237, 23%, 32%) 100%
   );
@@ -109,14 +110,206 @@ body {
   color: var(--clr-neutral-900);
   background-color: var(--clr-neutral-100);
 }
-
-h1 {
-  font-family: var(--ff-display);
-  font-weight: var(--fw-display-400);
-  font-size: 2.1em;
-  text-align: center;
-  padding-inline: 1em;
+.container {
+  max-width: 1110px;
+  margin-inline: auto;
 }
+
+/************************************************************************/
+/************************************************************************/
+/************************************************************************/
+/************************************************************************/
+
+/* Main document heading */
+.heading--1 {
+  font-size: 2.25rem;
+  font-family: "Overpass";
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: -1.08px;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+  padding-inline: 2rem;
+}
+
+/* section heading */
+.heading--2 {
+  font-size: 1.75rem;
+  font-family: "Overpass";
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: -0.84px;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+  color: var(--clr-neutral-700);
+}
+
+/* section alternate heading */
+.heading--3 {
+  font-size: 2.5rem;
+  font-family: "Overpass";
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: -1.2px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--clr-neutral-100);
+}
+
+/* subsection heading */
+.heading--4 {
+  font-size: 1.75rem;
+  font-family: "Overpass";
+  font-weight: 600;
+  font-style: normal;
+  line-height: 32px;
+  text-decoration: none;
+  text-transform: none;
+  padding-inline: 2rem;
+  color: var(--clr-neutral-700);
+  text-align: center;
+}
+
+/* paragraph text */
+p {
+  font-size: 1rem;
+  font-family: "Overpass";
+  font-weight: 300;
+  font-style: normal;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+  margin-block: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.p--inverse {
+  color: var(--clr-neutral-100);
+}
+
+/* paragraph in hero section, to be applied on a p element */
+.p--hero {
+  font-size: 1.125rem;
+  text-align: center; /* always center aligned regardless of media */
+  padding-inline: 2rem;
+  line-height: 23px;
+}
+
+/* Button Text */
+.btn {
+  font-size: 1rem;
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* Footer primary menu */
+.text-style-footer-menu {
+  font-size: 1.125rem;
+  font-family: "Ubuntu";
+  font-weight: 500;
+  font-style: normal;
+  line-height: 33px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* Sub-menu of primary menu item */
+.text-style-footer-submenu {
+  font-size: 1.125rem;
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 33px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* Primary menu in header dropdown */
+.text-style-dropdown-menu {
+  font-size: 1.125rem;
+  font-family: "Overpass";
+  font-weight: 600;
+  font-style: normal;
+  line-height: 28px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* Submenu in dropdown */
+.text-style-dropdown-submenu {
+  font-size: 1rem;
+  font-family: "Overpass";
+  font-weight: 600;
+  font-style: normal;
+  line-height: 28px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* Hero paragraph  */
+.text-style-desktop-p-hero {
+  font-size: 1.25rem;
+  font-family: "Overpass";
+  font-weight: 300;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* Footer primary menu */
+.text-style-desktop-footer-menu {
+  font-size: 0.938rem;
+  font-family: "Ubuntu";
+  font-weight: 500;
+  font-style: normal;
+  line-height: 33px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* Submenu */
+.text-style-desktop-footer-submenu {
+  font-size: 0.938rem;
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 33px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* Primary dropdown */
+.text-style-desktop-dropdown-menu {
+  font-size: 1rem;
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* Dropdown submenu */
+.text-style-desktop-dropdown-submenu {
+  font-size: 0.938rem;
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 33px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/************************************************************************/
+/************************************************************************/
+
+/*
 h2 {
   font-family: var(--ff-base);
   font-weight: var(--fw-base-600);
@@ -141,6 +334,7 @@ p {
   text-align: center;
   margin-top: 1em;
 }
+*/
 a {
   font-family: var(--ff-display);
   font-weight: var(--fw-display-500);
@@ -183,12 +377,10 @@ button {
   height: 7px;
 }
 .btn {
-  font-size: 1em;
-  padding-block: 1em;
-  padding-inline: 1.5em;
-  border-radius: 3em;
+  border-radius: 28px;
   border: none;
-  width: fit-content;
+  height: 48px;
+  width: 137px;
   cursor: pointer;
 }
 .btn--primary {
@@ -202,9 +394,6 @@ button {
 .btn--tertiary {
   background-image: var(--gradient-button);
   color: var(--clr-neutral-100);
-  padding-block: 0.9em;
-  padding-inline: 2.5em;
-  margin-block: 1em;
 }
 .modal {
   overflow: hidden;
@@ -252,13 +441,16 @@ button {
 .dropdown__toggle:checked ~ .dropdown__label .icon-arrow-light {
   transform: rotate(180deg);
 }
+.box-shadow {
+  box-shadow: 0px 20px 40px hsla(224, 69%, 66%, 0.243);
+}
 
 /***************** Header ******************/
 .header {
   position: absolute;
   top: 3.5rem;
   color: var(--clr-neutral-100);
-  padding-inline: 1rem;
+  padding-inline: 1.5rem;
   width: 100%;
 }
 .header-nav {
@@ -285,7 +477,7 @@ button {
   cursor: pointer;
   position: absolute;
   top: 0em;
-  right: 1em;
+  right: 1.5rem;
 }
 .header-nav--opened {
   position: relative;
@@ -318,13 +510,16 @@ button {
   background-repeat: no-repeat;
 
   border-bottom-left-radius: 100px;
-  padding-top: 12rem;
+  padding-top: 12.25rem;
+  /*
   padding-bottom: 10rem;
+  */
+  height: 600px;
 }
 .hero__buttons {
   display: flex;
   justify-content: center;
-  margin-top: 3em;
+  margin-top: 3rem;
 }
 .hero .btn--primary {
   color: var(--clr-primary-400);
@@ -342,40 +537,69 @@ button {
 }
 
 .hero p {
-  padding-inline: 2em;
-  margin-top: 2em;
-  font-size: 1.1em;
-  line-height: 1.2em;
+  margin-top: 0.875rem;
 }
 
-/***************** Hero ********************/
+/***************** Design ********************/
 .design {
-  padding: 2rem;
-  margin-top: 5rem;
+  padding: 1.5rem;
+  margin-top: 4.75rem;
+
+  background-image: url(/images/illustration-editor-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 400px auto;
+  background-position-x: center;
+  background-position-y: 100px;
 }
-.design img {
-  object-fit: none;
-  object-position: center center;
-  height: 400px;
+.design__heading {
+  margin-bottom: 25rem;
+}
+.design__container {
 }
 
 /************** Infrastructure *************/
+.infrastructure {
+  position: relative;
+  margin-top: 200px;
+}
 .infrastructure__img {
-  margin-bottom: -50%;
+  width: min(100%, 400px);
+  position: absolute;
+  /*
+  top: -180px;
+  */
+  top: max(-45vw, -180px);
+  margin-bottom: -210px;
+}
+.infrastructure__container {
+  margin-inline: auto;
+  max-width: 400px;
+}
+.infrastructure__background {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  background-image: url(/images/bg-pattern-circles.svg), var(--gradient-body);
+  background-repeat: no-repeat, no-repeat;
+  background-position-x: center, left;
+  background-position-y: -240px, top;
+  background-size: 600px 600px, cover;
+  height: 625px;
+  border-radius: 0 100px;
 }
 .infrastructure__card {
   color: var(--clr-neutral-100);
+  height: 625px;
   /*
   background-image: url(/images/bg-pattern-circles.svg), var(--gradient-body);
-  background-size: 160%, cover;
-  background-position: center -250px, top left;
   background-repeat: no-repeat, no-repeat;
-  border-top-right-radius: 5rem;
-  border-bottom-left-radius: 5rem;
-  padding-top: 50%;
-  padding-bottom: 36%;
-  padding-inline: 2rem;
+  background-position-x: center, left;
+  background-position-y: -240px, top;
+  background-size: 600px 600px, cover;
   */
+  padding-top: 221px;
+  padding-inline: 1.5rem; /* 24px */
+  border-radius: 0 100px;
 }
 
 /***************** Simple ******************/
@@ -443,31 +667,156 @@ button {
     padding-inline: 0;
   }
 
+  /* main document heading */
+  .heading--1 {
+    font-size: 4rem;
+    font-family: "Overpass";
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: -1.92px;
+    text-decoration: none;
+    text-transform: none;
+  }
+
+  /* section heading */
+  .heading--2 {
+    font-size: 2.5rem;
+    font-family: "Overpass";
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: -1.2px;
+    text-decoration: none;
+    text-transform: none;
+  }
+
+  /* section alternate heading */
+  .heading--3 {
+    font-size: 2.5rem;
+    font-family: "Overpass";
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: -1.2px;
+    text-decoration: none;
+    text-transform: none;
+  }
+
+  /* subsection heading */
+  .heading--4 {
+    font-size: 1.75rem;
+    font-family: "Overpass";
+    font-weight: 600;
+    font-style: normal;
+    line-height: 28px;
+    text-decoration: none;
+    text-transform: none;
+    text-align: left;
+    padding-left: 0;
+    padding-top: 1.5rem;
+  }
+  .btn--tertiary {
+    color: var(--clr-primary-400);
+    background-image: none;
+    background-color: var(--clr-neutral-100);
+  }
+  .icon-arrow-light {
+    stroke: var(--clr-neutral-100);
+  }
+
   /***************** Header ******************/
+  .dropdown__list {
+    background-color: var(--clr-neutral-100);
+  }
+  .dropdown__list li a {
+    color: var(--clr-neutral-900);
+  }
+  .dropdown__list a:hover {
+    color: var(--clr-neutral-200);
+  }
+  .header-nav .dropdown__label {
+    color: var(--clr-neutral-100);
+    opacity: 0.75;
+  }
+  .header-nav a {
+    color: var(--clr-neutral-100);
+  }
+  .header {
+    display: flex;
+  }
+  .header-nav {
+    all: unset;
+    display: block;
+    width: 100%;
+  }
+  .header-nav__toggle-label {
+    display: none;
+  }
+  .header-nav > ul {
+    display: flex;
+  }
+  .header-nav__menu-spacer {
+    margin-left: auto;
+  }
 
   /***************** Hero ********************/
+  .hero {
+    padding-top: 14.125rem;
+  }
+
+  /***************** Design ******************/
+  .design {
+    padding: 0;
+    margin-top: 4.44rem;
+    height: 882px;
+
+    background-image: url(/images/illustration-editor-desktop.svg);
+    background-position: right -280px center;
+    background-size: 920px auto;
+  }
+  .design__container {
+    display: grid;
+    max-width: 1110px;
+    margin-inline: auto;
+    align-content: flex-start;
+    height: 100%;
+  }
+  .design__heading {
+    padding-top: 79px;
+    margin-bottom: 103px;
+  }
+  .design__card {
+    width: 47%;
+  }
 
   /************** Infrastructure *************/
   .infrastructure {
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     align-items: center;
     margin: 0;
     padding: 0;
-    padding: 0;
     padding-block: 0;
-    padding-inline: 50px;
     margin: 0;
-    background-image: var(--gradient-body);
     border-radius: 0 100px;
     background-size: 100%;
     margin-block: 5rem;
   }
+  .infrastructure__background {
+    height: 400px;
+    background-position-x: -210px, left;
+    background-position-y: -500px, top;
+    background-size: 1008px 1008px, cover;
+  }
+  .infrastructure__container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+  }
   .infrastructure__img {
     position: absolute;
-    top: -90px;
-    width: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: min(580px, 57vw);
+    width: auto;
     margin: 0;
     padding: 0;
     /*
@@ -475,8 +824,10 @@ button {
     */
   }
   .infrastructure__card {
+    color: white;
     display: grid;
     align-content: center;
+    padding-top: 0;
 
     /*
     color: var(--clr-neutral-100);
@@ -490,12 +841,11 @@ button {
     padding-bottom: 36%;
     padding-inline: 2rem;
     */
-    height: 520px;
+    height: 400px;
     grid-column: 2 / -1;
   }
   .infrastructure__card p {
-    margin-top: 2rem;
-    line-height: 2;
+    margin-top: 1rem;
   }
 
   /***************** Simple ******************/
