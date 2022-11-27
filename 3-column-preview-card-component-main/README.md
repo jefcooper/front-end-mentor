@@ -27,12 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Screenshot](./screenshot.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Repository](https://github.com/jefcooper/front-end-mentor/tree/main/3-column-preview-card-component-main)
+- Live Site URL: [Github Pages](https://jefcooper.github.io/front-end-mentor/3-column-preview-card-component-main/)
 
 ## My process
 
@@ -56,7 +56,7 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Website - [Jeff Cooper](https://jefcooper.github.io)
+- Frontend Mentor - [@jefcooper](https://www.frontendmentor.io/profile/jefcooper)
 
 ## Acknowledgments
