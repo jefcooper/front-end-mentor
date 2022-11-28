@@ -121,8 +121,6 @@ body {
 
 /************************************************************************/
 /************************************************************************/
-/************************************************************************/
-/************************************************************************/
 
 /* Main document heading */
 .heading--1 {
@@ -313,32 +311,6 @@ p {
 /************************************************************************/
 /************************************************************************/
 
-/*
-h2 {
-  font-family: var(--ff-base);
-  font-weight: var(--fw-base-600);
-  font-size: 1.7em;
-  text-align: center;
-  color: var(--clr-neutral-700);
-}
-h3 {
-  font-family: var(--ff-base);
-  font-weight: var(--fw-base-600);
-  font-size: 1.625em;
-  text-align: center;
-  color: var(--clr-secondary-700);
-  margin-top: 1em;
-  padding-inline: 2em;
-}
-p {
-  font-family: var(--ff-base);
-  font-weight: var(--fw-base-300);
-  font-size: 1em;
-  line-height: 1.6;
-  text-align: center;
-  margin-top: 1em;
-}
-*/
 a {
   font-family: var(--ff-display);
   font-weight: var(--fw-display-500);
@@ -509,15 +481,12 @@ button {
   color: var(--clr-neutral-100);
   background-color: var(--clr-primary-400);
   background-image: url(images/bg-pattern-intro-mobile.svg), var(--gradient-cta);
-  background-size: 370%;
+  background-size: 370%, 100%;
   background-position: 35% 33%;
   background-repeat: no-repeat;
 
   border-bottom-left-radius: 100px;
   padding-top: 12.25rem;
-  /*
-  padding-bottom: 10rem;
-  */
   height: 600px;
 }
 .hero__buttons {
@@ -594,13 +563,6 @@ button {
 .infrastructure__card {
   color: var(--clr-neutral-100);
   height: 625px;
-  /*
-  background-image: url(/images/bg-pattern-circles.svg), var(--gradient-body);
-  background-repeat: no-repeat, no-repeat;
-  background-position-x: center, left;
-  background-position-y: -240px, top;
-  background-size: 600px 600px, cover;
-  */
   padding-top: 221px;
   padding-inline: 1.5rem; /* 24px */
   border-radius: 0 100px;
@@ -763,6 +725,9 @@ button {
     color: var(--clr-neutral-100);
     opacity: 0.75;
   }
+  .header-nav .dropdown__label:hover {
+    opacity: 1;
+  }
   .header-nav a {
     color: var(--clr-neutral-100);
   }
@@ -796,29 +761,19 @@ button {
     margin-left: auto;
     margin-right: 2rem;
   }
+  .header .btn--tertiary:hover {
+    color: var(--clr-neutral-100);
+    background-color: hsl(0 0% 100% / 30%);
+  }
 
   /***************** Hero ********************/
   .hero {
     padding-top: 14.125rem;
 
-    /*
-    background-image: url(images/bg-pattern-intro-desktop.svg),
-      linear-gradient(gray, gray);
-    background-size: 230%, 100%;
-    */
     background-image: url(images/bg-pattern-intro-desktop.svg),
       var(--gradient-cta);
     background-size: 3175px, 100%;
     background-position: top -1340px right -1290px, top left;
-    /*
-    background-position: bottom -1300px right -1360px, top left;
-    */
-    /*
-    background-position: bottom -162.5vh right -94.4vw, top left;
-    */
-    /*
-    background-position: top -62.5vh right -94.4vw, top left;
-    */
   }
 
   /***************** Design ******************/
@@ -828,12 +783,13 @@ button {
     height: 882px;
 
     background-image: url(/images/illustration-editor-desktop.svg);
-    background-position: right -280px center;
+    background-position: left 54vw center;
     background-size: 920px auto;
   }
   .design__container {
     display: grid;
-    max-width: 1110px;
+    max-width: 1100px;
+    padding-inline: 10px;
     margin-inline: auto;
     align-content: flex-start;
     height: 100%;
@@ -878,9 +834,6 @@ button {
     width: auto;
     margin: 0;
     padding: 0;
-    /*
-    margin-bottom: -50%;
-    */
   }
   .infrastructure__card {
     color: white;
@@ -888,18 +841,6 @@ button {
     align-content: center;
     padding-top: 0;
 
-    /*
-    color: var(--clr-neutral-100);
-    background-image: url(/images/bg-pattern-circles.svg), var(--gradient-body);
-    background-size: 160%, cover;
-    background-position: center -250px, top left;
-    background-repeat: no-repeat, no-repeat;
-    border-top-right-radius: 5rem;
-    border-bottom-left-radius: 5rem;
-    padding-top: 50%;
-    padding-bottom: 36%;
-    padding-inline: 2rem;
-    */
     height: 400px;
     grid-column: 2 / -1;
   }
@@ -915,7 +856,8 @@ button {
   }
   .simple h3,
   .simple p {
-    padding-inline: 4rem;
+    padding-inline: 0;
+    max-width: 33rem;
   }
   .simple img {
     height: 800px;
