@@ -592,7 +592,8 @@ button {
 .footer {
   color: var(--clr-neutral-100);
   background-color: var(--clr-neutral-900);
-
+}
+.footer__container {
   border-top-right-radius: 5rem;
 
   display: grid;
@@ -865,12 +866,35 @@ button {
   }
 
   /***************** Footer ******************/
-  .footer {
+  .footer__container {
     grid-template-columns: repeat(4, 1fr);
+    justify-items: left;
     padding-top: 2.5rem;
+    max-width: 1110px;
+    margin-inline: auto;
+  }
+  .footer {
+    border-top-right-radius: 100px;
+  }
+  .footer li {
+    text-align: left;
+  }
+  .footer li + li {
+    margin-top: 0;
+  }
+  .footer a {
+    font-weight: var(--fw-display-400);
+    font-size: 0.9375rem;
+    line-height: 2.2;
+    opacity: 0.75;
+  }
+  .footer ul li:first-of-type a {
+    opacity: 1;
   }
   .attribution {
     grid-column: 1 / -1;
+    justify-self: center;
+    margin-block: 1rem;
   }
   .footer .icon-logo {
     margin-top: 2.5rem;
