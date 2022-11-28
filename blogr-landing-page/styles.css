@@ -78,7 +78,11 @@ ul {
 
   /* Background gradient - Intro/CTA mobile nav */
   --gradient-test: linear-gradient(to bottom right, red, blue);
-  --gradient-cta: linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  --gradient-cta: linear-gradient(
+    135deg,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%)
+  );
   --gradient-button: linear-gradient(
     to bottom right,
     hsl(13, 100%, 72%),
@@ -365,6 +369,7 @@ button {
   width: 26px;
   height: 26px;
 }
+
 .icon-arrow-light {
   display: inline-block;
   width: 10px;
@@ -503,8 +508,7 @@ button {
 .hero {
   color: var(--clr-neutral-100);
   background-color: var(--clr-primary-400);
-  background-image: url(/images/bg-pattern-intro-mobile.svg),
-    var(--gradient-cta);
+  background-image: url(images/bg-pattern-intro-mobile.svg), var(--gradient-cta);
   background-size: 370%;
   background-position: 35% 33%;
   background-repeat: no-repeat;
@@ -657,7 +661,7 @@ button {
   margin-bottom: 2rem;
 }
 
-@media screen and (min-width: 35rem) {
+@media screen and (min-width: 40rem) {
   /**************** Global ****************/
   h1,
   h2,
@@ -723,8 +727,16 @@ button {
   }
 
   /***************** Header ******************/
+  .small-logo {
+    zoom: 1;
+    margin-right: 3rem;
+  }
+  .icon-logo {
+    width: 115px;
+  }
   .dropdown {
     margin-block: 0;
+    margin-right: 1.5rem;
   }
   .dropdown__list {
     background-color: var(--clr-neutral-100);
@@ -782,12 +794,31 @@ button {
   }
   .header-nav__menu-spacer {
     margin-left: auto;
-    margin-right: 1rem;
+    margin-right: 2rem;
   }
 
   /***************** Hero ********************/
   .hero {
     padding-top: 14.125rem;
+
+    /*
+    background-image: url(images/bg-pattern-intro-desktop.svg),
+      linear-gradient(gray, gray);
+    background-size: 230%, 100%;
+    */
+    background-image: url(images/bg-pattern-intro-desktop.svg),
+      var(--gradient-cta);
+    background-size: 3175px, 100%;
+    background-position: top -1340px right -1290px, top left;
+    /*
+    background-position: bottom -1300px right -1360px, top left;
+    */
+    /*
+    background-position: bottom -162.5vh right -94.4vw, top left;
+    */
+    /*
+    background-position: top -62.5vh right -94.4vw, top left;
+    */
   }
 
   /***************** Design ******************/
