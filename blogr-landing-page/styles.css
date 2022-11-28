@@ -347,7 +347,7 @@ button {
 .icon-logo {
   fill: var(--clr-neutral-100);
   display: inline-block;
-  width: 101px;
+  width: 110px;
   height: 40px;
 }
 .small-logo {
@@ -723,11 +723,26 @@ button {
   }
 
   /***************** Header ******************/
+  .dropdown {
+    margin-block: 0;
+  }
   .dropdown__list {
     background-color: var(--clr-neutral-100);
+    position: absolute;
+    padding: 1.5rem;
+    margin-left: -1.5rem;
+    width: 10.5rem;
+    box-shadow: 0px 20px 40px hsla(224, 69%, 66%, 0.243);
   }
   .dropdown__list li a {
     color: var(--clr-neutral-900);
+    font-size: 0.938rem;
+    font-family: "Ubuntu";
+    font-weight: 400;
+    font-style: normal;
+    line-height: 33px;
+    text-decoration: none;
+    text-transform: none;
   }
   .dropdown__list a:hover {
     color: var(--clr-neutral-200);
@@ -741,20 +756,33 @@ button {
   }
   .header {
     display: flex;
+    align-items: center;
+
+    margin-inline: 0;
+    padding-inline: 0;
+    max-width: 1110px;
+    margin-left: max(0px, calc(50vw - 1110px / 2));
+
+    top: 4rem;
   }
   .header-nav {
     all: unset;
     display: block;
     width: 100%;
   }
+  .header-nav hr {
+    display: none;
+  }
   .header-nav__toggle-label {
     display: none;
   }
   .header-nav > ul {
     display: flex;
+    align-items: center;
   }
   .header-nav__menu-spacer {
     margin-left: auto;
+    margin-right: 1rem;
   }
 
   /***************** Hero ********************/
