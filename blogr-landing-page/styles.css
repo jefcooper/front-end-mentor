@@ -530,7 +530,7 @@ button {
   padding: 1.5rem;
   margin-top: 4.75rem;
 
-  background-image: url(/images/illustration-editor-mobile.svg);
+  background-image: url(images/illustration-editor-mobile.svg);
   background-repeat: no-repeat;
   background-size: 400px auto;
   background-position-x: center;
@@ -564,7 +564,7 @@ button {
   position: absolute;
   z-index: -1;
   width: 100%;
-  background-image: url(/images/bg-pattern-circles.svg), var(--gradient-body);
+  background-image: url(images/bg-pattern-circles.svg), var(--gradient-body);
   background-repeat: no-repeat, no-repeat;
   background-position-x: center, left;
   background-position-y: -240px, top;
@@ -795,7 +795,7 @@ button {
     margin-top: 4.44rem;
     height: 882px;
 
-    background-image: url(/images/illustration-editor-desktop.svg);
+    background-image: url(images/illustration-editor-desktop.svg);
     background-position: left 54vw center;
     background-size: 920px auto;
   }
