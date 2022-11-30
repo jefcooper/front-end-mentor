@@ -27,11 +27,11 @@ Users should be able to:
 
 The finished desktop version.
 
-![Finished Desktop](./screenshot.png)
+![Finished Desktop](./screenshot.jpg)
 
 The finished mobile version.
 
-![Finished Mobile](./screenshot2.png)
+![Finished Mobile](./screenshot2.jpg)
 
 ### Links
 
