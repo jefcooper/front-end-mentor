@@ -1,0 +1,346 @@
+:root {
+  --clr-neutral-100: hsl(0, 0%, 100%); /* mobile background, menu background */
+  --clr-neutral-200: hsl(0, 0%, 98%); /* desktop background */
+  --clr-neutral-500: hsl(0, 0%, 67.8%); /* Logos */
+  --clr-neutral-700: hsl(0, 0%, 40.8%); /* Paragraph text, menu text */
+  --clr-neutral-900: hsl(0, 0%, 8.2%); /* CTA Title, Logo, Button */
+
+  --clr-accent-violet-400: hsl(243, 79.3%, 67.8%);
+  --clr-accent-cyan-400: hsl(197, 65.9%, 57.5%);
+  --clr-accent-yellow-400: hsl(50, 80.7%, 63.3%);
+  --clr-accent-purple-400: hsl(277, 42.1%, 50.6%);
+
+  --ff-base: "Epilogue", sans-serif;
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+}
+
+/********* Resets ****************/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+button,
+a,
+ul,
+li,
+body {
+  padding: 0;
+  margin: 0;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+button,
+a {
+  font: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 1rem;
+  font-style: normal;
+
+  color: var(--clr-neutral-500);
+  background-color: var(--clr-neutral-200);
+}
+
+/* Paragraph text, default body */
+.text-style-p {
+  font-size: 1rem;
+  font-family: "Epilogue";
+  font-weight: 500;
+  font-style: normal;
+  line-height: 26px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* CTA Button Text */
+.text-style-btn {
+  font-size: 1rem;
+  font-family: "Epilogue";
+  font-weight: 700;
+  font-style: normal;
+  line-height: 26px;
+  letter-spacing: -0.22px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* Main title text */
+.text-style-heading-1 {
+  font-size: 2.25rem;
+  font-family: "Epilogue";
+  font-weight: 700;
+  font-style: normal;
+  line-height: 42px;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* Menu Text */
+.text-style-menu {
+  font-size: 1rem;
+  font-family: "Epilogue";
+  font-weight: 500;
+  font-style: normal;
+  line-height: 26px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* Main title text */
+.text-style-desktop-heading-1 {
+  font-size: 5rem;
+  font-family: "Epilogue";
+  font-weight: 700;
+  font-style: normal;
+  line-height: 80px;
+  letter-spacing: -1.11px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* Paragraph text, default body */
+.text-style-desktop-p {
+  font-size: 1.125rem;
+  font-family: "Epilogue";
+  font-weight: 500;
+  font-style: normal;
+  line-height: 28px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* Menu text */
+.text-style-desktop-menu {
+  font-size: 0.875rem;
+  font-family: "Epilogue";
+  font-weight: 500;
+  font-style: normal;
+  line-height: 16px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* CTA Button Text */
+.text-style-desktop-btn {
+  font-size: 1.125rem;
+  font-family: "Epilogue";
+  font-weight: 700;
+  font-style: normal;
+  line-height: 28px;
+  letter-spacing: -0.25px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/*************** Icons ***************/
+.icon--snap-logo {
+  content: url(images/logo.svg);
+  width: 84px;
+  height: 27px;
+}
+.icon--hamburger {
+  content: url(images/icon-menu.svg);
+  width: 32px;
+  height: 18px;
+}
+.icon--close {
+  content: url(images/icon-close-menu.svg);
+  width: 26px;
+  height: 26px;
+}
+.icon--todo::before {
+  content: url(images/icon-todo.svg);
+  width: 14px;
+  height: 16px;
+}
+.icon--calendar::before {
+  content: url(images/icon-calendar.svg);
+  width: 16px;
+  height: 16px;
+}
+.icon--reminders::before {
+  content: url(images/icon-reminders.svg);
+  width: 13px;
+  height: 17px;
+}
+.icon--planning::before {
+  content: url(images/icon-planning.svg);
+  width: 16px;
+  height: 16px;
+}
+.logo--databiz {
+  content: url(images/client-databiz.svg);
+  width: 114px;
+  height: 20px;
+}
+.logo--audiophile {
+  content: url(images/client-audiophile.svg);
+  width: 73px;
+  height: 36px;
+}
+.logo--meet {
+  content: url(images/client-meet.svg);
+  width: 90px;
+  height: 20px;
+}
+.logo--maker {
+  content: url(images/client-maker.svg);
+  width: 83px;
+  height: 24px;
+}
+
+/************************************************
+  Heading
+ ************************************************/
+
+.header {
+  position: absolute;
+  top: 0;
+  padding-top: 1.5rem;
+  width: 100%;
+}
+body.modal .header {
+  background: hsl(0, 0%, 0%, 0.7);
+  height: 100vh;
+}
+
+/**************** header-nav **********************/
+.header-nav__toggle-label {
+  cursor: pointer;
+  user-select: none;
+}
+.header-nav__toggle-close {
+  display: none;
+}
+.header-nav__list {
+  display: none;
+}
+.header-nav__toggle:checked ~ .header-nav__list {
+  display: inline;
+}
+.header-nav__toggle:checked ~ .header-nav__toggle-close {
+  display: inline;
+}
+.header-nav__toggle:checked ~ .header-nav__toggle-open {
+  display: none;
+}
+
+/* ----- visual styling of header-nav ------ */
+
+body.modal .header-nav {
+  background-color: var(--clr-neutral-100);
+}
+.header-nav__list li {
+  background-color: var(--clr-neutral-100);
+}
+
+/**************** dropdown **********************/
+.dropdown__menu {
+  cursor: pointer;
+  user-select: none;
+}
+
+.dropdown__menu::after {
+  content: url(images/icon-arrow-down.svg);
+  display: inline;
+  width: 16px;
+  height: 16px;
+}
+.dropdown__toggle:checked ~ .dropdown__menu::after {
+  content: url(images/icon-arrow-up.svg);
+}
+
+.dropdown__list {
+  display: none;
+}
+.dropdown__toggle:checked ~ .dropdown__list {
+  display: block;
+}
+
+/************************************************
+  Main
+ ************************************************/
+
+main .container {
+  margin-top: 4rem;
+}
+.clients {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  zoom: 0.7;
+}
+
+/************************************************
+  Footer 
+ ************************************************/
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/************************************************
+  Components
+ ************************************************/
+
+/*************** Button **************/
+.btn {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+  outline: 1px solid var(--clr-neutral-900);
+  border: 0;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  border-radius: 1rem;
+
+  cursor: pointer;
+}
+.btn--inverse {
+  color: var(--clr-neutral-700);
+  background-color: transparent;
+  outline: 1px solid var(--clr-neutral-700);
+}
+
+/************************************************
+  Utilities  
+ ************************************************/
+
+.modal {
+  overflow: hidden;
+}
+
+.visually-hidden {
+  display: none;
+}

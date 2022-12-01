@@ -1,39 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <header class="header">
+    <nav class="header-nav">
+      <input class="header-nav__toggle visually-hidden" type="checkbox" id="header-nav__toggle">
+      <span class="icon--snap-logo"></span>
+      <label for="header-nav__toggle" class="header-nav__toggle-label header-nav__toggle-open icon--hamburger"
+        onclick="document.body.classList.add('modal');"></label>
+      <label for="header-nav__toggle" class="header-nav__toggle-label header-nav__toggle-close icon--close"
+        onclick="document.body.classList.remove('modal');"></label>
+      <ul class="header-nav__list">
+        <li class="dropdown">
+          <input class="dropdown__toggle visually-hidden" type="checkbox" id="dropdown__toggle--1">
+          <label for="dropdown__toggle--1" class="dropdown__menu" href="#">Features</label>
+          <ul class="dropdown__list">
+            <li><a class="icon--todo" href="#">Todo List</a></li>
+            <li><a class="icon--calendar" href="#">Calendar</a></li>
+            <li><a class="icon--reminders" href="#">Reminders</a></li>
+            <li><a class="icon--planning" href="#">Planning</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <input class="dropdown__toggle visually-hidden" type="checkbox" id="dropdown__toggle--2">
+          <label for="dropdown__toggle--2" class="dropdown__menu" href="#">Company</label>
+          <ul class="dropdown__list">
+            <li><a href="#">History</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Login</a></li>
+        <li><button class="btn btn--inverse" type="button">Register</button></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <picture>
+        <source media="(min-width: 40rem)" srcset="images/image-hero-desktop.png">
+        <img src="images/image-hero-mobile.png" alt="Technician looking at laptop">
+      </picture>
+      <h1 class="heading--1">
+        Make remote work
+      </h1>
 
-  Features
-  Company
-  Careers
-  About
+      <p>
+        Get your team in sync, no matter your location. Streamline processes,
+        create team rituals, and watch productivity soar.
+      </p>
 
-  Login
-  Register
+      <button class="btn" type="button">Learn more</button>
 
-  Make remote work
+      <ul class="clients">
+        <li><span class="logo--databiz"></span></li>
+        <li><span class="logo--audiophile"></span></li>
+        <li><span class="logo--meet"></span></li>
+        <li><span class="logo--maker"></span></li>
+      </ul>
+    </div>
+  </main>
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
 </body>
+
 </html>
