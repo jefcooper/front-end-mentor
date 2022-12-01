@@ -14,22 +14,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 </head>
 
 <body>
-  <header class="header">
+  <header class="header" onclick="dismissModal(event, this);">
     <nav class="header-nav">
       <input class="header-nav__toggle visually-hidden" type="checkbox" id="header-nav__toggle">
       <span class="icon--snap-logo"></span>
       <label for="header-nav__toggle" class="header-nav__toggle-label header-nav__toggle-open icon--hamburger"
-        onclick="document.body.classList.add('modal');"></label>
+        onclick="showModal();"></label>
       <label for="header-nav__toggle" class="header-nav__toggle-label header-nav__toggle-close icon--close"
-        onclick="document.body.classList.remove('modal');"></label>
+        onclick="hideModal();"></label>
       <ul class="header-nav__list">
         <li class="dropdown">
-          <input class="dropdown__toggle visually-hidden" type="checkbox" id="dropdown__toggle--1">
+          <input class="dropdown__toggle visually-hidden" onclick="selectDropdown(event);" type="checkbox"
+            id="dropdown__toggle--1">
           <label for="dropdown__toggle--1" class="dropdown__menu" href="#">Features</label>
           <ul class="dropdown__list">
             <li><a class="icon--todo" href="#">Todo List</a></li>
@@ -39,7 +41,8 @@
           </ul>
         </li>
         <li class="dropdown">
-          <input class="dropdown__toggle visually-hidden" type="checkbox" id="dropdown__toggle--2">
+          <input class="dropdown__toggle visually-hidden" onclick="selectDropdown(event);" type="checkbox"
+            id="dropdown__toggle--2">
           <label for="dropdown__toggle--2" class="dropdown__menu" href="#">Company</label>
           <ul class="dropdown__list">
             <li><a href="#">History</a></li>

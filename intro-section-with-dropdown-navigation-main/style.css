@@ -52,6 +52,10 @@ ul {
   list-style: none;
 }
 
+li {
+  user-select: none;
+}
+
 img {
   display: block;
   width: 100%;
@@ -217,7 +221,7 @@ body {
 }
 
 /************************************************
-  Heading
+  Header
  ************************************************/
 
 .header {
