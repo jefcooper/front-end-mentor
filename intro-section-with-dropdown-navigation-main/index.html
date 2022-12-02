@@ -21,10 +21,10 @@
 
 <body>
   <header class="header">
+    <span class="header__logo icon--snap-logo"></span>
     <div class="header__backdrop" onclick="dismissModal(event, this);">
       <nav class="header-nav">
         <input class="header-nav__toggle visually-hidden" type="checkbox" id="header-nav__toggle">
-        <span class="icon--snap-logo"></span>
         <label for="header-nav__toggle" class="header-nav__toggle-label header-nav__toggle-open icon--hamburger"
           onclick="showModal();"></label>
         <label for="header-nav__toggle" class="header-nav__toggle-label header-nav__toggle-close icon--close"
@@ -53,8 +53,8 @@
           </li>
           <li><a href="#">Careers</a></li>
           <li><a href="#">About</a></li>
-          <li><a href="#">Login</a></li>
-          <li><button class="btn btn--inverse" type="button">Register</button></li>
+          <li class="header-nav__login"><a href="#">Login</a></li>
+          <li class="header-nav__register"><button class="btn btn--inverse" type="button">Register</button></li>
         </ul>
       </nav>
     </div>

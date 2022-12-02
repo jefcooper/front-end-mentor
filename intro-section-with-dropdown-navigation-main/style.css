@@ -72,7 +72,7 @@ body {
 }
 
 /* Paragraph text, default body */
-.text-style-p {
+p {
   font-size: 1rem;
   font-family: "Epilogue";
   font-weight: 500;
@@ -80,10 +80,15 @@ body {
   line-height: 26px;
   text-decoration: none;
   text-transform: none;
+  color: var(--clr-neutral-700);
+
+  text-align: center;
+  margin-inline: 1rem;
+  margin-top: 1rem;
 }
 
 /* CTA Button Text */
-.text-style-btn {
+.btn {
   font-size: 1rem;
   font-family: "Epilogue";
   font-weight: 700;
@@ -95,7 +100,7 @@ body {
 }
 
 /* Main title text */
-.text-style-heading-1 {
+.heading--1 {
   font-size: 2.25rem;
   font-family: "Epilogue";
   font-weight: 700;
@@ -104,6 +109,10 @@ body {
   letter-spacing: -0.5px;
   text-decoration: none;
   text-transform: none;
+  color: var(--clr-neutral-900);
+
+  text-align: center;
+  margin-top: 3rem;
 }
 
 /* Menu Text */
@@ -178,26 +187,36 @@ body {
   content: url(images/icon-close-menu.svg);
   width: 26px;
   height: 26px;
+
+  /* adjust centering so it matches the hamburger icon */
+  margin-top: -4px;
+  margin-right: 3px;
 }
 .icon--todo::before {
   content: url(images/icon-todo.svg);
   width: 14px;
   height: 16px;
+  padding-inline: 1px;
+  margin-right: 1rem;
 }
 .icon--calendar::before {
   content: url(images/icon-calendar.svg);
   width: 16px;
   height: 16px;
+  margin-right: 1rem;
 }
 .icon--reminders::before {
   content: url(images/icon-reminders.svg);
   width: 13px;
   height: 17px;
+  padding-inline: 1.5px;
+  margin-right: 1rem;
 }
 .icon--planning::before {
   content: url(images/icon-planning.svg);
   width: 16px;
   height: 16px;
+  margin-right: 1rem;
 }
 .logo--databiz {
   content: url(images/client-databiz.svg);
@@ -230,7 +249,14 @@ body {
   top: 0;
   width: 100%;
 }
+.header__logo {
+  position: absolute;
+  margin: 1rem;
+}
 body.modal .header__backdrop {
+  display: flex;
+  justify-content: flex-end;
+
   background: hsl(0, 0%, 0%, 0.7);
   height: 100vh;
 }
@@ -238,9 +264,10 @@ body.modal .header__backdrop {
 /**************** .header-nav **********************/
 .header-nav {
   display: flex;
-  justify-content: space-between;
-  padding-top: 1rem;
-  padding-inline: 1rem;
+  flex-direction: column;
+  align-items: flex-end;
+
+  padding: 1rem;
 }
 body.modal .header-nav {
   background-color: var(--clr-neutral-100);
@@ -256,9 +283,26 @@ body.modal .header-nav {
 }
 .header-nav__list {
   display: none;
+  width: 15rem;
+  padding: 0.5rem;
+  padding-top: 2rem;
+  color: var(--clr-neutral-700);
 }
 .header-nav__list li {
   background-color: var(--clr-neutral-100);
+}
+
+.header-nav__list li + li {
+  margin-top: 1rem;
+}
+.header-nav__list .header-nav__login {
+  margin-top: 2rem;
+  text-align: center;
+}
+.header-nav__list .header-nav__register button {
+  width: 100%;
+  padding-block: 0.5rem;
+  text-align: center;
 }
 
 .header-nav__toggle:checked ~ .header-nav__toggle-open {
@@ -282,16 +326,27 @@ body.modal .header-nav {
   display: inline;
   width: 16px;
   height: 16px;
+  padding-inline: 1rem;
 }
 .dropdown__toggle:checked ~ .dropdown__menu::after {
   content: url(images/icon-arrow-up.svg);
+  height: 16px;
+  width: 16px;
+  padding-inline: 1rem;
 }
 
 .dropdown__list {
   display: none;
+
+  padding-block: 0.5rem;
+  padding-left: 1.5rem;
 }
 .dropdown__toggle:checked ~ .dropdown__list {
   display: block;
+}
+
+.dropdown__list li {
+  margin-block: 1rem;
 }
 
 /************************************************
@@ -300,23 +355,43 @@ body.modal .header-nav {
 
 main .container {
   margin-top: 4.6875rem;
+  display: grid;
+  justify-items: center;
 }
+
+main .btn {
+  width: fit-content;
+  margin-top: 1.5rem;
+}
+
+main p {
+  max-width: 400px;
+}
+
 .clients {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   zoom: 0.7;
+
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+  padding: 1rem;
 }
 
 /************************************************
   Footer 
  ************************************************/
 
+footer {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
 }
-
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
