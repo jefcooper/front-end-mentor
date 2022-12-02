@@ -224,18 +224,29 @@ body {
   Header
  ************************************************/
 
+/**************** .header **********************/
 .header {
   position: absolute;
   top: 0;
-  padding-top: 1.5rem;
   width: 100%;
 }
-body.modal .header {
+body.modal .header__backdrop {
   background: hsl(0, 0%, 0%, 0.7);
   height: 100vh;
 }
 
-/**************** header-nav **********************/
+/**************** .header-nav **********************/
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-inline: 1rem;
+}
+body.modal .header-nav {
+  background-color: var(--clr-neutral-100);
+}
+
+/**************** .header-nav__toggle... **********************/
 .header-nav__toggle-label {
   cursor: pointer;
   user-select: none;
@@ -246,23 +257,18 @@ body.modal .header {
 .header-nav__list {
   display: none;
 }
-.header-nav__toggle:checked ~ .header-nav__list {
-  display: inline;
+.header-nav__list li {
+  background-color: var(--clr-neutral-100);
+}
+
+.header-nav__toggle:checked ~ .header-nav__toggle-open {
+  display: none;
 }
 .header-nav__toggle:checked ~ .header-nav__toggle-close {
   display: inline;
 }
-.header-nav__toggle:checked ~ .header-nav__toggle-open {
-  display: none;
-}
-
-/* ----- visual styling of header-nav ------ */
-
-body.modal .header-nav {
-  background-color: var(--clr-neutral-100);
-}
-.header-nav__list li {
-  background-color: var(--clr-neutral-100);
+.header-nav__toggle:checked ~ .header-nav__list {
+  display: inline;
 }
 
 /**************** dropdown **********************/
@@ -293,7 +299,7 @@ body.modal .header-nav {
  ************************************************/
 
 main .container {
-  margin-top: 4rem;
+  margin-top: 4.6875rem;
 }
 .clients {
   display: flex;

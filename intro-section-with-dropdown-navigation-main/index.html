@@ -20,42 +20,44 @@
 </head>
 
 <body>
-  <header class="header" onclick="dismissModal(event, this);">
-    <nav class="header-nav">
-      <input class="header-nav__toggle visually-hidden" type="checkbox" id="header-nav__toggle">
-      <span class="icon--snap-logo"></span>
-      <label for="header-nav__toggle" class="header-nav__toggle-label header-nav__toggle-open icon--hamburger"
-        onclick="showModal();"></label>
-      <label for="header-nav__toggle" class="header-nav__toggle-label header-nav__toggle-close icon--close"
-        onclick="hideModal();"></label>
-      <ul class="header-nav__list">
-        <li class="dropdown">
-          <input class="dropdown__toggle visually-hidden" onclick="selectDropdown(event);" type="checkbox"
-            id="dropdown__toggle--1">
-          <label for="dropdown__toggle--1" class="dropdown__menu" href="#">Features</label>
-          <ul class="dropdown__list">
-            <li><a class="icon--todo" href="#">Todo List</a></li>
-            <li><a class="icon--calendar" href="#">Calendar</a></li>
-            <li><a class="icon--reminders" href="#">Reminders</a></li>
-            <li><a class="icon--planning" href="#">Planning</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <input class="dropdown__toggle visually-hidden" onclick="selectDropdown(event);" type="checkbox"
-            id="dropdown__toggle--2">
-          <label for="dropdown__toggle--2" class="dropdown__menu" href="#">Company</label>
-          <ul class="dropdown__list">
-            <li><a href="#">History</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Login</a></li>
-        <li><button class="btn btn--inverse" type="button">Register</button></li>
-      </ul>
-    </nav>
+  <header class="header">
+    <div class="header__backdrop" onclick="dismissModal(event, this);">
+      <nav class="header-nav">
+        <input class="header-nav__toggle visually-hidden" type="checkbox" id="header-nav__toggle">
+        <span class="icon--snap-logo"></span>
+        <label for="header-nav__toggle" class="header-nav__toggle-label header-nav__toggle-open icon--hamburger"
+          onclick="showModal();"></label>
+        <label for="header-nav__toggle" class="header-nav__toggle-label header-nav__toggle-close icon--close"
+          onclick="hideModal();"></label>
+        <ul class="header-nav__list">
+          <li class="dropdown">
+            <input class="dropdown__toggle visually-hidden" onclick="selectDropdown(event);" type="checkbox"
+              id="dropdown__toggle--1">
+            <label for="dropdown__toggle--1" class="dropdown__menu" href="#">Features</label>
+            <ul class="dropdown__list">
+              <li><a class="icon--todo" href="#">Todo List</a></li>
+              <li><a class="icon--calendar" href="#">Calendar</a></li>
+              <li><a class="icon--reminders" href="#">Reminders</a></li>
+              <li><a class="icon--planning" href="#">Planning</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <input class="dropdown__toggle visually-hidden" onclick="selectDropdown(event);" type="checkbox"
+              id="dropdown__toggle--2">
+            <label for="dropdown__toggle--2" class="dropdown__menu" href="#">Company</label>
+            <ul class="dropdown__list">
+              <li><a href="#">History</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Login</a></li>
+          <li><button class="btn btn--inverse" type="button">Register</button></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main>
     <div class="container">
