@@ -74,8 +74,8 @@ body {
 /* Paragraph text, default body */
 p {
   font-size: 1rem;
-  font-family: "Epilogue";
-  font-weight: 500;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
   font-style: normal;
   line-height: 26px;
   text-decoration: none;
@@ -90,8 +90,8 @@ p {
 /* CTA Button Text */
 .btn {
   font-size: 1rem;
-  font-family: "Epilogue";
-  font-weight: 700;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-bold);
   font-style: normal;
   line-height: 26px;
   letter-spacing: -0.22px;
@@ -102,8 +102,8 @@ p {
 /* Main title text */
 .heading--1 {
   font-size: 2.25rem;
-  font-family: "Epilogue";
-  font-weight: 700;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-bold);
   font-style: normal;
   line-height: 42px;
   letter-spacing: -0.5px;
@@ -118,8 +118,8 @@ p {
 /* Menu Text */
 .text-style-menu {
   font-size: 1rem;
-  font-family: "Epilogue";
-  font-weight: 500;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
   font-style: normal;
   line-height: 26px;
   text-decoration: none;
@@ -129,8 +129,8 @@ p {
 /* Main title text */
 .text-style-desktop-heading-1 {
   font-size: 5rem;
-  font-family: "Epilogue";
-  font-weight: 700;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-bold);
   font-style: normal;
   line-height: 80px;
   letter-spacing: -1.11px;
@@ -141,8 +141,8 @@ p {
 /* Paragraph text, default body */
 .text-style-desktop-p {
   font-size: 1.125rem;
-  font-family: "Epilogue";
-  font-weight: 500;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
   font-style: normal;
   line-height: 28px;
   text-decoration: none;
@@ -152,8 +152,8 @@ p {
 /* Menu text */
 .text-style-desktop-menu {
   font-size: 0.875rem;
-  font-family: "Epilogue";
-  font-weight: 500;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
   font-style: normal;
   line-height: 16px;
   text-decoration: none;
@@ -163,8 +163,8 @@ p {
 /* CTA Button Text */
 .text-style-desktop-btn {
   font-size: 1.125rem;
-  font-family: "Epilogue";
-  font-weight: 700;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-bold);
   font-style: normal;
   line-height: 28px;
   letter-spacing: -0.25px;
@@ -362,6 +362,7 @@ main .container {
 main .btn {
   width: fit-content;
   margin-top: 1.5rem;
+  padding-block: 0.65rem;
 }
 
 main p {
@@ -428,4 +429,17 @@ footer {
 
 .visually-hidden {
   display: none;
+}
+
+/************************************************
+ ************************************************
+  Desktop-specific overrides
+ ************************************************
+ ************************************************/
+@media screen and (min-width: 40rem) {
+  main .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  main .group {
+  }
 }
