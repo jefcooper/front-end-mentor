@@ -126,29 +126,6 @@ p {
   text-transform: none;
 }
 
-/* Main title text */
-.text-style-desktop-heading-1 {
-  font-size: 5rem;
-  font-family: var(--ff-base);
-  font-weight: var(--fw-bold);
-  font-style: normal;
-  line-height: 80px;
-  letter-spacing: -1.11px;
-  text-decoration: none;
-  text-transform: none;
-}
-
-/* Paragraph text, default body */
-.text-style-desktop-p {
-  font-size: 1.125rem;
-  font-family: var(--ff-base);
-  font-weight: var(--fw-regular);
-  font-style: normal;
-  line-height: 28px;
-  text-decoration: none;
-  text-transform: none;
-}
-
 /* Menu text */
 .text-style-desktop-menu {
   font-size: 0.875rem;
@@ -156,18 +133,6 @@ p {
   font-weight: var(--fw-regular);
   font-style: normal;
   line-height: 16px;
-  text-decoration: none;
-  text-transform: none;
-}
-
-/* CTA Button Text */
-.text-style-desktop-btn {
-  font-size: 1.125rem;
-  font-family: var(--ff-base);
-  font-weight: var(--fw-bold);
-  font-style: normal;
-  line-height: 28px;
-  letter-spacing: -0.25px;
   text-decoration: none;
   text-transform: none;
 }
@@ -323,21 +288,18 @@ body.modal .header-nav {
 
 .dropdown__menu::after {
   content: url(images/icon-arrow-down.svg);
-  display: inline;
-  width: 16px;
+  display: inline-block;
+  width: 10px;
   height: 16px;
-  padding-inline: 1rem;
+  margin-left: 9px;
+  transition: 200ms ease-in-out;
 }
 .dropdown__toggle:checked ~ .dropdown__menu::after {
-  content: url(images/icon-arrow-up.svg);
-  height: 16px;
-  width: 16px;
-  padding-inline: 1rem;
+  transform: rotate(-180deg);
 }
 
 .dropdown__list {
   display: none;
-
   padding-block: 0.5rem;
   padding-left: 1.5rem;
 }
@@ -355,6 +317,11 @@ body.modal .header-nav {
 
 main .container {
   margin-top: 4.6875rem;
+  display: grid;
+  justify-items: center;
+}
+
+main .group {
   display: grid;
   justify-items: center;
 }
@@ -439,9 +406,127 @@ footer {
  ************************************************
  ************************************************/
 @media screen and (min-width: 40rem) {
+  /* Header */
+  .header-nav {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header__logo {
+    margin: 1.5rem;
+  }
+  .header-nav__list {
+    display: grid;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-left: 8rem;
+  }
+  .header-nav__list li + li {
+    margin-block: 0;
+  }
+  .header-nav__toggle-label {
+    display: none;
+  }
+  .header-nav__list {
+    display: flex;
+  }
+  .header-nav__list .header-nav__login {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+  }
+
+  .dropdown {
+    position: relative;
+  }
+  .dropdown__menu {
+    background-color: var(--clr-neutral-200);
+  }
+  .dropdown__list {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    width: fit-content;
+    background-color: var(--clr-neutral-100);
+    padding: 1.5rem;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.149126);
+    border-radius: 10px;
+
+    transform: scaleY(0%);
+    transition: 200ms ease-in-out;
+    transform-origin: top;
+  }
+  .dropdown__toggle:checked ~ .dropdown__list {
+    transform: scaleY(100%);
+  }
+  .dropdown__list--right-align {
+    right: 0;
+  }
+  .dropdown__list li {
+    margin-block: 0;
+    width: max-content;
+  }
+  .dropdown__list li + li {
+    margin-top: 1rem;
+  }
+
+  /* Main */
+  main img {
+    height: 640px;
+  }
+  .heading--1 {
+    font-size: 5rem;
+    font-family: var(--ff-base);
+    font-weight: var(--fw-bold);
+    font-style: normal;
+    line-height: 80px;
+    letter-spacing: -1.11px;
+    text-decoration: none;
+    text-transform: none;
+    text-align: left;
+  }
+  .btn {
+    font-size: 1.125rem;
+    font-family: var(--ff-base);
+    font-weight: var(--fw-bold);
+    font-style: normal;
+    line-height: 28px;
+    letter-spacing: -0.25px;
+    text-decoration: none;
+    text-transform: none;
+  }
   main .container {
     grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: flex-start;
+    max-width: 1146px;
+    margin-inline: auto;
+    gap: 1rem;
+  }
+  main .container img {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
   }
   main .group {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    align-content: flex-start;
+    justify-items: flex-start;
+    gap: 2rem;
+  }
+  main .group p {
+    font-size: 1.125rem;
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    font-style: normal;
+    line-height: 28px;
+    text-decoration: none;
+    text-transform: none;
+
+    text-align: left;
+    margin-inline: 0;
   }
 }
