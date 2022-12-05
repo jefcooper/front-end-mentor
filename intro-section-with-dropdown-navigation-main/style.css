@@ -282,8 +282,9 @@ body.modal .header-nav {
 
 /**************** dropdown **********************/
 .dropdown__menu {
+  background-color: var(--clr-neutral-100);
   cursor: pointer;
-  user-select: none;
+  border: 0;
 }
 
 .dropdown__menu::after {
@@ -294,11 +295,6 @@ body.modal .header-nav {
   margin-left: 9px;
   transition: 200ms ease-in-out;
 }
-/*
-.dropdown__toggle:checked ~ .dropdown__menu::after {
-  transform: rotate(-180deg);
-}
-*/
 .dropdown[aria-expanded="true"] .dropdown__menu::after {
   transform: rotate(-180deg);
 }
@@ -308,11 +304,6 @@ body.modal .header-nav {
   padding-block: 0.5rem;
   padding-left: 1.5rem;
 }
-/*
-.dropdown__toggle:checked ~ .dropdown__list {
-  display: block;
-}
-*/
 .dropdown__list li {
   margin-block: 1rem;
 }
