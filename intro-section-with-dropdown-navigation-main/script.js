@@ -1,3 +1,12 @@
+document.addEventListener("click", (evt) => {
+  console.log(evt);
+  const nearest = evt.target.closest(".dropdown");
+  console.log(nearest);
+  if (!nearest) {
+    uncheckDropdowns();
+  }
+});
+
 function uncheckDropdowns(target) {
   const dropdowns = Array.from(
     document.getElementsByClassName("dropdown__toggle")

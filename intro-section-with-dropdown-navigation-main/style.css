@@ -345,7 +345,9 @@ main p {
   zoom: 0.7;
 
   margin-top: 3rem;
+  /*
   margin-bottom: 6rem;
+  */
   padding: 1rem;
 }
 
@@ -357,6 +359,7 @@ footer {
   display: grid;
   justify-content: center;
   width: 100%;
+  padding-top: 2rem;
 }
 .attribution {
   font-size: 11px;
