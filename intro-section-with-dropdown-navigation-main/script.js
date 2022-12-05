@@ -1,22 +1,27 @@
+//
+// Global click handler to show/dismiss dropdowns and mobile menu
+//
 document.addEventListener("click", (evt) => {
+  // does the clicked element have a dropdown as a parent
   const nearest = evt.target.closest(".dropdown");
+
   if (!nearest) {
+    // if not, then simply make sure any open dropdowns get dismissed if opened
     uncheckDropdowns();
   } else {
-    console.log(nearest);
-    console.log(nearest.attributes["aria-expanded"]?.value);
+    // otherwise, we need to toggle the dropdown menu
+    const isExpanded = nearest.attributes["aria-expanded"]?.value === "true";
 
-    if (nearest.hasAttribute("aria-expanded")) {
-      const isExpanded = nearest.attributes["aria-expanded"].value === "true";
-      if (isExpanded) {
-        nearest.attributes["aria-expanded"].value = "false";
-      } else {
-        nearest.attributes["aria-expanded"].value = "true";
-      }
-      evt.preventDefault();
-      evt.stopPropagation();
-      uncheckDropdowns(nearest);
+    if (isExpanded) {
+      //nearest.attributes["aria-expanded"].value = "false";
+      nearest.setAttribute("aria-expanded", false);
+    } else {
+      nearest.setAttribute("aria-expanded", true);
+      //nearest.attributes["aria-expanded"].value = "true";
     }
+    evt.preventDefault();
+    evt.stopPropagation();
+    uncheckDropdowns(nearest);
   }
 });
 
