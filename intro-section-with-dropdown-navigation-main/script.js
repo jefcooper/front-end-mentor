@@ -29,7 +29,7 @@ function uncheckDropdowns(target) {
   const dropdowns = Array.from(document.getElementsByClassName("dropdown"));
   dropdowns.forEach((el) => {
     if (el !== target) {
-      el.attributes["aria-expanded"].value = "false";
+      el.setAttribute("aria-expanded", false);
     }
   });
 }
