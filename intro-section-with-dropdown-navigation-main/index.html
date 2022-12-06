@@ -30,17 +30,18 @@
         <label for="header-nav__toggle" class="header-nav__toggle-label header-nav__toggle-close icon--close"
           onclick="hideModal();"></label>
         <ul class="header-nav__list">
-          <li class="dropdown" aria-expanded="false">
-            <button type="button" class="dropdown__menu">Features</button>
-            <ul class="dropdown__list dropdown__list--right-align">
+          <li>
+            <button type="button" class="dropdown" area-owns="features-dropdown"
+              onclick="dropdownClicked(event, this);">Features</button>
+            <ul class="dropdown__list dropdown__list--right-align" id="features-dropdown">
               <li><a class="icon--todo" href="#">Todo List</a></li>
               <li><a class="icon--calendar" href="#">Calendar</a></li>
               <li><a class="icon--reminders" href="#">Reminders</a></li>
               <li><a class="icon--planning" href="#">Planning</a></li>
             </ul>
           </li>
-          <li class="dropdown" aria-expanded="false">
-            <button type="button" class="dropdown__menu">Company</button>
+          <li>
+            <button type="button" class="dropdown" onclick="dropdownClicked(event, this);">Company</button>
             <ul class="dropdown__list">
               <li><a href="#">History</a></li>
               <li><a href="#">Our Team</a></li>

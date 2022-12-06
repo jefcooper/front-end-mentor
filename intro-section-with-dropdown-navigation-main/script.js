@@ -3,33 +3,52 @@
 //
 document.addEventListener("click", (evt) => {
   // does the clicked element have a dropdown as a parent
-  const nearest = evt.target.closest(".dropdown");
+  const parentDropdown = evt.target.closest(".dropdown");
 
-  if (!nearest) {
+  if (!parentDropdown) {
     // if not, then simply make sure any open dropdowns get dismissed if opened
     uncheckDropdowns();
-  } else {
-    // otherwise, we need to toggle the dropdown menu
-    const isExpanded = nearest.attributes["aria-expanded"]?.value === "true";
-
-    if (isExpanded) {
-      //nearest.attributes["aria-expanded"].value = "false";
-      nearest.setAttribute("aria-expanded", false);
-    } else {
-      nearest.setAttribute("aria-expanded", true);
-      //nearest.attributes["aria-expanded"].value = "true";
-    }
-    evt.preventDefault();
-    evt.stopPropagation();
-    uncheckDropdowns(nearest);
   }
 });
 
+function dropdownClicked(evt) {
+  const isExpanded = evt.target.getAttribute("aria-expanded") === "true";
+  const dropdownList = evt.target.nextElementSibling;
+  console.log(dropdownList);
+
+  if (isExpanded) {
+    evt.target.setAttribute("data-state", "closing");
+    dropdownList.addEventListener(
+      "animationend",
+      () => {
+        evt.target.setAttribute("aria-expanded", "false");
+        evt.target.removeAttribute("data-state");
+      },
+      { once: true }
+    );
+  } else {
+    evt.target.setAttribute("aria-expanded", "true");
+    evt.target.setAttribute("data-state", "open");
+  }
+  uncheckDropdowns(evt.target);
+}
+
 function uncheckDropdowns(target) {
-  const dropdowns = Array.from(document.getElementsByClassName("dropdown"));
-  dropdowns.forEach((el) => {
+  const allDropdowns = Array.from(document.getElementsByClassName("dropdown"));
+  allDropdowns.forEach((el) => {
     if (el !== target) {
-      el.setAttribute("aria-expanded", false);
+      if (el.getAttribute("aria-expanded") === "true") {
+        el.setAttribute("data-state", "closing");
+        const nextDropdownList = el.nextElementSibling;
+        nextDropdownList.addEventListener(
+          "animationend",
+          () => {
+            el.setAttribute("aria-expanded", "false");
+            el.removeAttribute("data-state");
+          },
+          { once: true }
+        );
+      }
     }
   });
 }
