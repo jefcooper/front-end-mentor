@@ -299,29 +299,23 @@ body.modal .header-nav {
 .dropdown[data-state="open"]::after {
   transform: rotate(-180deg);
 }
-/*
-.dropdown[data-state="closing"]::after {
-  transform: rotate(0deg);
-}
-*/
-
-.dropdown__list {
+.dropdown__menu {
   display: none;
   padding-block: 0.5rem;
   padding-left: 1.5rem;
 }
-.dropdown__list li {
+.dropdown__menu li {
   margin-block: 1rem;
 }
-.dropdown[data-state="open"] ~ .dropdown__list {
+.dropdown[data-state="open"] ~ .dropdown__menu {
   display: block;
   animation: dropdownOpen 250ms ease-in-out forwards;
 }
-.dropdown[data-state="closing"] ~ .dropdown__list {
+.dropdown[data-state="closing"] ~ .dropdown__menu {
   display: block;
   animation: dropdownClose 250ms ease-in-out forwards;
 }
-.dropdown[data-state="closed"] ~ .dropdown__list {
+.dropdown[data-state="closed"] ~ .dropdown__menu {
   display: none;
 }
 @keyframes dropdownOpen {
@@ -480,7 +474,7 @@ footer {
     position: relative;
     background-color: var(--clr-neutral-200);
   }
-  .dropdown__list {
+  .dropdown__menu {
     position: absolute;
     top: 2rem;
     width: fit-content;
@@ -489,14 +483,14 @@ footer {
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.149126);
     border-radius: 10px;
   }
-  .dropdown__list--right-align {
+  .dropdown__menu--right-align {
     right: 0;
   }
-  .dropdown__list li {
+  .dropdown__menu li {
     margin-block: 0;
     width: max-content;
   }
-  .dropdown__list li + li {
+  .dropdown__menu li + li {
     margin-top: 1rem;
   }
 
