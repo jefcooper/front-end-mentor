@@ -14,7 +14,6 @@ document.addEventListener("click", (evt) => {
 function dropdownClicked(evt) {
   const isExpanded = evt.target.getAttribute("aria-expanded") === "true";
   const dropdownList = evt.target.nextElementSibling;
-  console.log(dropdownList);
 
   if (isExpanded) {
     evt.target.setAttribute("data-state", "closing");

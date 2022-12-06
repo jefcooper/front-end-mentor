@@ -296,9 +296,14 @@ body.modal .header-nav {
   margin-left: 9px;
   transition: 200ms ease-in-out;
 }
-.dropdown[aria-expanded="true"]::after {
+.dropdown[data-state="open"]::after {
   transform: rotate(-180deg);
 }
+/*
+.dropdown[data-state="closing"]::after {
+  transform: rotate(0deg);
+}
+*/
 
 .dropdown__list {
   display: none;
@@ -308,13 +313,12 @@ body.modal .header-nav {
 .dropdown__list li {
   margin-block: 1rem;
 }
-.dropdown[aria-expanded="true"] ~ .dropdown__list {
-  display: block;
-}
 .dropdown[data-state="open"] ~ .dropdown__list {
+  display: block;
   animation: dropdownOpen 250ms ease-in-out forwards;
 }
 .dropdown[data-state="closing"] ~ .dropdown__list {
+  display: block;
   animation: dropdownClose 250ms ease-in-out forwards;
 }
 .dropdown[data-state="closed"] ~ .dropdown__list {
