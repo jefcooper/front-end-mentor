@@ -246,26 +246,26 @@ body.modal .header-nav {
 .header-nav__toggle-close {
   display: none;
 }
-.header-nav__list {
+.header-nav__menu {
   display: none;
   width: 15rem;
   padding: 0.5rem;
   padding-top: 2rem;
   color: var(--clr-neutral-700);
 }
-.header-nav__list li {
+.header-nav__menu li {
   position: relative;
   background-color: var(--clr-neutral-100);
 }
 
-.header-nav__list li + li {
+.header-nav__menu li + li {
   margin-top: 1rem;
 }
-.header-nav__list .header-nav__login {
+.header-nav__menu .header-nav__login {
   margin-top: 2rem;
   text-align: center;
 }
-.header-nav__list .header-nav__register button {
+.header-nav__menu .header-nav__register button {
   width: 100%;
   padding-block: 0.5rem;
   text-align: center;
@@ -277,7 +277,7 @@ body.modal .header-nav {
 .header-nav__toggle:checked ~ .header-nav__toggle-close {
   display: inline;
 }
-.header-nav__toggle:checked ~ .header-nav__list {
+.header-nav__toggle:checked ~ .header-nav__menu {
   display: inline;
 }
 
@@ -446,7 +446,7 @@ footer {
   .header__logo {
     margin: 1.5rem;
   }
-  .header-nav__list {
+  .header-nav__menu {
     display: grid;
     align-items: center;
     gap: 2rem;
@@ -455,16 +455,13 @@ footer {
     margin: 0;
     margin-left: 8rem;
   }
-  .header-nav__list li + li {
+  .header-nav__menu li + li {
     margin-block: 0;
   }
   .header-nav__toggle-label {
     display: none;
   }
-  .header-nav__list {
-    display: flex;
-  }
-  .header-nav__list .header-nav__login {
+  .header-nav__menu .header-nav__login {
     margin-top: 0;
     margin-bottom: 0;
     margin-left: auto;
