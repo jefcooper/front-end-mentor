@@ -24,15 +24,15 @@
     <span class="header__logo icon--snap-logo"></span>
     <div class="header__backdrop" onclick="dismissModal(event, this);">
       <nav class="header-nav">
-        <input class="header-nav__toggle visually-hidden" type="checkbox" id="header-nav__toggle">
-        <label for="header-nav__toggle" class="header-nav__toggle-label header-nav__toggle-open icon--hamburger"
-          onclick="showModal();"></label>
-        <label for="header-nav__toggle" class="header-nav__toggle-label header-nav__toggle-close icon--close"
-          onclick="hideModal();"></label>
+        <button type="button" class="header-nav__button" id="headerNavButton" onclick="headerNavClicked(event);">
+          <span class="visually-hidden">Menu</span>
+          <span class="header-nav__toggle-open icon--hamburger"></span>
+          <span class="header-nav__toggle-close icon--close"></span>
+        </button>
         <ul class="header-nav__menu">
           <li>
             <button type="button" class="dropdown" aria-owns="features-dropdown"
-              onclick="dropdownClicked(event, this);">Features</button>
+              onclick="dropdownClicked(event);">Features</button>
             <ul class="dropdown__menu dropdown__menu--right-align" id="features-dropdown">
               <li><a class="icon--todo" href="#">Todo List</a></li>
               <li><a class="icon--calendar" href="#">Calendar</a></li>
@@ -41,7 +41,7 @@
             </ul>
           </li>
           <li>
-            <button type="button" class="dropdown" onclick="dropdownClicked(event, this);">Company</button>
+            <button type="button" class="dropdown" onclick="dropdownClicked(event);">Company</button>
             <ul class="dropdown__menu">
               <li><a href="#">History</a></li>
               <li><a href="#">Our Team</a></li>

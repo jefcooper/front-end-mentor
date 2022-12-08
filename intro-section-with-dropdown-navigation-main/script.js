@@ -52,9 +52,29 @@ function uncheckDropdowns(target) {
   });
 }
 
+function headerNavClicked(evt) {
+  const button = evt.target.closest(".header-nav__button");
+  console.log(button);
+
+  const isOpen = button.getAttribute("data-state") === "open";
+
+  if (isOpen) {
+    // if open, then close the menu by removing the data-state
+    button.removeAttribute("data-state");
+    button.setAttribute("aria-expanded", "false");
+    hideModal();
+  } else {
+    // otherwise, open the menu by setting the data-state to open
+    button.setAttribute("data-state", "open");
+    button.setAttribute("aria-expanded", "true");
+    showModal();
+  }
+}
+
 function dismissModal(event, el) {
   if (event.target === el) {
-    document.getElementById("header-nav__toggle").checked = false;
+    headerNavButton.removeAttribute("data-state");
+    headerNavButton.setAttribute("aria-expanded", "false");
 
     // also close all the submenus so it looks good on next open
     uncheckDropdowns();

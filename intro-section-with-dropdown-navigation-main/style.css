@@ -271,13 +271,23 @@ body.modal .header-nav {
   text-align: center;
 }
 
-.header-nav__toggle:checked ~ .header-nav__toggle-open {
-  display: none;
+.header-nav__button {
+  border: 0;
+  background-color: transparent;
 }
-.header-nav__toggle:checked ~ .header-nav__toggle-close {
+.header-nav__toggle-open {
   display: inline;
 }
-.header-nav__toggle:checked ~ .header-nav__menu {
+.header-nav__toggle-close {
+  display: none;
+}
+.header-nav__button[data-state="open"] .header-nav__toggle-close {
+  display: inline;
+}
+.header-nav__button[data-state="open"] .header-nav__toggle-open {
+  display: none;
+}
+.header-nav__button[data-state="open"] ~ .header-nav__menu {
   display: inline;
 }
 
@@ -458,7 +468,7 @@ footer {
   .header-nav__menu li + li {
     margin-block: 0;
   }
-  .header-nav__toggle-label {
+  .header-nav__button {
     display: none;
   }
   .header-nav__menu .header-nav__login {
@@ -546,5 +556,8 @@ footer {
 
     text-align: left;
     margin-inline: 0;
+  }
+  .clients {
+    zoom: 1;
   }
 }
