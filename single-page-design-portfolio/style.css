@@ -1,0 +1,200 @@
+/***************** Global ********************/
+:root {
+  --ff-base: "Plus Jakarta Sans", sans-serif;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --clr-neutral-900: hsl(0, 0%, 1.2%);
+  --clr-neutral-500: hsl(30, 5.2%, 45.5%);
+  --clr-neutral-100: hsl(28, 100%, 97.1%);
+
+  --clr-accent-1: hsl(252, 66.3%, 61.6%); /* galactic blue */
+  --clr-accent-2: hsl(28, 89.3%, 67.1%); /* summer yellow */
+  --clr-accent-3: hsl(0, 78%, 78.6%); /* pink */
+  --clr-accent-4: hsl(7, 77%, 65.9%); /* light red */
+  --clr-accent-5: hsl(172, 45.6%, 57.5%); /* cyan */
+  --clr-accent-6: hsl(314, 45.3%, 22.9%); /* dark purple */
+}
+
+/***************** Resets ********************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+ul,
+li,
+a,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+
+/************* Body ***************/
+.heading--1 {
+  font-size: 3.5rem;
+  line-height: 1.25;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-bold);
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--clr-neutral-900);
+}
+.heading--2 {
+  font-size: 2.5rem;
+  line-height: 1.275;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-bold);
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--clr-neutral-900);
+}
+.heading--3 {
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-bold);
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--clr-neutral-900);
+}
+.heading--4 {
+  font-size: 1.5rem;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-bold);
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--clr-neutral-100);
+}
+.p {
+  font-size: 1.125rem;
+  line-height: 1.56;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-medium);
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--clr-neutral-500);
+}
+.icon--left::after {
+  content: url(assets/icon-arrow-left.svg);
+  fill: var(--clr-neutral-100);
+}
+.icon--right::after {
+  content: url(assets/icon-arrow-right.svg);
+  fill: var(--clr-neutral-100);
+}
+body {
+  font-size: 1.125rem;
+  line-height: 1.56;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-medium);
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--clr-neutral-500);
+
+  background-color: var(--clr-neutral-100);
+}
+
+/*************** Common ****************/
+.btn {
+  border: 0;
+  outline: 0;
+
+  font-family: var(--ff-base);
+  font-weight: var(--fw-bold);
+  font-size: 1rem;
+
+  padding-block: 1.125rem;
+  padding-inline: 2.85rem;
+
+  border-radius: 1.75rem;
+}
+.btn--primary {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+}
+.btn--primary:hover {
+  background-color: var(--clr-accent-1);
+}
+.btn--secondary {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-accent-4);
+}
+.btn--secondary:hover {
+  background-color: var(--clr-accent-2);
+}
+.btn--round {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+  height: 4rem;
+  width: 4rem;
+  border-radius: 2rem;
+  padding: 0;
+}
+.btn--round:hover {
+  background-color: var(--clr-accent-1);
+}
+
+/*************** Header ****************/
+
+/*************** Intro Section ****************/
+.skills {
+}
+.skills--graphic-design {
+  background-color: var(--clr-accent-1);
+}
+.skills--ui-ux {
+  background-color: var(--clr-accent-2);
+}
+.skills--apps {
+  background-color: var(--clr-accent-3);
+}
+.skills--photography {
+  background-color: var(--clr-accent-5);
+}
+.skills--illustrations {
+  background-color: var(--clr-accent-4);
+}
+.skills--motion-graphics {
+  background-color: var(--clr-accent-6);
+}
+
+/*************** Portfolio Section ****************/
+.portfolio__photo {
+  width: 100%;
+}
+
+/*************** CTA Section ****************/
+.cta {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+}
+
+/*************** Footer ****************/
+
+/************* Utilities ****************/
+.visually-hidden {
+  display: none;
+}
