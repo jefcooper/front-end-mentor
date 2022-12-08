@@ -24,13 +24,15 @@
 }
 
 body,
+button,
 ul,
 li,
 a,
 p,
 h1,
 h2,
-h3 {
+h3,
+h4 {
   margin: 0;
   padding: 0;
   font: inherit;
@@ -47,6 +49,7 @@ img {
 }
 
 /************* Body ***************/
+/* desktop *
 .heading--1 {
   font-size: 3.5rem;
   line-height: 1.25;
@@ -56,10 +59,36 @@ img {
   text-decoration: none;
   text-transform: none;
   color: var(--clr-neutral-900);
+  text-align: center;
 }
+*/
+.heading--1 {
+  font-size: 2.25rem;
+  line-height: 1.25;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-bold);
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--clr-neutral-900);
+  text-align: center;
+}
+
+/* desktop
 .heading--2 {
   font-size: 2.5rem;
   line-height: 1.275;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-bold);
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--clr-neutral-900);
+}
+*/
+.heading--2 {
+  font-size: 1.625rem;
+  line-height: 1.26;
   font-family: var(--ff-base);
   font-weight: var(--fw-bold);
   font-style: normal;
@@ -86,9 +115,21 @@ img {
   text-transform: none;
   color: var(--clr-neutral-100);
 }
+/* desktop
 .p {
   font-size: 1.125rem;
   line-height: 1.56;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-medium);
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--clr-neutral-500);
+}
+*/
+.p {
+  font-size: 1rem;
+  line-height: 1.625;
   font-family: var(--ff-base);
   font-weight: var(--fw-medium);
   font-style: normal;
@@ -105,8 +146,12 @@ img {
   fill: var(--clr-neutral-100);
 }
 body {
+  font-size: 1rem;
+  line-height: 1.625;
+  /* desktop
   font-size: 1.125rem;
   line-height: 1.56;
+  */
   font-family: var(--ff-base);
   font-weight: var(--fw-medium);
   font-style: normal;
@@ -117,6 +162,12 @@ body {
   background-color: var(--clr-neutral-100);
 }
 
+p {
+  margin-top: 1rem;
+  margin-inline: 1.8125rem;
+  text-align: center;
+}
+
 /*************** Common ****************/
 .btn {
   border: 0;
@@ -125,11 +176,18 @@ body {
   font-family: var(--ff-base);
   font-weight: var(--fw-bold);
   font-size: 1rem;
+  line-height: 2;
 
+  /* desktop
   padding-block: 1.125rem;
   padding-inline: 2.85rem;
 
   border-radius: 1.75rem;
+  */
+  padding-block: 0.5rem;
+  padding-inline: 1.5rem;
+
+  border-radius: 1.375rem;
 }
 .btn--primary {
   color: var(--clr-neutral-100);
@@ -157,44 +215,161 @@ body {
   background-color: var(--clr-accent-1);
 }
 
+.icon--logo {
+  height: 3rem;
+}
+
 /*************** Header ****************/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 1rem;
+}
 
 /*************** Intro Section ****************/
+.intro {
+  margin-top: 2rem;
+}
 .skills {
+  margin-top: 2rem;
 }
-.skills--graphic-design {
+.skills ul {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+}
+.skill {
+  position: relative;
+  border-radius: 0.5rem;
+  display: grid;
+  align-content: flex-end;
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+  grid-column: 1 / -1;
+}
+.skill img {
+  display: block;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+.skill--graphic-design {
   background-color: var(--clr-accent-1);
+  min-height: 364px;
 }
-.skills--ui-ux {
+.skill--ui-ux {
   background-color: var(--clr-accent-2);
+  min-height: 182px;
+  grid-column: 1 / 2;
 }
-.skills--apps {
+.skill--apps {
   background-color: var(--clr-accent-3);
+  min-height: 182px;
+  grid-column: 2 / -1;
 }
-.skills--photography {
+.skill--photography {
   background-color: var(--clr-accent-5);
+  height: 182px;
 }
-.skills--illustrations {
+.skill--illustrations {
   background-color: var(--clr-accent-4);
+  height: 158px;
 }
-.skills--motion-graphics {
+.skill--motion-graphics {
   background-color: var(--clr-accent-6);
+  height: 182px;
 }
 
 /*************** Portfolio Section ****************/
+.portfolio {
+  display: grid;
+  margin-top: 6.25rem;
+}
+.portfolio__bio {
+  display: grid;
+  justify-items: center;
+}
 .portfolio__photo {
   width: 100%;
+}
+.portfolio .heading--2 {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+.portfolio p {
+  padding-inline: 0;
+  margin-inline: 0;
+  margin-top: 1.5rem;
+}
+.portfolio .btn {
+  margin-top: 1.5rem;
+}
+.carousel {
+  margin-top: 6.25rem;
+}
+.carousel .heading--3 {
+  text-align: center;
+}
+.carousel__strip {
+  overflow: scroll;
+  display: flex;
+  gap: 1.875rem;
+  width: 100vw;
+  height: 180px;
+  margin-top: 2rem;
+  padding-inline: max(0px, 50vw - 135px);
+}
+.carousel__strip img {
+  border-radius: 10px;
+}
+.carousel__controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 /*************** CTA Section ****************/
 .cta {
+  display: grid;
+  justify-items: center;
   color: var(--clr-neutral-100);
   background-color: var(--clr-neutral-900);
+
+  border-radius: 10px;
+  margin-top: 7.5rem;
+  padding-bottom: 3rem;
+}
+
+.cta .heading--2 {
+  color: var(--clr-neutral-100);
+  text-align: center;
+  padding-top: 3rem;
+}
+.cta p {
+  padding: 0;
+  margin-top: 1.5rem;
+  margin-inline: 1.5rem;
+}
+.cta .btn {
+  margin-top: 1.5rem;
 }
 
 /*************** Footer ****************/
+.footer {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
 
 /************* Utilities ****************/
 .visually-hidden {
   display: none;
+}
+.container {
+  max-width: 1110px;
+  margin-inline: max(1rem, 50vw - 555px);
 }
