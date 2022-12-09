@@ -267,14 +267,21 @@ p {
 }
 .carousel__strip {
   overflow: scroll;
+  scroll-snap-type: inline mandatory;
+  overscroll-behavior: inline contain;
   display: flex;
   gap: 1.875rem;
   width: 100vw;
   height: 180px;
   margin-top: 2rem;
   padding-inline: max(0px, 50vw - 135px);
+  scrollbar-width: none;
+}
+.carousel__strip::-webkit-scrollbar {
+  display: none;
 }
 .carousel__strip img {
+  scroll-snap-align: center;
   border-radius: 10px;
 }
 .carousel__controls {
