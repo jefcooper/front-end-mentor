@@ -140,6 +140,8 @@ p {
   padding-inline: 1.5rem;
 
   border-radius: 1.375rem;
+
+  cursor: pointer;
 }
 .btn--primary {
   color: var(--clr-neutral-100);
