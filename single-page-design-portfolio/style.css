@@ -49,19 +49,6 @@ img {
 }
 
 /************* Body ***************/
-/* desktop *
-.heading--1 {
-  font-size: 3.5rem;
-  line-height: 1.25;
-  font-family: var(--ff-base);
-  font-weight: var(--fw-bold);
-  font-style: normal;
-  text-decoration: none;
-  text-transform: none;
-  color: var(--clr-neutral-900);
-  text-align: center;
-}
-*/
 .heading--1 {
   font-size: 2.25rem;
   line-height: 1.25;
@@ -73,19 +60,6 @@ img {
   color: var(--clr-neutral-900);
   text-align: center;
 }
-
-/* desktop
-.heading--2 {
-  font-size: 2.5rem;
-  line-height: 1.275;
-  font-family: var(--ff-base);
-  font-weight: var(--fw-bold);
-  font-style: normal;
-  text-decoration: none;
-  text-transform: none;
-  color: var(--clr-neutral-900);
-}
-*/
 .heading--2 {
   font-size: 1.625rem;
   line-height: 1.26;
@@ -115,18 +89,6 @@ img {
   text-transform: none;
   color: var(--clr-neutral-100);
 }
-/* desktop
-.p {
-  font-size: 1.125rem;
-  line-height: 1.56;
-  font-family: var(--ff-base);
-  font-weight: var(--fw-medium);
-  font-style: normal;
-  text-decoration: none;
-  text-transform: none;
-  color: var(--clr-neutral-500);
-}
-*/
 .p {
   font-size: 1rem;
   line-height: 1.625;
@@ -148,10 +110,6 @@ img {
 body {
   font-size: 1rem;
   line-height: 1.625;
-  /* desktop
-  font-size: 1.125rem;
-  line-height: 1.56;
-  */
   font-family: var(--ff-base);
   font-weight: var(--fw-medium);
   font-style: normal;
@@ -178,12 +136,6 @@ p {
   font-size: 1rem;
   line-height: 2;
 
-  /* desktop
-  padding-block: 1.125rem;
-  padding-inline: 2.85rem;
-
-  border-radius: 1.75rem;
-  */
   padding-block: 0.5rem;
   padding-inline: 1.5rem;
 
@@ -208,7 +160,7 @@ p {
   background-color: var(--clr-neutral-900);
   height: 4rem;
   width: 4rem;
-  border-radius: 2rem;
+  border-radius: 50%;
   padding: 0;
 }
 .btn--round:hover {
@@ -285,6 +237,7 @@ p {
 /*************** Portfolio Section ****************/
 .portfolio {
   display: grid;
+  justify-items: center;
   margin-top: 6.25rem;
 }
 .portfolio__bio {
@@ -363,6 +316,7 @@ p {
   margin-bottom: 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 /************* Utilities ****************/
@@ -382,4 +336,194 @@ p {
 .container {
   max-width: 1110px;
   margin-inline: max(1rem, 50vw - 555px);
+}
+
+/* Tablet 481px or 31rem */
+@media screen and (min-width: 31rem) {
+  body {
+    font-size: 1.125rem;
+    line-height: 1.56;
+  }
+  .heading--1 {
+    font-size: 2.75rem;
+  }
+  p {
+    font-size: 1.125rem;
+    line-height: 1.56;
+  }
+  .btn {
+    font-size: 1rem;
+    padding-block: 0.75rem;
+    padding-inline: 2.85rem;
+
+    border-radius: 1.75rem;
+  }
+  .btn--round {
+    padding: 0.75rem;
+
+    /* note: .btn in media is more specific, so needed to re-assert border-radius here */
+    border-radius: 50%;
+  }
+  .header {
+    margin-top: 2.125rem;
+  }
+  .icon--logo {
+    height: 4rem;
+  }
+  .container {
+    margin-inline: max(2.5rem, 50vw - 555px);
+  }
+
+  /* Intro */
+  .intro {
+    margin-top: 4rem;
+  }
+  .intro p {
+    margin-top: 1.6875rem;
+    margin-inline: 3.65rem;
+  }
+
+  /* Skills */
+  .skills {
+    margin-top: 4rem;
+  }
+  .skills ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .skill--graphic-design {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+  .skill--ui-ux {
+    grid-column: 3 / 4;
+  }
+  .skill--apps {
+    grid-column: 4 / -1;
+  }
+  .skill--photography {
+    grid-column: 1 / 3;
+  }
+  .skill--illustrations {
+    grid-column: 3 / -1;
+  }
+  .skill--motion-graphics {
+    grid-column: 3 / -1;
+  }
+
+  /* Portfolio */
+  .portfolio {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+  .portfolio .heading--2 {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  /* Carousel */
+  .carousel {
+    margin-top: 7.5rem;
+  }
+  .carousel__strip {
+    height: 360px;
+    padding-inline: max(0px, 50vw - 270px);
+    margin-top: 3.5rem;
+  }
+  .carousel__controls {
+    margin-top: 3.5rem;
+  }
+
+  /* CTA */
+  .cta {
+    padding-bottom: 4rem;
+  }
+  .cta .heading--2 {
+    font-size: 2rem;
+    padding-top: 3.5rem;
+  }
+  .cta p {
+    margin-top: 1, 625rem;
+    margin-inline: 4.6875rem;
+  }
+  .cta .btn {
+    margin-top: 1.625rem;
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+}
+
+/* Laptop 769px or 49rem */
+@media screen and (min-width: 49rem) {
+  .heading--1 {
+    font-size: 3.5rem;
+  }
+
+  /* Skills */
+  .skills {
+    margin-top: 5rem;
+  }
+  .skills ul {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .skill--graphic-design {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+  .skill--ui-ux {
+    grid-column: 3 / 4;
+  }
+  .skill--apps {
+    grid-column: 4 / 5;
+  }
+  .skill--photography {
+    grid-column: 5 / -1;
+    grid-row: 1 / 2;
+  }
+  .skill--illustrations {
+    grid-column: 3 / 5;
+  }
+  .skill--motion-graphics {
+    grid-column: 5 / -1;
+    height: 158px;
+  }
+
+  /* Portfolio */
+  .portfolio .heading--2 {
+    font-size: 2.5rem;
+  }
+  .portfolio__bio {
+  }
+
+  /* CTA */
+  .cta {
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    padding-left: 4rem;
+    padding-block: 5rem;
+  }
+  .cta .heading--2 {
+    font-size: 2.5rem;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+  .cta p {
+    margin: 0;
+    margin-top: 1.5rem;
+    padding: 0;
+    text-align: left;
+  }
+  .cta .btn {
+    margin: 0;
+  }
+}
+
+/* Desktop 1025px or 65rem */
+@media screen and (min-width: 65rem) {
 }
