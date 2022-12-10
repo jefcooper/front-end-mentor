@@ -238,9 +238,11 @@ p {
 
 /*************** Portfolio Section ****************/
 .portfolio {
+  position: relative;
   display: grid;
   justify-items: center;
   margin-top: 6.25rem;
+  margin-inline: 1rem;
 }
 .portfolio__bio {
   display: grid;
@@ -268,22 +270,26 @@ p {
   text-align: center;
 }
 .carousel__strip {
+  /* snap scrolling with touch or programmatic with buttons */
   overflow: scroll;
-  scroll-snap-type: inline mandatory;
-  overscroll-behavior: inline contain;
+  scroll-snap-type: inline mandatory; /* enable horizontal snapping on items */
+  overscroll-behavior: inline contain; /* prevent bounce at end of scroll */
+  scrollbar-width: none; /* hide scrollbar on Firefox */
+
   display: flex;
   gap: 1.875rem;
   width: 100vw;
   height: 180px;
   margin-top: 2rem;
   padding-inline: max(0px, 50vw - 135px);
-  scrollbar-width: none;
 }
 .carousel__strip::-webkit-scrollbar {
+  /* hide scrollbar on webkit browsers */
   display: none;
 }
 .carousel__strip img {
   scroll-snap-align: center;
+
   border-radius: 10px;
 }
 .carousel__controls {
@@ -421,13 +427,32 @@ p {
 
   /* Portfolio */
   .portfolio {
+    /* pad right as if it's centering in a 1110px container */
+    margin-right: max(2.5rem, 50vw - 555px);
+
+    /* pad left so at desktop it's same as right, but smaller we get negative
+       offset to make space for text block to right */
+    margin-left: max(min(2.5rem, 100vw - 812px), 50vw - 555px);
     grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
+    justify-items: flex-start;
+    gap: 4rem;
   }
   .portfolio .heading--2 {
     font-size: 2rem;
     text-align: left;
+    margin-top: 0;
+  }
+  .portfolio p {
+    text-align: left;
+    margin-top: 0;
+  }
+  .portfolio .btn {
+    margin-top: 0;
+  }
+  .portfolio__bio {
+    justify-items: left;
+    align-content: space-between;
+    min-width: 339px;
   }
 
   /* Carousel */
@@ -505,8 +530,6 @@ p {
   .portfolio .heading--2 {
     font-size: 2.5rem;
   }
-  .portfolio__bio {
-  }
 
   /* CTA */
   .cta {
@@ -535,4 +558,10 @@ p {
 
 /* Desktop 1025px or 65rem */
 @media screen and (min-width: 65rem) {
+  .portfolio {
+    gap: 0;
+  }
+  .portfolio__bio {
+    padding-block: 4.375rem;
+  }
 }
