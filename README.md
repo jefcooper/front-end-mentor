@@ -11,3 +11,5 @@ Frontend Mentor Challenges
 [Profile Card Component](https://jefcooper.github.io/front-end-mentor/profile-card-component-main/)
 
 [Blogr Landing Page](https://jefcooper.github.io/front-end-mentor/blogr-landing-page/)
+
+[Single-page Design Portfolio](https://jefcooper.github.io/front-end-mentor/single-page-design-portfolio/)
