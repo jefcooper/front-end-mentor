@@ -27,15 +27,15 @@ Users should be able to:
 
 The finished desktop version.
 
-![Finished Desktop](./screenshot.jpg)
+![Finished Desktop](./screenshot-desktop.jpg)
 
 The finished tablet version.
 
-![Finished Mobile](./screenshot2.jpg)
+![Finished Mobile](./screenshot-tablet.jpg)
 
 The finished mobile version.
 
-![Finished Mobile](./screenshot3.jpg)
+![Finished Mobile](./screenshot-mobile.jpg)
 
 ### Links
 
