@@ -1,0 +1,233 @@
+:root {
+  --clr-primary-200: hsl(178, 55%, 61%);
+  --clr-primary-400: hsl(179, 81%, 29%);
+
+  --clr-accent-400: hsl(25, 94%, 86%);
+
+  --clr-neutral-100: hsl(43, 0%, 100%);
+  --clr-neutral-200: hsl(43, 78%, 98%);
+  --clr-neutral-300: hsl(40, 29%, 94%);
+  --clr-neutral-400: hsl(26, 11%, 87%);
+  --clr-neutral-700: hsl(215, 5%, 54%);
+  --clr-neutral-900: hsl(215, 19%, 25%);
+
+  --ff-base: "Barlow", sans-serif;
+  --ff-display: "Fraunces", serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-black: 900;
+}
+
+/********************************************************
+  CSS Resets
+ ********************************************************/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+a,
+body {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/********************************************************
+  Fonts
+ ********************************************************/
+.title--1 {
+  font-size: 2.5rem;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-black);
+  line-height: 4.5rem;
+  letter-spacing: 0.6px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+.heading--1 {
+  font-size: 2.5rem;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-black);
+  line-height: 2.5rem;
+  letter-spacing: 0.7px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+.heading--2 {
+  font-size: 1.75rem;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-black);
+  line-height: 1.75rem;
+  letter-spacing: 0.3px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+.heading--3 {
+  font-size: 2rem;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-black);
+  line-height: 3rem;
+  letter-spacing: 0.4px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+.heading--4 {
+  font-size: 1.75rem;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-black);
+  line-height: 2rem;
+  letter-spacing: 0.3px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+.heading--5 {
+  font-size: 1.5rem;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-black);
+  line-height: 2rem;
+  letter-spacing: 0.17px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+.heading--6 {
+  font-size: 1.5rem;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-black);
+  line-height: 1.75rem;
+  letter-spacing: 0.17px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+.btn {
+  font-size: 1.125rem;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-black);
+  line-height: 1.5625rem;
+  letter-spacing: 0.1px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+.p {
+  font-size: 0.938rem;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  line-height: 1.5625rem;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+.menu {
+  font-size: 0.75rem;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-bold);
+  line-height: 0.9375rem;
+  letter-spacing: 0.92px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.order {
+  font-size: 1.5rem;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-black);
+  line-height: 2.5rem;
+  letter-spacing: 0.17px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+.order__heading {
+  font-size: 0.938rem;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  line-height: 1.5625rem;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Tablet Font Variants */
+@media screen and (min-width: 768px) {
+  .title--1 {
+    font-size: 6rem;
+    line-height: 4.5rem;
+    letter-spacing: 8.6px;
+  }
+  .heading--1 {
+    font-size: 3rem;
+    line-height: 3rem;
+    letter-spacing: 1.05px;
+  }
+}
+
+/* Desktop Font Variants */
+@media screen and (min-width: 1024px) {
+  .title--1 {
+    font-size: 9.375rem;
+    line-height: 4.5rem;
+    letter-spacing: 14.2px;
+  }
+  .heading--1 {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    letter-spacing: 3.6px;
+  }
+  .heading--2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    letter-spacing: 0.6px;
+  }
+  .heading--3 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+    letter-spacing: 0.4px;
+  }
+  .p {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+}
+
+/********************************************************
+  Structure
+ ********************************************************/
+
+body {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-neutral-900);
+
+  font-size: 0.938rem;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  line-height: 1.5625rem;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
