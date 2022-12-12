@@ -20,9 +20,13 @@
 </head>
 
 <body>
-  <header class="header">
-    <nav class="nav">
-      <ul>
+  <header class="header container">
+    <img src="assets/logo.svg" alt="">
+    <nav class="nav menu">
+      <button class="menu__toggle" type="button" aria-expanded="false">
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <ul class="menu__options">
         <li>
           <a href="#">Home</a>
         </li>
@@ -36,7 +40,7 @@
     </nav>
   </header>
   <main class="main">
-    <section class="hero">
+    <section class="hero container">
       <h1 class="heading--1">
         Great coffee made simple.
       </h1>
@@ -56,6 +60,7 @@
         Our collection
       </h2>
 
+      <img src="assets/home/image-gran-espresso.png" alt="">
       <h3 class="heading--5">
         Gran Espresso
       </h3>
@@ -63,6 +68,7 @@
         Light and flavorful blend with cocoa and black pepper for an intense experience
       </p>
 
+      <img src="assets/home/image-planalto.png" alt="">
       <h3 class="heading--5">
         Planalto
       </h3>
@@ -70,6 +76,7 @@
         Brazilian dark roast with rich and velvety body, and hints of fruits and nuts
       </p>
 
+      <img src="assets/home/image-piccollo.png" alt="">
       <h3 class="heading--5">
         Piccollo
       </h3>
@@ -77,6 +84,7 @@
         Mild and smooth blend featuring notes of toasted almond and dried cherry
       </p>
 
+      <img src="assets/home/image-danche.png" alt="">
       <h3 class="heading--5">
         Danche
       </h3>
@@ -85,7 +93,7 @@
       </p>
     </section>
 
-    <section class="why-us">
+    <section class="why-us container">
       <h2 class="heading--2">
         Why choose us?
       </h2>
@@ -96,26 +104,35 @@
         you a more impactful experience on every level.
       </p>
 
-      <h3 class="heading--5">
-        Best quality
-      </h3>
-      <p class="p">
-        Discover an endless variety of the world’s best artisan coffee from each of our roasters.
-      </p>
+      <div class="why-us__card">
+        <img src="assets/home/icon-coffee-bean.svg" alt="">
+        <h3 class="heading--5">
+          Best quality
+        </h3>
+        <p class="p">
+          Discover an endless variety of the world’s best artisan coffee from each of our roasters.
+        </p>
+      </div>
 
-      <h3 class="heading--5">
-        Exclusive benefits
-      </h3>
-      <p class="p">
-        Special offers and swag when you subscribe, including 30% off your first shipment.
-      </p>
+      <div class="why-us__card">
+        <img src="assets/home/icon-gift.svg" alt="">
+        <h3 class="heading--5">
+          Exclusive benefits
+        </h3>
+        <p class="p">
+          Special offers and swag when you subscribe, including 30% off your first shipment.
+        </p>
+      </div>
 
-      <h3 class="heading--5">
-        Free shipping
-      </h3>
-      <p class="p">
-        We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.
-      </p>
+      <div class="why-us__card">
+        <img src="assets/home/icon-truck.svg" alt="">
+        <h3 class="heading--5">
+          Free shipping
+        </h3>
+        <p class="p">
+          We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.
+        </p>
+      </div>
     </section>
 
     <section class="how-it-works">
@@ -123,45 +140,33 @@
         How it works
       </h2>
 
-      <h3>
-        <span class="heading--1">
-          01
-        </span>
-        <span class="heading--4">
-          Pick your coffee
-        </span>
-      </h3>
-      <p class="p">
-        Select from our evolving range of artisan coffees. Our beans are ethically
-        sourced and we pay fair prices for them. There are new coffees in all profiles
-        every month for you to try out.
-      </p>
+      <ul class="how-it-works__list">
+        <li class="how-it-works__card">
+          <h3 class="heading--4">Pick your coffee</h3>
+          <p class="p">
+            Select from our evolving range of artisan coffees. Our beans are ethically
+            sourced and we pay fair prices for them. There are new coffees in all profiles
+            every month for you to try out.
+          </p>
+        </li>
 
-      <h3>
-        <span class="heading--1">
-          02
-        </span>
-        <span class="heading--4">
-          Choose the frequency
-        </span>
-      </h3>
-      <p class="p">
-        Customize your order frequency, quantity, even your roast style and grind type.
-        Pause, skip or cancel your subscription with no commitment through our online portal.
-      </p>
 
-      <h3>
-        <span class="heading--1">
-          03
-        </span>
-        <span class="heading--4">
-          Receive and enjoy!
-        </span>
-      </h3>
-      <p class="p">
-        We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
-        world-class coffees curated to provide a distinct tasting experience.
-      </p>
+        <li class="how-it-works__card">
+          <h3 class="heading--4">Choose the frequency</h3>
+          <p class="p">
+            Customize your order frequency, quantity, even your roast style and grind type.
+            Pause, skip or cancel your subscription with no commitment through our online portal.
+          </p>
+        </li>
+
+        <li class="how-it-works__card">
+          <h3 class="heading--4">Receive and enjoy!</h3>
+          <p class="p">
+            We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
+            world-class coffees curated to provide a distinct tasting experience.
+          </p>
+        </li>
+      </ul>
 
       <button type="button" class="btn">
         Create your plan
@@ -169,8 +174,9 @@
     </section>
   </main>
   <footer class="footer">
-    <nav>
-      <ul>
+    <img class="footer__logo" src="assets/logo-white.svg" alt="">
+    <nav class="nav menu">
+      <ul class="menu__options">
         <li>
           <a href="#">Home</a>
         </li>
@@ -182,6 +188,11 @@
         </li>
       </ul>
     </nav>
+    <div class="footer__social">
+      <img src="assets/icon-facebook.svg" alt="">
+      <img src="assets/icon-twitter.svg" alt="">
+      <img src="assets/icon-instagram.svg" alt="">
+    </div>
   </footer>
 </body>
 
