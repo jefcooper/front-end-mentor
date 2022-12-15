@@ -201,7 +201,7 @@ a {
 @media screen and (min-width: 1024px) {
   .title--1 {
     font-size: 9.375rem;
-    line-height: 4.5rem;
+    line-height: 1;
     letter-spacing: 14.2px;
   }
   .heading--1 {
@@ -314,15 +314,14 @@ body {
 .our-collection {
   margin-top: 7.5rem;
 }
-.our-collection ul {
-}
-.our-collection li {
+.our-collection__grid {
   display: grid;
   justify-items: center;
 }
 .our-collection__card {
   display: grid;
   justify-items: center;
+  margin-top: 1.5rem;
 }
 .our-collection img {
   margin-top: 3rem;
@@ -331,13 +330,10 @@ body {
 .our-collection img:first-of-type {
   margin-top: 1rem;
 }
-.our-collection .heading--5 {
-  margin-top: 1.5rem;
-}
 .our-collection .p {
   margin-top: 1rem;
   text-align: center;
-  margin-inline: 2.87rem;
+  margin-inline: 2rem;
 }
 
 /************ Why Us Section ***************/
@@ -482,37 +478,18 @@ body {
     width: 65%;
   }
 
-  .our-collection {
-    margin-top: 9rem;
-    justify-items: flex-start;
-  }
-  .our-collection li {
-    justify-items: center;
+  .our-collection__grid {
     grid-template-columns: 1fr 1fr;
-    margin-top: 2rem;
-  }
-  .our-collection li:first-of-type {
-    margin-top: -1.5rem;
-  }
-  .our-collection img:first-of-type {
-    margin: 0;
-    padding-left: 1.7rem;
-  }
-  .our-collection img {
-    margin: 0;
+    margin-inline: 3.626rem;
+    align-items: center;
+    margin-top: -2.7rem;
   }
   .our-collection__card {
     justify-items: flex-start;
-    align-content: center;
+    gap: 1.5rem;
+    margin: 0;
   }
   .our-collection__card .p {
-    margin: 0;
-    margin-top: 1.5rem;
-    text-align: left;
-    width: 34ch;
-  }
-  .our-collection__card .heading--5 {
-    line-height: 1;
     margin: 0;
     text-align: left;
   }
@@ -613,6 +590,133 @@ body {
   }
   .footer__social {
     margin-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    padding-top: 2.5rem;
+  }
+  .hero {
+    margin-top: 2.5rem;
+    gap: 2rem;
+    background-image: url(assets/home/image-hero-coffeepress-lg.jpg);
+    height: 600px;
+  }
+  .hero .heading--1 {
+    width: 50%;
+  }
+  .hero .p {
+    width: 35%;
+  }
+  .our-collection__grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column;
+
+    margin-top: -6rem;
+  }
+  .our-collection__card {
+    justify-items: center;
+  }
+  .our-collection__card .p {
+    text-align: center;
+    margin-inline: 1rem;
+  }
+  .why-us__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-inline: 5.3125rem;
+    margin-top: 5.375rem;
+    gap: 1.875rem;
+  }
+  .why-us .heading--2 {
+    padding-top: 6.25rem;
+  }
+  .why-us::after {
+    height: 577px;
+  }
+  .why-us .p {
+    margin-top: 2rem;
+  }
+  .why-us__card {
+    margin: 0;
+    padding: 0;
+    height: 382px;
+    padding: 3rem;
+
+    grid-auto-flow: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+
+    gap: 3.5rem;
+  }
+  .why-us__card .heading--5 {
+    text-align: center;
+  }
+  .why-us__card .p {
+    text-align: center;
+    margin: 0;
+    margin-top: 1.5rem;
+  }
+  .why-us__card:first-of-type {
+    margin: 0;
+  }
+  .how-it-works {
+    margin-top: 12.5rem;
+    padding-inline: 5.3125rem;
+  }
+  .how-it-works__list {
+    margin-top: 5rem;
+    justify-self: stretch;
+    justify-content: space-between;
+    justify-items: flex-start;
+    gap: 1.875rem;
+  }
+  .how-it-works__line::after {
+    max-width: 35vw;
+  }
+  .how-it-works .heading--4 {
+    font-size: 2rem;
+    width: 10ch;
+  }
+  .how-it-works__list .heading--4::before {
+    margin: 0;
+    margin-top: 2.3125rem;
+    margin-bottom: 2.375rem;
+  }
+  .how-it-works__list .p {
+    margin-top: 0.75rem;
+    width: 30ch;
+  }
+  .how-it-works .btn {
+    margin-top: 4rem;
+  }
+  .how-it-works__background {
+    background-color: aqua;
+  }
+  .footer {
+    display: flex;
+    align-items: center;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, auto);
+    margin-inline: 5.3125rem;
+  }
+  .footer__social {
+    margin: 0;
+    margin-left: auto;
+  }
+  .footer .menu {
+    margin-top: 0;
+    margin-left: 10rem;
+  }
+  .footer .menu__options {
+    justify-content: stretch;
+    height: fit-content;
+  }
+  .footer__social img {
+    width: 24px;
+    height: 24px;
   }
 }
 
