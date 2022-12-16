@@ -15,29 +15,32 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/plan.css">
+  <script src="script.js"></script>
 
   <title>Frontend Mentor | Coffeeroasters subscription site</title>
 </head>
 
 <body>
-  <header class="header">
-    <img src="assets/logo.svg" alt="">
-    <nav class="nav menu">
-      <button class="menu__toggle" type="button" aria-expanded="false">
-        <span class="visually-hidden">Menu</span>
-      </button>
-      <ul class="menu__options">
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="about.html">About us</a>
-        </li>
-        <li>
-          <a href="#">Create your plan</a>
-        </li>
-      </ul>
-    </nav>
+  <header class="header container">
+    <div class="menu__backdrop" onclick="closeMenu(event);">
+      <img src="assets/logo.svg" alt="">
+      <nav class="nav menu">
+        <button class="menu__toggle" type="button" aria-expanded="false" onclick="headerNavMenuClicked(event);">
+          <span class="visually-hidden">Menu</span>
+        </button>
+        <ul class="menu__options">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="about.html">About us</a>
+          </li>
+          <li>
+            <a href="#">Create your plan</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="main">
@@ -306,9 +309,10 @@
     </section>
   </main>
 
-  <footer>
-    <nav>
-      <ul>
+  <footer class="footer container">
+    <img class="footer__logo" src="assets/logo-white.svg" alt="">
+    <nav class="nav menu">
+      <ul class="menu__options">
         <li>
           <a href="index.html">Home</a>
         </li>
@@ -320,6 +324,11 @@
         </li>
       </ul>
     </nav>
+    <div class="footer__social">
+      <img src="assets/icon-facebook.svg" alt="">
+      <img src="assets/icon-twitter.svg" alt="">
+      <img src="assets/icon-instagram.svg" alt="">
+    </div>
   </footer>
 </body>
 

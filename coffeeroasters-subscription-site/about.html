@@ -15,32 +15,35 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/about.css">
+  <script src="script.js"></script>
 
   <title>Frontend Mentor | Coffeeroasters subscription site</title>
 </head>
 
 <body>
-  <header class="header">
-    <img src="assets/logo.svg" alt="">
-    <nav class="nav menu">
-      <button class="menu__toggle" type="button" aria-expanded="false">
-        <span class="visually-hidden">Menu</span>
-      </button>
-      <ul class="menu__options">
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="#">About us</a>
-        </li>
-        <li>
-          <a href="plan.html">Create your plan</a>
-        </li>
-      </ul>
-    </nav>
+  <header class="header container">
+    <div class="menu__backdrop" onclick="closeMenu(event);">
+      <img src="assets/logo.svg" alt="">
+      <nav class="nav menu">
+        <button class="menu__toggle" type="button" aria-expanded="false" onclick="headerNavMenuClicked(event);">
+          <span class="visually-hidden">Menu</span>
+        </button>
+        <ul class="menu__options">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="#">About us</a>
+          </li>
+          <li>
+            <a href="plan.html">Create your plan</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main class="main">
-    <section class="about-us">
+    <section class="about-us container">
       <h1 class="heading--2">
         About us
       </h1>
@@ -52,7 +55,8 @@
       </p>
     </section>
 
-    <section class="our-commitment">
+    <section class="our-commitment container">
+      <div class="our-commitment__img"></div>
       <h2 class="heading--3">
         Our commitment
       </h2>
@@ -68,7 +72,8 @@
       </p>
     </section>
 
-    <section class="uncompromising-quality">
+    <section class="uncompromising-quality container">
+      <div class="uncompromising-quality__img"></div>
       <h2 class="heading--2">
         Uncompromising quality
       </h2>
@@ -80,54 +85,52 @@
       </p>
     </section>
 
-    <section class="headquarters">
+    <section class="headquarters container">
       <h2 class="heading--5">
         Our headquarters
       </h2>
 
       <ul class="headquarters__list">
         <li>
+          <img src="assets/about/illustration-uk.svg" alt="">
           <h3 class="heading--2">
             United Kingdom
           </h3>
-          <p class="p">
-            68 Asfordby Rd
-            Alcaston
-            SY6 1YA
-            +44 1241 918425
-          </p>
+          <p class="p">68 Asfordby Rd</p>
+          <p class="p">Alcaston</p>
+          <p class="p">SY6 1YA</p>
+          <p class="p">+44 1241 918425</p>
         </li>
 
         <li>
+          <img src="assets/about/illustration-canada.svg" alt="">
           <h3 class="heading--2">
             Canada
           </h3>
-          <p class="p">
-            1528 Eglinton Avenue
-            Toronto
-            Ontario M4P 1A6
-            +1 416 485 2997
-          </p>
+          <p class="p">1528 Eglinton Avenue</p>
+          <p class="p">Toronto</p>
+          <p class="p">Ontario M4P 1A6</p>
+          <p class="p">+1 416 485 2997</p>
         </li>
 
         <li>
+          <img src="assets/about/illustration-australia.svg" alt="">
           <h3 class="heading--2">
             Australia
           </h3>
-          <p class="p">
-            36 Swanston Street
-            Kewell
-            Victoria
-            +61 4 9928 3629
-          </p>
+          <p class="p">36 Swanston Street</p>
+          <p class="p">Kewell</p>
+          <p class="p">Victoria</p>
+          <p class="p">+61 4 9928 3629</p>
         </li>
       </ul>
     </section>
   </main>
 
-  <footer class="footer">
-    <nav>
-      <ul>
+  <footer class="footer container">
+    <img src="assets/logo-white.svg" alt="coffee roasters logo" class="footer__logo">
+    <nav class="nav menu">
+      <ul class="menu__options">
         <li>
           <a href="index.html">Home</a>
         </li>
@@ -138,6 +141,11 @@
           <a href="plan.html">Create your plan</a>
         </li>
       </ul>
+      <div class="footer__social">
+        <img src="assets/icon-facebook.svg" alt="">
+        <img src="assets/icon-twitter.svg" alt="">
+        <img src="assets/icon-instagram.svg" alt="">
+      </div>
     </nav>
   </footer>
 </body>

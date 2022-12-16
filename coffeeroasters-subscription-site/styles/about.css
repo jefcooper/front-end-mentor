@@ -1,0 +1,95 @@
+/****************** About Us ***********************/
+.about-us {
+  display: grid;
+  align-content: center;
+  gap: 1.5rem;
+  padding-inline: 1.5rem;
+  margin-top: 2.5rem;
+  height: 400px;
+  text-align: center;
+
+  color: var(--clr-neutral-200);
+  background-image: url(../assets/about/image-hero-whitecup-sm.jpg);
+  background-size: cover;
+  border-radius: 10px;
+}
+.about-us .heading--2 {
+  text-transform: capitalize;
+}
+
+/*************** Our Commitment ********************/
+.our-commitment {
+  margin-top: 7.5rem;
+  text-align: center;
+}
+.our-commitment__img {
+  height: 400px;
+
+  background-image: url(../assets/about/image-commitment-sm.jpg);
+  background-size: cover;
+  border-radius: 10px;
+}
+.our-commitment .heading--3 {
+  margin-top: 3rem;
+}
+.our-commitment .p {
+  margin-top: 1.875rem;
+}
+
+/************* Uncompromising Quality **************/
+.uncompromising-quality {
+  position: relative;
+  margin-top: 12.375rem;
+  height: 509px;
+
+  text-align: center;
+  color: var(--clr-neutral-200);
+}
+.uncompromising-quality::before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 509px;
+  background-color: var(--clr-neutral-900);
+  border-radius: 10px;
+}
+.uncompromising-quality__img {
+  margin-inline: 1.5rem;
+  transform: translateY(-50%);
+  height: 156px;
+  width: calc(100vw - 6rem);
+  border-radius: 8px;
+  background-image: url(../assets/about/image-quality-sm.jpg);
+  background-size: cover;
+}
+.uncompromising-quality .heading--2 {
+  margin-top: -1rem;
+}
+.uncompromising-quality .p {
+  margin-top: 1.5rem;
+  margin-inline: 1.5rem;
+}
+
+/***************** Headquarters ********************/
+.headquarters {
+  margin-top: 7.5rem;
+  display: grid;
+  justify-items: center;
+  color: var(--clr-neutral-700);
+}
+.headquarters__list {
+  display: grid;
+  justify-content: center;
+}
+.headquarters__list li {
+  margin-top: 4.5rem;
+  text-align: center;
+  color: var(--clr-neutral-900);
+}
+.headquarters__list .heading--2 {
+  margin-top: 3.1875rem;
+  margin-bottom: 1.6875rem;
+}
