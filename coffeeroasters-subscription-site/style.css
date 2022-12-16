@@ -491,9 +491,12 @@ body.modal .menu__backdrop {
   background-color: var(--clr-neutral-900);
   text-align: center;
   padding: 3.375rem;
+  margin-bottom: 4.5rem;
 }
 .footer .menu {
   margin-top: 3rem;
+  text-align: center;
+  justify-items: center;
 }
 .footer a {
   color: var(--clr-neutral-700);
