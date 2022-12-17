@@ -1,0 +1,104 @@
+.create-a-plan {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 1.5rem;
+  height: 400px;
+  background-image: url(../assets/plan/image-hero-blackcup-sm.jpg);
+  background-size: cover;
+  color: var(--clr-neutral-200);
+  text-align: center;
+  padding-inline: 1.5rem;
+  border-radius: 10px;
+  margin-top: 2.5rem;
+}
+
+.create-a-plan .p {
+  opacity: 70%;
+}
+
+.plan-steps {
+  margin-top: 7.5rem;
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-neutral-200);
+  border-radius: 10px;
+  text-align: center;
+  padding-inline: 1.5rem;
+  padding-block: 5rem;
+}
+.plan-steps__list {
+  counter-reset: plan-steps;
+}
+.plan-steps .heading--4:where(:not(:first-of-type)) {
+  margin-top: 3.5rem;
+}
+.plan-steps .heading--4::before {
+  display: block;
+  counter-increment: plan-steps;
+  content: counter(plan-steps, decimal-leading-zero);
+  font-size: 4.5rem;
+  letter-spacing: 3.6px;
+  color: var(--clr-accent-400);
+  margin-bottom: 1.5rem;
+}
+.plan-steps .p {
+  margin-top: 1.5rem;
+}
+.plan {
+  margin-top: 7.5rem;
+}
+.plan .side-nav {
+  display: none;
+}
+.plan .heading--2 {
+  color: var(--clr-neutral-700);
+  font-size: 1.5rem;
+}
+.accordion__heading {
+  position: relative;
+}
+.accordion__heading::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  content: url(../assets/plan/icon-arrow.svg);
+}
+.accordion__option {
+  margin-top: 2rem;
+  background-color: var(--clr-neutral-300);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+.accordion__option .p {
+  margin-top: 0.5rem;
+}
+.accordion__option + .accordion__option {
+  margin-top: 0.5rem;
+}
+.accordion__option--selected {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-400);
+}
+.accordion {
+  margin-bottom: 6.875rem;
+}
+
+.order {
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-neutral-100);
+  padding-block: 2rem;
+  padding-inline: 1.5rem;
+  border-radius: 10px;
+  text-align: left;
+}
+.order__heading {
+  color: var(--clr-neutral-700);
+}
+.order-submit {
+  margin-top: 3.5rem;
+  display: grid;
+  justify-items: center;
+}
+.order-confirmation {
+  display: none;
+}

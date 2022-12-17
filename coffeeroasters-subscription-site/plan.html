@@ -44,7 +44,7 @@
   </header>
 
   <main class="main">
-    <section class="create-a-plan">
+    <section class="create-a-plan container">
       <h1 class="heading--1">
         Create a plan
       </h1>
@@ -55,24 +55,29 @@
     </section>
 
     <section class="plan-steps">
-      01
-      Pick your coffee
-      Select from our evolving range of artisan coffees. Our beans are ethically
-      sourced and we pay fair prices for them. There's new coffees in all profiles
-      every month for you to try out.
+      <div class="plan-steps__list">
+        <h3 class="heading--4">Pick your coffee</h3>
+        <p class="p">
+          Select from our evolving range of artisan coffees. Our beans are ethically
+          sourced and we pay fair prices for them. There's new coffees in all profiles
+          every month for you to try out.
+        </p>
 
-      02
-      Choose the frequency
-      Customize your order frequency, quantity, even your roast style and grind type.
-      Pause, skip or cancel your subscription with no commitment through our online portal.
+        <h3 class="heading--4">Choose the frequency</h3>
+        <p class="p">
+          Customize your order frequency, quantity, even your roast style and grind type.
+          Pause, skip or cancel your subscription with no commitment through our online portal.
+        </p>
 
-      03
-      Receive and enjoy!
-      We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
-      world-class coffees curated to provide a distinct tasting experience.
+        <h3 class="heading--4">Receive and enjoy!</h3>
+        <p class="p">
+          We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
+          world-class coffees curated to provide a distinct tasting experience.
+        </p>
+      </div>
     </section>
 
-    <section class="plan">
+    <section class="plan container">
 
       <nav class="side-nav">
         <ul>
@@ -99,14 +104,14 @@
         </ul>
       </nav>
 
-      <div class="accordion">
+      <div class="accordion" aria-expanded="false">
 
-        <h2 class="heading--2 accordion__heading">
+        <h2 class="heading--2 accordion__heading" onclick="accordionClick(event);">
           How do you drink your coffee?
         </h2>
 
-        <div class="accordion__option">
-          <h3 class="heading--4">
+        <div class="accordion__option" onclick="coffeeOption(event, 'format', 'capsule');">
+          <h3 class="heading--5">
             Capsule
           </h3>
 
@@ -115,8 +120,8 @@
           </p>
         </div>
 
-        <div class="accorion__option">
-          <h3 class="heading--4">
+        <div class="accordion__option" onclick="coffeeOption(event, 'format', 'filter');">
+          <h3 class="heading--5">
             Filter
           </h3>
           <p class="p">
@@ -124,8 +129,8 @@
           </p>
         </div>
 
-        <div class="accordion__option">
-          <h3 class="heading--4">
+        <div class="accordion__option" onclick="coffeeOption(event, 'format', 'espresso');">
+          <h3 class="heading--5">
             Espresso
           </h3>
           <p class="p">
@@ -134,14 +139,14 @@
         </div>
       </div>
 
-      <div class="accordion">
+      <div class="accordion" aria-expanded="false">
 
-        <h2 class="heading--2 accordion__heading">
+        <h2 class="heading--2 accordion__heading" onclick="accordionClick(event);">
           What type of coffee?
         </h2>
 
-        <div class="accordion__option">
-          <h3 class="heading--4">
+        <div class="accordion__option" onclick="coffeeOption(event, 'type', 'single origin');">
+          <h3 class="heading--5">
             Single origin
           </h3>
           <p class="p">
@@ -149,8 +154,8 @@
           </p>
         </div>
 
-        <div class="accordion__option">
-          <h3 class="heading--4">
+        <div class="accordion__option" onclick="coffeeOption(event, 'type', 'decaf');">
+          <h3 class="heading--5">
             Decaf
           </h3>
           <p class="p">
@@ -158,8 +163,8 @@
           </p>
         </div>
 
-        <div class="accordion__option">
-          <h3 class="heading--4">
+        <div class="accordion__option" onclick="coffeeOption(event, 'type', 'blended');">
+          <h3 class="heading--5">
             Blended
           </h3>
           <p class="p">
@@ -168,12 +173,12 @@
         </div>
       </div>
 
-      <div class="accordion">
-        <h2 class="heading--2 accordion__heading">
+      <div class="accordion" aria-expanded="false">
+        <h2 class="heading--2 accordion__heading" onclick="accordionClick(event);">
           How much would you like?
         </h2>
-        <div class="accordion__option">
-          <h3 class="heading--4">
+        <div class="accordion__option" onclick="coffeeOption(event, 'quantity', '250g');">
+          <h3 class="heading--5">
             250g
           </h3>
           <p class="p">
@@ -181,8 +186,8 @@
           </p>
         </div>
 
-        <div class="accordion__option">
-          <h3 class="heading--4">
+        <div class="accordion__option" onclick="coffeeOption(event, 'quantity', '500g');">
+          <h3 class="heading--5">
             500g
           </h3>
           <p class="p">
@@ -190,8 +195,8 @@
           </p>
         </div>
 
-        <div class="accordion__option">
-          <h3 class="heading--4">
+        <div class="accordion__option" onclick="coffeeOption(event, 'quantity', '1000g');">
+          <h3 class="heading--5">
             1000g
           </h3>
           <p class="p">
@@ -200,13 +205,13 @@
         </div>
       </div>
 
-      <div class="accordion">
-        <h2 class="heading--2 accordion__heading">
+      <div class="accordion" aria-expanded="false">
+        <h2 class="heading--2 accordion__heading" onclick="accordionClick(event);">
           Want us to grind them?
         </h2>
 
-        <div class="accordion__option">
-          <h3 class="heading--4">
+        <div class="accordion__option" onclick="coffeeOption(event, 'grind', 'wholebean');">
+          <h3 class="heading--5">
             Wholebean
           </h3>
           <p class="p">
@@ -214,8 +219,8 @@
           </p>
         </div>
 
-        <div class="accordion__option">
-          <h3 class="heading--4">
+        <div class="accordion__option" onclick="coffeeOption(event, 'grind', 'filter');">
+          <h3 class="heading--5">
             Filter
           </h3>
           <p class="p">
@@ -223,8 +228,8 @@
           </p>
         </div>
 
-        <div class="accordion__option">
-          <h3 class="heading--4">
+        <div class="accordion__option" onclick="coffeeOption(event, 'grind', 'Cafetiére');">
+          <h3 class="heading--5">
             Cafetiére
           </h3>
           <p class="p">
@@ -233,13 +238,13 @@
         </div>
       </div>
 
-      <div class="accordion">
-        <h2 class="heading--2 accordion__heading">
+      <div class="accordion" aria-expanded="false">
+        <h2 class="heading--2 accordion__heading" onclick="accordionClick(event);">
           How often should we deliver?
         </h2>
 
-        <div class="accordion__option">
-          <h3 class="heading--4">
+        <div class="accordion__option" onclick="coffeeOption(event, 'frequency', 'weekly');">
+          <h3 class="heading--5">
             Every week
           </h3>
           <p class="p">
@@ -247,8 +252,8 @@
           </p>
         </div>
 
-        <div class="accordion__option">
-          <h3 class="heading--4">
+        <div class="accordion__option" onclick="coffeeOption(event, 'frequency', '2 weeks');">
+          <h3 class="heading--5">
             Every 2 weeks
           </h3>
           <p class="p">
@@ -256,8 +261,8 @@
           </p>
         </div>
 
-        <div class="accordion__option">
-          <h3 class="heading--4">
+        <div class="accordion__option" onclick="coffeeOption(event, 'frequency', 'monthly');">
+          <h3 class="heading--5">
             Every month
           </h3>
           <p class="p">
@@ -275,13 +280,15 @@
           sent to me _____.”
         </p>
 
-        <button type="button" class="btn">
+      </div>
+      <form class="order-submit" action="submit">
+        <button type="submit" class="btn">
           Create my plan!
         </button>
-      </div>
+      </form>
     </section>
 
-    <section class="order-summary">
+    <section class="order-confirmation">
 
       <!-- Modal -->
       <h2 class="order__heading">
@@ -307,6 +314,7 @@
       </button>
       <!-- End modal -->
     </section>
+
   </main>
 
   <footer class="footer container">
