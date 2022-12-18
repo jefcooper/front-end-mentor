@@ -464,6 +464,15 @@ body.modal .menu__backdrop {
   background-color: var(--clr-primary-200);
 }
 
+.icon--logo {
+  width: 237px;
+  height: 27px;
+  fill: var(--clr-neutral-900);
+}
+.icon--white-logo {
+  fill: var(--clr-neutral-100);
+}
+
 /********************************************************
   Utilities 
  ********************************************************/

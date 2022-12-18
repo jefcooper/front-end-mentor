@@ -24,7 +24,9 @@
 <body>
   <header class="header container">
     <div class="menu__backdrop" onclick="closeMenu(event);">
-      <img src="assets/logo.svg" alt="">
+      <svg class="icon--logo">
+        <use href="assets/images.svg#logo"></use>
+      </svg>
       <nav class="nav menu">
         <button class="menu__toggle" type="button" aria-expanded="false" onclick="headerNavMenuClicked(event);">
           <span class="visually-hidden">Menu</span>
@@ -198,7 +200,9 @@
     </section>
   </main>
   <footer class="footer container">
-    <img class="footer__logo" src="assets/logo-white.svg" alt="">
+    <svg class="icon--logo icon--white-logo">
+      <use href="assets/images.svg#logo"></use>
+    </svg>
     <nav class="nav menu">
       <ul class="menu__options">
         <li>
