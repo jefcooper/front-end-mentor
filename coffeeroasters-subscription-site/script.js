@@ -186,12 +186,14 @@ function updateOrderText() {
       "</span> type of bean.  "
   );
   text.push(
-    "<span class='order--highlight'>" + coffeeOptions["quantity"] + "</span> "
+    "<span class='order--highlight'>" +
+      (coffeeOptions["quantity"] || "___") +
+      "</span> "
   );
   if (coffeeOptions["grind"]) {
     text.push(
       "ground ala <span class='order--highlight'>" +
-        coffeeOptions["grind"] +
+        (coffeeOptions["grind"] || "___") +
         "</span>"
     );
   }
