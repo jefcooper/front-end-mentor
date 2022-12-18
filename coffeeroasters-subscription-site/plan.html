@@ -56,6 +56,9 @@
 
     <section class="plan-steps">
       <div class="plan-steps__list">
+
+        <div class="plan-steps__line"></div>
+        <div class="plan-steps__ball plan-steps__ball--1"></div>
         <h3 class="heading--4">Pick your coffee</h3>
         <p class="p">
           Select from our evolving range of artisan coffees. Our beans are ethically
@@ -63,12 +66,14 @@
           every month for you to try out.
         </p>
 
+        <div class="plan-steps__ball plan-steps__ball--2"></div>
         <h3 class="heading--4">Choose the frequency</h3>
         <p class="p">
           Customize your order frequency, quantity, even your roast style and grind type.
           Pause, skip or cancel your subscription with no commitment through our online portal.
         </p>
 
+        <div class="plan-steps__ball plan-steps__ball--3"></div>
         <h3 class="heading--4">Receive and enjoy!</h3>
         <p class="p">
           We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
@@ -79,203 +84,190 @@
 
     <section class="plan container">
 
-      <nav class="side-nav">
-        <ul>
-          <li>
-            <span>01</span>
-            <span>Preferences</span>
-          </li>
-          <li>
-            <span>02</span>
-            <span>Bean type</span>
-          </li>
-          <li>
-            <span>03</span>
-            <span>Quantity</span>
-          </li>
-          <li>
-            <span>04</span>
-            <span>Grind option</span>
-          </li>
-          <li>
-            <span>05</span>
-            <span>Deliveries</span>
-          </li>
+      <nav class="plan__side-nav">
+        <ul class="heading--5">
+          <li>Preferences</li>
+          <li>Bean type</li>
+          <li>Quantity</li>
+          <li>Grind option</li>
+          <li>Deliveries</li>
         </ul>
       </nav>
 
-      <div class="accordion" aria-expanded="false">
+      <div class="plan__selections">
+        <div class="accordion" aria-expanded="false">
 
-        <h2 class="heading--2 accordion__heading" onclick="accordionClick(event);">
-          How do you drink your coffee?
-        </h2>
+          <h2 class="heading--2 accordion__heading" onclick="accordionClick(event);">
+            How do you drink your coffee?
+          </h2>
 
-        <div class="accordion__option" onclick="coffeeOption(event, 'format', 'capsule');">
-          <h3 class="heading--5">
-            Capsule
-          </h3>
+          <div class="accordion__option" onclick="coffeeOption(event, 'format', 'capsule');">
+            <h3 class="heading--5">
+              Capsule
+            </h3>
 
-          <p class="p">
-            Compatible with Nespresso systems and similar brewers
-          </p>
+            <p class="p">
+              Compatible with Nespresso systems and similar brewers
+            </p>
+          </div>
+
+          <div class="accordion__option" onclick="coffeeOption(event, 'format', 'filter');">
+            <h3 class="heading--5">
+              Filter
+            </h3>
+            <p class="p">
+              For pour over or drip methods like Aeropress, Chemex, and V60
+            </p>
+          </div>
+
+          <div class="accordion__option" onclick="coffeeOption(event, 'format', 'espresso');">
+            <h3 class="heading--5">
+              Espresso
+            </h3>
+            <p class="p">
+              Dense and finely ground beans for an intense, flavorful experience
+            </p>
+          </div>
         </div>
 
-        <div class="accordion__option" onclick="coffeeOption(event, 'format', 'filter');">
-          <h3 class="heading--5">
-            Filter
-          </h3>
-          <p class="p">
-            For pour over or drip methods like Aeropress, Chemex, and V60
-          </p>
+        <div class="accordion" aria-expanded="false">
+
+          <h2 class="heading--2 accordion__heading" onclick="accordionClick(event);">
+            What type of coffee?
+          </h2>
+
+          <div class="accordion__option" onclick="coffeeOption(event, 'type', 'single origin');">
+            <h3 class="heading--5">
+              Single origin
+            </h3>
+            <p class="p">
+              Distinct, high quality coffee from a specific family-owned farm
+            </p>
+          </div>
+
+          <div class="accordion__option" onclick="coffeeOption(event, 'type', 'decaf');">
+            <h3 class="heading--5">
+              Decaf
+            </h3>
+            <p class="p">
+              Just like regular coffee, except the caffeine has been removed
+            </p>
+          </div>
+
+          <div class="accordion__option" onclick="coffeeOption(event, 'type', 'blended');">
+            <h3 class="heading--5">
+              Blended
+            </h3>
+            <p class="p">
+              Combination of two or three dark roasted beans of organic coffees
+            </p>
+          </div>
         </div>
 
-        <div class="accordion__option" onclick="coffeeOption(event, 'format', 'espresso');">
-          <h3 class="heading--5">
-            Espresso
-          </h3>
-          <p class="p">
-            Dense and finely ground beans for an intense, flavorful experience
-          </p>
+        <div class="accordion" aria-expanded="false">
+          <h2 class="heading--2 accordion__heading" onclick="accordionClick(event);">
+            How much would you like?
+          </h2>
+          <div class="accordion__option" onclick="coffeeOption(event, 'quantity', '250g');">
+            <h3 class="heading--5">
+              250g
+            </h3>
+            <p class="p">
+              Perfect for the solo drinker. Yields about 12 delicious cups.
+            </p>
+          </div>
+
+          <div class="accordion__option" onclick="coffeeOption(event, 'quantity', '500g');">
+            <h3 class="heading--5">
+              500g
+            </h3>
+            <p class="p">
+              Perfect option for a couple. Yields about 40 delectable cups.
+            </p>
+          </div>
+
+          <div class="accordion__option" onclick="coffeeOption(event, 'quantity', '1000g');">
+            <h3 class="heading--5">
+              1000g
+            </h3>
+            <p class="p">
+              Perfect for offices and events. Yields about 90 delightful cups.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion" aria-expanded="false" id="accordion--grind">
+          <h2 class="heading--2 accordion__heading" onclick="accordionClick(event);">
+            Want us to grind them?
+          </h2>
+
+          <div class="accordion__option" onclick="coffeeOption(event, 'grind', 'wholebean');">
+            <h3 class="heading--5">
+              Wholebean
+            </h3>
+            <p class="p">
+              Best choice if you cherish the full sensory experience
+            </p>
+          </div>
+
+          <div class="accordion__option" onclick="coffeeOption(event, 'grind', 'filter');">
+            <h3 class="heading--5">
+              Filter
+            </h3>
+            <p class="p">
+              For drip or pour-over coffee methods such as V60 or Aeropress
+            </p>
+          </div>
+
+          <div class="accordion__option" onclick="coffeeOption(event, 'grind', 'Cafetiére');">
+            <h3 class="heading--5">
+              Cafetiére
+            </h3>
+            <p class="p">
+              Course ground beans specially suited for french press coffee
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion" aria-expanded="false">
+          <h2 class="heading--2 accordion__heading" onclick="accordionClick(event);">
+            How often should we deliver?
+          </h2>
+
+          <div class="accordion__option" onclick="coffeeOption(event, 'frequency', 'weekly');">
+            <h3 class="heading--5">
+              Every week
+            </h3>
+            <p class="p">
+              $14.00 per shipment. Includes free first-class shipping.
+            </p>
+          </div>
+
+          <div class="accordion__option" onclick="coffeeOption(event, 'frequency', 'bi-weekly');">
+            <h3 class="heading--5">
+              Every 2 weeks
+            </h3>
+            <p class="p">
+              $17.25 per shipment. Includes free priority shipping.
+            </p>
+          </div>
+
+          <div class="accordion__option" onclick="coffeeOption(event, 'frequency', 'monthly');">
+            <h3 class="heading--5">
+              Every month
+            </h3>
+            <p class="p">
+              $22.50 per shipment. Includes free priority shipping.
+            </p>
+          </div>
         </div>
       </div>
 
-      <div class="accordion" aria-expanded="false">
-
-        <h2 class="heading--2 accordion__heading" onclick="accordionClick(event);">
-          What type of coffee?
-        </h2>
-
-        <div class="accordion__option" onclick="coffeeOption(event, 'type', 'single origin');">
-          <h3 class="heading--5">
-            Single origin
-          </h3>
-          <p class="p">
-            Distinct, high quality coffee from a specific family-owned farm
-          </p>
-        </div>
-
-        <div class="accordion__option" onclick="coffeeOption(event, 'type', 'decaf');">
-          <h3 class="heading--5">
-            Decaf
-          </h3>
-          <p class="p">
-            Just like regular coffee, except the caffeine has been removed
-          </p>
-        </div>
-
-        <div class="accordion__option" onclick="coffeeOption(event, 'type', 'blended');">
-          <h3 class="heading--5">
-            Blended
-          </h3>
-          <p class="p">
-            Combination of two or three dark roasted beans of organic coffees
-          </p>
-        </div>
-      </div>
-
-      <div class="accordion" aria-expanded="false">
-        <h2 class="heading--2 accordion__heading" onclick="accordionClick(event);">
-          How much would you like?
-        </h2>
-        <div class="accordion__option" onclick="coffeeOption(event, 'quantity', '250g');">
-          <h3 class="heading--5">
-            250g
-          </h3>
-          <p class="p">
-            Perfect for the solo drinker. Yields about 12 delicious cups.
-          </p>
-        </div>
-
-        <div class="accordion__option" onclick="coffeeOption(event, 'quantity', '500g');">
-          <h3 class="heading--5">
-            500g
-          </h3>
-          <p class="p">
-            Perfect option for a couple. Yields about 40 delectable cups.
-          </p>
-        </div>
-
-        <div class="accordion__option" onclick="coffeeOption(event, 'quantity', '1000g');">
-          <h3 class="heading--5">
-            1000g
-          </h3>
-          <p class="p">
-            Perfect for offices and events. Yields about 90 delightful cups.
-          </p>
-        </div>
-      </div>
-
-      <div class="accordion" aria-expanded="false">
-        <h2 class="heading--2 accordion__heading" onclick="accordionClick(event);">
-          Want us to grind them?
-        </h2>
-
-        <div class="accordion__option" onclick="coffeeOption(event, 'grind', 'wholebean');">
-          <h3 class="heading--5">
-            Wholebean
-          </h3>
-          <p class="p">
-            Best choice if you cherish the full sensory experience
-          </p>
-        </div>
-
-        <div class="accordion__option" onclick="coffeeOption(event, 'grind', 'filter');">
-          <h3 class="heading--5">
-            Filter
-          </h3>
-          <p class="p">
-            For drip or pour-over coffee methods such as V60 or Aeropress
-          </p>
-        </div>
-
-        <div class="accordion__option" onclick="coffeeOption(event, 'grind', 'Cafetiére');">
-          <h3 class="heading--5">
-            Cafetiére
-          </h3>
-          <p class="p">
-            Course ground beans specially suited for french press coffee
-          </p>
-        </div>
-      </div>
-
-      <div class="accordion" aria-expanded="false">
-        <h2 class="heading--2 accordion__heading" onclick="accordionClick(event);">
-          How often should we deliver?
-        </h2>
-
-        <div class="accordion__option" onclick="coffeeOption(event, 'frequency', 'weekly');">
-          <h3 class="heading--5">
-            Every week
-          </h3>
-          <p class="p">
-            $14.00 per shipment. Includes free first-class shipping.
-          </p>
-        </div>
-
-        <div class="accordion__option" onclick="coffeeOption(event, 'frequency', '2 weeks');">
-          <h3 class="heading--5">
-            Every 2 weeks
-          </h3>
-          <p class="p">
-            $17.25 per shipment. Includes free priority shipping.
-          </p>
-        </div>
-
-        <div class="accordion__option" onclick="coffeeOption(event, 'frequency', 'monthly');">
-          <h3 class="heading--5">
-            Every month
-          </h3>
-          <p class="p">
-            $22.50 per shipment. Includes free priority shipping.
-          </p>
-        </div>
-      </div>
-
-      <div class="order">
+      <div class="order__card">
         <h2 class="order__heading">
           Order Summary
         </h2>
-        <p class="order">
+        <p class="order" id="order-text">
           “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
           sent to me _____.”
         </p>
@@ -333,9 +325,15 @@
       </ul>
     </nav>
     <div class="footer__social">
-      <img src="assets/icon-facebook.svg" alt="">
-      <img src="assets/icon-twitter.svg" alt="">
-      <img src="assets/icon-instagram.svg" alt="">
+      <svg class="footer__social-icon">
+        <use href="assets/images.svg#icon-facebook"></use>
+      </svg>
+      <svg class="footer__social-icon">
+        <use href="assets/images.svg#icon-twitter"></use>
+      </svg>
+      <svg class="footer__social-icon">
+        <use href="assets/images.svg#icon-instagram"></use>
+      </svg>
     </div>
   </footer>
 </body>

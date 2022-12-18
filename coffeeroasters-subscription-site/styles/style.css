@@ -357,6 +357,9 @@ body.modal .menu__backdrop {
 .footer a {
   color: var(--clr-neutral-700);
 }
+.footer a:is(:focus, :hover) {
+  color: var(--clr-neutral-100);
+}
 .footer .menu__options {
   display: grid;
   gap: 1.5rem;
@@ -366,6 +369,17 @@ body.modal .menu__backdrop {
   justify-content: center;
   gap: 1.5rem;
   margin-top: 3rem;
+}
+.footer__social-icon {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+.footer__social-icon {
+  fill: var(--clr-neutral-100);
+}
+.footer__social-icon:is(:focus, :hover) {
+  fill: var(--clr-accent-400);
 }
 
 @media screen and (min-width: 768px) {
@@ -418,10 +432,8 @@ body.modal .menu__backdrop {
     margin-left: auto;
   }
   .footer .menu {
-    margin-top: 0;
-    /*
+    margin-block: 0;
     margin-left: 10rem;
-    */
   }
   .footer .menu__options {
     justify-content: stretch;
@@ -445,6 +457,11 @@ body.modal .menu__backdrop {
   outline: 0;
   border: 0;
   border-radius: 6px;
+
+  cursor: pointer;
+}
+.btn:is(:focus, :hover) {
+  background-color: var(--clr-primary-200);
 }
 
 /********************************************************

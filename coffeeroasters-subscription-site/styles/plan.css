@@ -47,7 +47,7 @@
 .plan {
   margin-top: 7.5rem;
 }
-.plan .side-nav {
+.plan__side-nav {
   display: none;
 }
 .plan .heading--2 {
@@ -55,7 +55,12 @@
   font-size: 1.5rem;
 }
 .accordion__heading {
+  cursor: pointer;
+  user-select: none;
   position: relative;
+}
+.plan .accordion[disabled] .heading--2 {
+  color: var(--clr-neutral-400);
 }
 .accordion__heading::after {
   position: absolute;
@@ -64,10 +69,20 @@
   content: url(../assets/plan/icon-arrow.svg);
 }
 .accordion__option {
+  cursor: pointer;
+  user-select: none;
+  display: none;
   margin-top: 2rem;
+  margin-bottom: 6.875rem;
   background-color: var(--clr-neutral-300);
   border-radius: 8px;
   padding: 1.5rem;
+}
+.accordion__option:is(:focus, :hover):not(.accordion__option--selected) {
+  background-color: var(--clr-accent-400);
+}
+.accordion[aria-expanded="true"] .accordion__option {
+  display: block;
 }
 .accordion__option .p {
   margin-top: 0.5rem;
@@ -80,16 +95,18 @@
   background-color: var(--clr-primary-400);
 }
 .accordion {
-  margin-bottom: 6.875rem;
 }
-
-.order {
+.order__card {
   background-color: var(--clr-neutral-900);
   color: var(--clr-neutral-100);
   padding-block: 2rem;
   padding-inline: 1.5rem;
   border-radius: 10px;
   text-align: left;
+}
+.order--highlight {
+  color: var(--clr-primary-400);
+  text-transform: capitalize;
 }
 .order__heading {
   color: var(--clr-neutral-700);
@@ -101,4 +118,189 @@
 }
 .order-confirmation {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .create-a-plan {
+    background-image: url(../assets/plan/image-hero-blackcup-md.jpg);
+    justify-items: flex-start;
+    text-align: left;
+    padding-left: 3.625rem;
+  }
+  .create-a-plan .p {
+    max-width: 45ch;
+  }
+  .plan-steps {
+    margin-top: 9rem;
+    padding: 0;
+  }
+  .plan-steps__list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    text-align: left;
+    column-gap: 0.625rem;
+    grid-row-gap: 2.4375rem;
+    padding-inline: 2.5rem;
+    padding-top: 6.25rem;
+    padding-bottom: 4.375rem;
+    color: var(--clr-neutral-100);
+  }
+  .plan-steps__list .heading--4 {
+    margin: 0;
+    max-width: 10ch;
+  }
+  .plan-steps__list .heading--4::before {
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 2.625rem;
+  }
+  .plan-steps__list .p {
+    margin: 0;
+  }
+  .plan-steps__ball {
+    position: relative;
+    justify-self: flex-start;
+    width: 100%;
+    height: 31px;
+    grid-row: 1 / 2;
+  }
+  .plan-steps__ball::before {
+    content: "";
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    border: 2px solid var(--clr-primary-400);
+    border-radius: 50%;
+  }
+  .plan-steps__ball--1 {
+    grid-column: 1 / 2;
+    background-image: linear-gradient(
+      var(--clr-neutral-900),
+      var(--clr-neutral-900)
+    );
+    background-size: 16px 31px;
+    background-position: top left;
+    background-repeat: no-repeat;
+  }
+  .plan-steps__ball--2 {
+    grid-column: 2 / 3;
+  }
+  .plan-steps__ball--3 {
+    grid-column: 3 / -1;
+    background-image: linear-gradient(
+      var(--clr-neutral-900),
+      var(--clr-neutral-900)
+    );
+    background-size: 100% 31px;
+    background-position-x: 16px;
+    background-repeat: no-repeat;
+  }
+  .plan-steps__line {
+    position: relative;
+    width: 100%;
+    height: 31px;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+  .plan-steps__line::after {
+    position: absolute;
+    bottom: calc(50% - 1px);
+    left: 0;
+    right: 0;
+    content: "";
+    background-color: var(--clr-accent-400);
+    height: 2px;
+  }
+  .accordion {
+    display: grid;
+    column-gap: 0.625rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+  .accordion__heading {
+    grid-column: 1 / -1;
+    margin-bottom: 2.5rem;
+  }
+  .plan .heading--2 {
+    font-size: 2rem;
+  }
+  .accordion__option {
+    margin-top: 0;
+    height: 250px;
+    padding-inline: 1.625rem;
+  }
+  .accordion__option + .accordion__option {
+    margin-top: 0;
+  }
+  .accordion__option .heading--5 {
+    margin-top: 0.5rem;
+  }
+  .accordion__option .p {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .create-a-plan {
+    background-image: url(../assets/plan/image-hero-blackcup-lg.jpg);
+    height: 450px;
+    padding-left: 5.3125rem;
+  }
+  .create-a-plan .p {
+    max-width: 50ch;
+  }
+  .plan-steps {
+    margin-top: 10.5rem;
+    max-width: 1280px;
+    margin-inline: auto;
+  }
+  .plan-steps__list {
+    column-gap: 5.9375rem;
+    padding-inline: 5.3125rem;
+  }
+  .plan {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    column-gap: 7.8125rem;
+    padding-inline: 5.3125rem;
+    margin-top: 10.5rem;
+  }
+  .plan .accordion {
+    grid-column: 2 / 3;
+  }
+  .plan .order__card {
+    grid-column: 2 / 3;
+  }
+  .plan .order-submit {
+    grid-column: 2 / 3;
+  }
+  .plan__side-nav {
+    display: block;
+    counter-reset: plan__side-nav;
+    color: var(--clr-neutral-700);
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    min-width: 255px;
+  }
+  .plan__side-nav li {
+    counter-increment: plan__side-nav;
+    line-height: 3;
+  }
+  .plan__side-nav li + li {
+    border-top: 1px solid var(--clr-neutral-400);
+  }
+  .plan__side-nav li::before {
+    content: counter(plan__side-nav, decimal-leading-zero);
+    display: inline-block;
+    width: 3.65rem;
+  }
+  .plan__side-nav li:first-of-type::before {
+    color: var(--clr-primary-400);
+  }
+  .plan form {
+    justify-items: right;
+  }
 }
