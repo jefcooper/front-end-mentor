@@ -53,7 +53,7 @@
   content: "";
   width: 100%;
   height: 509px;
-  background-color: var(--clr-neutral-900);
+  background-image: url(../assets/about/bg-quality-sm.png);
   border-radius: 10px;
 }
 .uncompromising-quality__img {
@@ -145,6 +145,7 @@
     margin-top: 19rem;
   }
   .uncompromising-quality::before {
+    background-image: url(../assets/about/bg-quality-md.png);
     height: 488px;
   }
   .uncompromising-quality__img {
@@ -217,6 +218,7 @@
     position: relative;
   }
   .uncompromising-quality::before {
+    background-image: url(../assets/about/bg-quality-lg.png);
     height: 474px;
   }
   .uncompromising-quality__img {
