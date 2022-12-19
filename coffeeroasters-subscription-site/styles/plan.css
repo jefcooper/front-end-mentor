@@ -69,6 +69,9 @@
   top: 0;
   content: url(../assets/plan/icon-arrow.svg);
 }
+.accordion[aria-expanded="true"] .accordion__heading::after {
+  transform: rotate(-180deg);
+}
 .accordion__option {
   cursor: pointer;
   user-select: none;
