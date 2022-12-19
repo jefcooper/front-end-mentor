@@ -47,6 +47,7 @@ function closeMenu(evt) {
 
 function accordionClick(evt) {
   const accordion = evt.target.closest(".accordion");
+  const sideNavList = document.querySelector(".plan__side-nav ul");
 
   if (accordion) {
     if (accordion.hasAttribute("disabled")) {
@@ -65,6 +66,8 @@ function accordionClick(evt) {
       updatePlanOrderSubmit();
     } else {
       accordion.setAttribute("aria-expanded", "true");
+      const category = accordion.getAttribute("data-category");
+      updatePlanSideNav(category);
     }
   }
 }
@@ -124,6 +127,10 @@ const pricing = {
 };
 
 function updateGrindCategory(selection) {
+  const grindSideNav = document.querySelector(
+    '.plan__side-nav li[data-category="grind"]'
+  );
+
   if (selection === "capsule") {
     coffeeOptions["using"] = "using";
     // remove the grind category from coffeeOptions
@@ -136,11 +143,13 @@ function updateGrindCategory(selection) {
     // close and disable the grind accordion
     grindAccordion.setAttribute("aria-expanded", "false");
     grindAccordion.setAttribute("disabled", "");
+    grindSideNav.setAttribute("disabled", "");
   } else {
     coffeeOptions["using"] = "as";
     // enable the grind accordion
     const grindAccordion = document.getElementById("accordion--grind");
     grindAccordion.removeAttribute("disabled");
+    grindSideNav.removeAttribute("disabled");
   }
 }
 
@@ -232,4 +241,26 @@ function updatePlanOrderSubmit() {
     // disable button
     button.setAttribute("disabled", "");
   }
+}
+
+//
+// updatePlanSideNav
+//
+//    Set or clear the data-selected attribute on the side-nav li element
+//    to indicate the first incomplete accordion.  Leave the last delivery
+//    one selected even if completed.
+//
+function updatePlanSideNav(category) {
+  const sideNavList = document.querySelector(".plan__side-nav ul");
+
+  console.log(sideNavList);
+  console.log(category);
+
+  Array.from(sideNavList.children).forEach((element) => {
+    if (element.getAttribute("data-category") === category) {
+      element.setAttribute("data-selected", "");
+    } else {
+      element.removeAttribute("data-selected");
+    }
+  });
 }

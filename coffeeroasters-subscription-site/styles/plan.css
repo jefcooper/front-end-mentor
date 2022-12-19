@@ -318,6 +318,20 @@
   .plan__side-nav li {
     counter-increment: plan__side-nav;
     line-height: 3;
+
+    color: var(--clr-neutral-900);
+    opacity: 40%;
+    user-select: none;
+    cursor: pointer;
+  }
+  .plan__side-nav li:is(:focus, :hover) {
+    opacity: 60%;
+  }
+  .plan__side-nav li[data-selected] {
+    opacity: 100%;
+  }
+  .plan__side-nav li[disabled] {
+    opacity: 20%;
   }
   .plan__side-nav li + li {
     border-top: 1px solid var(--clr-neutral-400);
@@ -326,6 +340,7 @@
     content: counter(plan__side-nav, decimal-leading-zero);
     display: inline-block;
     width: 3.65rem;
+    color: var(--clr-neutral-700);
   }
   .plan__side-nav li:first-of-type::before {
     color: var(--clr-primary-400);
