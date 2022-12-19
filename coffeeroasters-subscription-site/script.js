@@ -54,6 +54,15 @@ function accordionClick(evt) {
     }
     if (accordion.getAttribute("aria-expanded") === "true") {
       accordion.setAttribute("aria-expanded", "false");
+      const category = accordion.getAttribute("data-category");
+      delete coffeeOptions[category];
+
+      // for all options under this accordion, de-select them
+      Array.from(accordion.children).forEach((element) => {
+        element.classList.remove("accordion__option--selected");
+      });
+      updateOrderText();
+      updatePlanOrderSubmit();
     } else {
       accordion.setAttribute("aria-expanded", "true");
     }
