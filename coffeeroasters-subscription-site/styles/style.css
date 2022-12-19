@@ -463,6 +463,12 @@ body.modal .menu__backdrop {
 .btn:is(:focus, :hover) {
   background-color: var(--clr-primary-200);
 }
+.btn[disabled] {
+  background-color: var(--clr-neutral-400);
+}
+.btn[disabled]:is(:focus, :hover) {
+  background-color: var(--clr-neutral-400);
+}
 
 .icon-logo {
   width: 237px;

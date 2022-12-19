@@ -93,6 +93,7 @@ function coffeeOption(evt, category, selection) {
     updateGrindCategory(selection);
   }
   updateOrderText();
+  updatePlanOrderSubmit();
 }
 
 const pricing = {
@@ -204,4 +205,22 @@ function updateOrderText() {
   );
 
   orderText.innerHTML = text.join("");
+}
+
+function updatePlanOrderSubmit() {
+  const button = document.getElementById("plan__order-submit");
+  if (
+    coffeeOptions["using"] &&
+    coffeeOptions["format"] &&
+    coffeeOptions["type"] &&
+    coffeeOptions["quantity"] &&
+    (coffeeOptions["grind"] || coffeeOptions["format"] === "capsule") &&
+    coffeeOptions["frequency"]
+  ) {
+    // enable button
+    button.removeAttribute("disabled");
+  } else {
+    // disable button
+    button.setAttribute("disabled", "");
+  }
 }
