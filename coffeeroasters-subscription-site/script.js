@@ -45,6 +45,15 @@ function closeMenu(evt) {
   // TODO - when animation added
 }
 
+function showDialog(evt) {
+  document.body.classList.add("modal-dialog");
+  evt.preventDefault();
+}
+function hideDialog(evt) {
+  document.body.classList.remove("modal-dialog");
+  evt.preventDefault();
+}
+
 function accordionClick(evt) {
   const accordion = evt.target.closest(".accordion");
   const sideNavList = document.querySelector(".plan__side-nav ul");

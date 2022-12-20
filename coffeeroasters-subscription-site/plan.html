@@ -277,36 +277,42 @@
       </div>
       <form class="order-submit" action="submit"
         onsubmit="console.log('on submit');console.log(event);event.preventDefault();">
-        <button type="submit" class="btn" id="plan__order-submit" disabled>
+        <button onclick="showDialog(event);" type="submit" class="btn" id="plan__order-submit" disabled>
           Create my plan!
         </button>
       </form>
     </section>
 
     <section class="order-confirmation">
+      <form action="submit" class="order-confirmation__form">
+        <!-- Modal -->
+        <h2 class="order-confirmation__heading">
+          <span>Order Summary</span>
+          <span onclick="hideDialog(event);">
+            <svg class="icon--close">
+              <use href="assets/images.svg#icon-close"></use>
+            </svg>
+          </span>
+        </h2>
 
-      <!-- Modal -->
-      <h2 class="order__heading">
-        Order Summary
-      </h2>
+        <p class="order">
+          “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
+          sent to me _____.”
+        </p>
 
-      <p class="order">
-        “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
-        sent to me _____.”
-      </p>
+        <p class="p">
+          Is this correct? You can proceed to checkout or go back to plan selection if something
+          is off. Subscription discount codes can also be redeemed at the checkout.
+        </p>
 
-      <p class="p">
-        Is this correct? You can proceed to checkout or go back to plan selection if something
-        is off. Subscription discount codes can also be redeemed at the checkout.
-      </p>
+        <h3 class="heading--3">
+          $_____/month
+        </h3>
 
-      <h3 class="heading--3">
-        $_____/month
-      </h3>
-
-      <button type="button" class="btn">
-        Checkout
-      </button>
+        <button type="submit" class="btn">
+          Checkout
+        </button>
+      </form>
       <!-- End modal -->
     </section>
 
