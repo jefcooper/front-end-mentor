@@ -180,6 +180,9 @@ body.modal-dialog {
 .order-confirmation__button-price {
   display: inline-block;
 }
+.order-confirmation .btn {
+  margin-top: 1.5rem;
+}
 
 @media screen and (min-width: 768px) {
   .create-a-plan {
@@ -302,11 +305,46 @@ body.modal-dialog {
   .order__card {
     background-image: url(../assets/plan/bg-order-summary.png);
   }
+  .order-confirmation__heading {
+    font-size: 2.5rem;
+    line-height: 1;
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
+    padding-inline: 3.5rem;
+  }
+  .order-confirmation__form {
+    width: 540px;
+    margin-inline: auto;
+    height: fit-content;
+    margin-block: auto;
+  }
+  .order-confirmation__form .order {
+    margin-top: 3.5rem;
+    margin-inline: 3.5rem;
+  }
+  .order-confirmation .p {
+    margin-top: 0.5rem;
+    margin-inline: 3.5rem;
+    font-size: 1rem;
+    line-height: 1.625;
+  }
+  .order-confirmation__submit {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 1rem;
+    margin-bottom: 3.5rem;
+  }
   .order-confirmation__form-price {
     display: block;
+    color: var(--clr-neutral-900);
   }
   .order-confirmation__button-price {
     display: none;
+  }
+  .order-confirmation .btn {
+    margin-top: 0;
+    padding-inline: 4rem;
   }
 }
 
