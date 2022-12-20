@@ -125,6 +125,7 @@
   position: fixed;
   inset: 0px;
   background-color: hsl(0 0% 0% / 50%);
+  color: var(--clr-neutral-700);
 
   display: none;
 }
@@ -165,11 +166,19 @@ body.modal-dialog {
 }
 .order-confirmation .p {
   margin-inline: 1.5rem;
+  color: var(--clr-neutral-900);
+  opacity: 80%;
+}
+.order-confirmation__form-price {
+  display: none;
 }
 .order-confirmation .icon--close {
   width: 16px;
   height: 16px;
   fill: var(--clr-neutral-200);
+}
+.order-confirmation__button-price {
+  display: inline-block;
 }
 
 @media screen and (min-width: 768px) {
@@ -292,6 +301,12 @@ body.modal-dialog {
   }
   .order__card {
     background-image: url(../assets/plan/bg-order-summary.png);
+  }
+  .order-confirmation__form-price {
+    display: block;
+  }
+  .order-confirmation__button-price {
+    display: none;
   }
 }
 

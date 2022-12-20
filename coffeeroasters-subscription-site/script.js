@@ -115,6 +115,7 @@ function coffeeOption(evt, category, selection) {
   }
   updateOrderText();
   updatePlanOrderSubmit();
+  updatePricing();
 }
 
 const pricing = {
@@ -134,6 +135,38 @@ const pricing = {
     monthly: 42.0,
   },
 };
+
+function updatePricing() {
+  const quantity = coffeeOptions["quantity"];
+  const frequency = coffeeOptions["frequency"];
+  let multiplier = 1;
+  if (frequency === "bi-weekly") {
+    multiplier = 2;
+  } else if (frequency === "weekly") {
+    multiplier = 4;
+  }
+
+  if (quantity && frequency) {
+    const price = pricing[quantity][frequency] * multiplier;
+
+    // obtain all elements of class order-confirmation__price and
+    // replace the text node with the price text.
+    const priceElements = Array.from(
+      document.querySelectorAll(".order-confirmation__price")
+    );
+    console.log(priceElements);
+    priceElements.forEach((el) => {
+      let text = [];
+      if (el.classList.contains("order-confirmation__button-price")) {
+        text.push(" -");
+      }
+      text.push(" $");
+      text.push(price.toFixed(2));
+      text.push(" / mo");
+      el.innerHTML = text.join("");
+    });
+  }
+}
 
 function updateGrindCategory(selection) {
   const grindSideNav = document.querySelector(
@@ -200,6 +233,9 @@ The designs show these differences, so you can refer to them to get an idea of w
 
 function updateOrderText() {
   const orderText = document.getElementById("order-text");
+  const orderConfirmationText = document.getElementById(
+    "order-confirmation-text"
+  );
 
   let text = ["&ldquo;I drink my coffee "];
   text.push(coffeeOptions["using"] || "using");
@@ -232,6 +268,7 @@ function updateOrderText() {
   );
 
   orderText.innerHTML = text.join("");
+  orderConfirmationText.innerHTML = text.join("");
 }
 
 function updatePlanOrderSubmit() {
