@@ -77,7 +77,9 @@
   cursor: pointer;
   user-select: none;
   margin-top: 2rem;
+  /*
   margin-bottom: 6.875rem;
+  */
   background-color: var(--clr-neutral-300);
   border-radius: 8px;
   padding: 1.5rem;
@@ -94,6 +96,7 @@
   transform: scaleY(0%);
   max-height: 0;
   transition: 250ms ease-in-out;
+  margin-bottom: 2rem;
 }
 .accordion__option:is(:focus, :hover):not(.accordion__option--selected) {
   background-color: var(--clr-accent-400);
@@ -103,6 +106,7 @@
   display: block;
   */
 
+  margin-bottom: 6.875rem;
   transform: scaleY(100%);
   max-height: 100%;
 }
@@ -110,7 +114,7 @@
   margin-top: 0.5rem;
 }
 .accordion__option + .accordion__option {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 .accordion__option--selected {
   color: var(--clr-neutral-100);

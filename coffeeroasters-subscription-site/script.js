@@ -56,6 +56,9 @@ function hideDialog(evt) {
 
 function accordionClick(evt) {
   const accordion = evt.target.closest(".accordion");
+  const accordionOptions = Array.from(accordion.children).find((el) =>
+    el.classList.contains("accordion__option-set")
+  );
   const sideNavList = document.querySelector(".plan__side-nav ul");
 
   if (accordion) {
@@ -68,7 +71,7 @@ function accordionClick(evt) {
       delete coffeeOptions[category];
 
       // for all options under this accordion, de-select them
-      Array.from(accordion.children).forEach((element) => {
+      Array.from(accordionOptions.children).forEach((element) => {
         element.classList.remove("accordion__option--selected");
       });
       updateOrderText();
@@ -93,6 +96,9 @@ function accordionClick(evt) {
 function coffeeOption(evt, category, selection) {
   const option = evt.target.closest(".accordion__option");
   const accordion = evt.target.closest(".accordion");
+  const accordionOptions = Array.from(accordion.children).find((el) =>
+    el.classList.contains("accordion__option-set")
+  );
 
   if (option.classList.contains("accordion__option--selected")) {
     // if we're de-selecting, then remove from dictionary
@@ -104,7 +110,7 @@ function coffeeOption(evt, category, selection) {
     option.classList.add("accordion__option--selected");
   }
   // for all other options under this accordion, de-select them
-  Array.from(accordion.children).forEach((element) => {
+  Array.from(accordionOptions.children).forEach((element) => {
     if (element !== option) {
       element.classList.remove("accordion__option--selected");
     }
