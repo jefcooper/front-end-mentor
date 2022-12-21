@@ -16,8 +16,6 @@ This is a solution to the [Coffeeroasters subscription site challenge on Fronten
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -30,20 +28,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![TBD](./screenshot.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Repository](https://github.com/jefcooper/front-end-mentor/tree/main/coffeeroasters-subscription-site)
+- Live Site URL: [Github Pages Site](https://jefcooper.github.io/front-end-mentor/coffeeroasters-subscription-site/)
 
 ## My process
 
@@ -54,59 +44,53 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This is a larger challenge than others I have completed.  Time, task management and motivation to finish all become factors.
 
-To see how you can add code snippets, see below:
+The Technical
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+- Ball and Line illustration went through multiple iterations before landing on a pure CSS solution separating the balls from the line as background element.  The deciding factor was aligning the balls to the grid.  To do this the balls needed to be inside grid cells.  The background line, likewise had to be aligned across multiple grid cells underneath the same cells as the balls.
+
+- The dark backgrounds in the plan and about pages presented subtle challenges.  The bitmaps fade slightly from left-to-right such that a background repeat shows a line.  background: cover was needed to prevent this.
+
+- Fraunces 9pt is used as the display font in the Figma design.  This is not one of the built-in Figma fonts (at least not on the Mac version), but Fraunces Black is.  The 9pt variant is ever so slightly different and yields width differences.  This led to the addition of letter-spacing on nearly every heading to match the original design.
+
+- Changing the text of the order was done by setting the innerHTML of the heading or span node as required.  I didn't use any frameworks for this, although in times past I've used jquery, but it seemed heavy since I didn't have much DOM manipulation to do here, so kept it to pure JS.
+
+- svg images were altered for social icons, and logo.  Used vercel's svg sprite site (https://svg-sprite-generator.vercel.app/) to create a single svg file where fill can be overridden in css.
+
+- the logo svg required manual intervention because simply removing all fill removes the green of the beans.  For this I used a CSS variable to add a replacable color with overrid.
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+fill="var(--_clr-green, hsl(179, 81%, 29%))" 
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+- CSS variables were also used for a configurable container class.  This allowed for easily modifying the margin for different breakpoints as required by the design.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+```css
+.container {
+  --_container-margin: 1.5rem; /* mobile is default */
+  --_container-max-width: 1280px; /* desktop max width */
+
+  max-width: var(--_container-max-width);
+  margin-inline: max(
+    50vw - var(--_container-max-width) / 2,
+    var(--_container-margin)
+  );
+}
+```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Jeff Cooper](https://jefcooper.github.io)
+- Frontend Mentor - [@jefcooper](https://www.frontendmentor.io/profile/jefcooper)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
