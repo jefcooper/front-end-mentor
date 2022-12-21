@@ -272,7 +272,7 @@ body.modal .header {
   /* because modal menu__backdrop is absolute a gap closes up,
      this will fill the gap so main section does not shift.
    */
-  height: 3.1606rem;
+  height: 3.7rem;
 }
 .header img {
   display: inline-block;
