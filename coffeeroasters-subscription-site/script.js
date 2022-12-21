@@ -184,7 +184,10 @@ function updateGrindCategory(selection) {
     // remove the grind category from coffeeOptions
     delete coffeeOptions["grind"];
     const grindAccordion = document.getElementById("accordion--grind");
-    const grindOptions = Array.from(grindAccordion.children);
+    const grindAccordionOptions = Array.from(grindAccordion.children).find(
+      (el) => el.classList.contains("accordion__option-set")
+    );
+    const grindOptions = Array.from(grindAccordionOptions.children);
     grindOptions.forEach((option) => {
       option.classList.remove("accordion__option--selected");
     });
