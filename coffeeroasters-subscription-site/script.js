@@ -1,7 +1,6 @@
 let coffeeOptions = {};
 
 function headerNavMenuClicked(evt) {
-  console.log("headerNavMenuClicked");
   const menuButton = evt.target.closest(".menu__toggle");
   const menu = evt.target.closest(".menu");
 
@@ -160,7 +159,6 @@ function updatePricing() {
     const priceElements = Array.from(
       document.querySelectorAll(".order-confirmation__price")
     );
-    console.log(priceElements);
     priceElements.forEach((el) => {
       let text = [];
       if (el.classList.contains("order-confirmation__button-price")) {
@@ -307,9 +305,6 @@ function updatePlanOrderSubmit() {
 //
 function updatePlanSideNav(category) {
   const sideNavList = document.querySelector(".plan__side-nav ul");
-
-  console.log(sideNavList);
-  console.log(category);
 
   Array.from(sideNavList.children).forEach((element) => {
     if (element.getAttribute("data-category") === category) {
