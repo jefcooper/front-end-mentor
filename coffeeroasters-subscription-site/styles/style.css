@@ -270,6 +270,8 @@ body {
   height: 27px;
   fill: var(--clr-neutral-900);
   zoom: 70%;
+  user-select: none;
+  cursor: pointer;
 }
 .icon-logo--white {
   fill: var(--clr-neutral-100);
