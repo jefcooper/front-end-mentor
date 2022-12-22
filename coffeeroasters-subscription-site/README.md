@@ -29,7 +29,12 @@ Users should be able to:
 
 ### Screenshot
 
-![TBD](./screenshot.jpg)
+![Mobile](./screenshot-phone.jpg)
+
+![Desktop](./screenshot-desktop.jpg)
+
+![Tablet](./screenshot-ipad.jpg)
+
 
 ### Links
 
