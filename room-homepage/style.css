@@ -1,0 +1,77 @@
+/*******************************************************
+  Global Variables
+ *******************************************************/
+:root {
+  --clr-neutral-100: hsl(0, 0%, 100%); /* White */
+  --clr-neutral-400: hsl(0, 0%, 63%); /* Dark Gray */
+  --clr-neutral-700: hsl(0, 0%, 27%); /* Very Dark Gray */
+  --clr-neutral-900: hsl(0, 0%, 0%); /* Black */
+
+  --fs-base: 1rem;
+  --ff-base: "League Spartan", sans-serif;
+  --fw-regular: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+}
+
+/*******************************************************
+  Resets
+ *******************************************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+a,
+p,
+button,
+body {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+/*******************************************************
+  Structure
+ *******************************************************/
+
+body {
+  height: 100vh;
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-neutral-400);
+
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-base);
+}
+
+.p {
+  line-height: 1.375;
+}
+
+.attribution {
+  position: fixed;
+  width: 100%;
+  bottom: 1rem;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
