@@ -83,6 +83,7 @@ a {
   font-style: normal;
   text-decoration: none;
   text-transform: none;
+  text-align: center;
 }
 .heading--2 {
   font-size: 1.75rem;
@@ -152,6 +153,7 @@ a {
   font-style: normal;
   text-decoration: none;
   text-transform: none;
+  text-align: center;
 }
 .menu {
   font-size: 0.75rem;
@@ -194,6 +196,10 @@ a {
     font-size: 3rem;
     line-height: 3rem;
     letter-spacing: 1.05px;
+    text-align: left;
+  }
+  .p {
+    text-align: left;
   }
 }
 

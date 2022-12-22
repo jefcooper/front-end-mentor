@@ -82,6 +82,12 @@ fill="var(--_clr-green, hsl(179, 81%, 29%))"
 }
 ```
 
+### Design Observations
+
+1. The Order Confirmation modal dialog lacks a way to cancel.  I added a close button to the top right since the text of the box refers to cancelling and adding a whole second button disrupted the look too much.
+2. The Order box in the plan page for desktop lacks rounded corners where all other breakpoints have rounded corners.  I gave the desktop version rounded corners for consistency.
+3. The display font is Fraunces 9pt.  In Figma, this font is not available by default and it is not available easily on Google Fonts.  For this reason I used Fraunces, Black and added letter-spacing to approximate the look of Fraunces 9pt.
+
 ### Continued development
 
 

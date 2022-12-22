@@ -184,7 +184,6 @@
   }
   .why-us .p {
     padding-inline: 4.625rem;
-    margin-right: 2.5rem;
   }
   .why-us__card {
     display: grid;
@@ -212,6 +211,9 @@
   .how-it-works {
     margin-top: 9rem;
     justify-items: flex-start;
+  }
+  .how-it-works .p {
+    text-align: left;
   }
   .how-it-works .heading--4 {
     margin-bottom: 0.875rem;
@@ -320,6 +322,8 @@
   }
   .why-us .p {
     margin-top: 2rem;
+    max-width: 74ch;
+    margin-inline: auto;
   }
   .why-us__card {
     margin: 0;

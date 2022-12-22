@@ -67,6 +67,7 @@
 }
 .uncompromising-quality .heading--2 {
   margin-top: -1rem;
+  margin-inline: 1.5rem;
 }
 .uncompromising-quality .p {
   margin-top: 1.5rem;
@@ -111,6 +112,7 @@
   .about-us .heading--2 {
     font-size: 2rem;
     line-height: 3rem;
+    letter-spacing: 2px;
   }
   .about-us .p {
     width: 48ch;
@@ -164,6 +166,7 @@
     margin-top: 1.5rem;
     margin-inline: 4.625rem;
     opacity: 80%;
+    text-align: center;
   }
   .headquarters {
     justify-items: flex-start;
@@ -230,7 +233,7 @@
     width: 445px;
   }
   .uncompromising-quality .heading--2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 1;
     letter-spacing: 1px;
     padding-top: 5.5rem;
