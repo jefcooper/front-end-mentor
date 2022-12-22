@@ -24,9 +24,12 @@
 <body>
   <header class="header container">
     <div class="menu__backdrop" onclick="closeMenu(event);">
-      <svg class="icon-logo">
-        <use href="assets/images.svg#logo"></use>
-      </svg>
+      <a href="/index.html">
+        <span class="visually-hidden">CoffeeRoasters home</span>
+        <svg class="icon-logo">
+          <use href="assets/images.svg#logo"></use>
+        </svg>
+      </a>
       <nav class="nav menu">
         <button class="menu__toggle" type="button" aria-expanded="false" onclick="headerNavMenuClicked(event);">
           <span class="visually-hidden">Menu</span>
