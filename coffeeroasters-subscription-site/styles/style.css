@@ -313,6 +313,7 @@ body.modal .header {
 .menu__toggle[data-state="open"] ~ .menu__options {
   position: absolute;
   top: 0;
+  left: 0;
   display: grid;
   margin-top: 8.75rem;
   width: calc(100vw - 3rem);
