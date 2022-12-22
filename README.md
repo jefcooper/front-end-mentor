@@ -15,3 +15,5 @@ Frontend Mentor Challenges
 [Single-page Design Portfolio](https://jefcooper.github.io/front-end-mentor/single-page-design-portfolio/)
 
 [Coffeeroasters Subscription Site](https://jefcooper.github.io/front-end-mentor/coffeeroasters-subscription-site)
+
+[Room homepage](https://jefcooper.github.io/front-end-mentor/room-homepage)
