@@ -54,6 +54,7 @@
   width: 100%;
   height: 509px;
   background-image: url(../assets/about/bg-quality-sm.png);
+  background-size: cover;
   border-radius: 10px;
 }
 .uncompromising-quality__img {
@@ -239,11 +240,13 @@
     padding-top: 5.5rem;
     margin-left: 5.5rem;
     text-align: left;
+    max-width: 37vw;
   }
   .uncompromising-quality .p {
     margin-top: 2rem;
     margin-left: 5.5rem;
     width: 58ch;
+    max-width: 32vw;
     text-align: left;
     opacity: 70%;
   }
