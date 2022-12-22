@@ -29,7 +29,8 @@
           <use href="assets/images.svg#logo"></use>
         </svg>
       </a>
-      <nav class="nav menu">
+      <nav class="nav menu" aria-labelledby="main-menu">
+        <h2 id="main-menu" class="visually-hidden">Main Site Navigation Menu</h2>
         <button class="menu__toggle" type="button" aria-expanded="false" onclick="headerNavMenuClicked(event);">
           <span class="visually-hidden">Menu</span>
         </button>
@@ -89,7 +90,8 @@
 
     <section class="plan container">
 
-      <nav class="plan__side-nav">
+      <nav class="plan__side-nav" aria-labelledby="plan__side-nav">
+        <h2 id="plan__side-nav" class="visually-hidden">Plan Steps</h2>
         <ul class="heading--5">
           <li data-category="format">Preferences</li>
           <li data-category="type">Bean type</li>
@@ -343,7 +345,8 @@
         <use href="assets/images.svg#logo"></use>
       </svg>
     </a>
-    <nav class="nav menu">
+    <nav class="nav menu" aria-labelledby="footer-menu">
+      <h2 id="footer-menu" class="visually-hidden">Footer Site Navigation</h2>
       <ul class="menu__options">
         <li>
           <a href="index.html">Home</a>
