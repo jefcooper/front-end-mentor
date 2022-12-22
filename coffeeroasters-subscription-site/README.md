@@ -11,6 +11,7 @@ This is a solution to the [Coffeeroasters subscription site challenge on Fronten
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+  - [Design Observations](#design-observations)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
@@ -61,7 +62,7 @@ The Technical
 
 - svg images were altered for social icons, and logo.  Used vercel's svg sprite site (https://svg-sprite-generator.vercel.app/) to create a single svg file where fill can be overridden in css.
 
-- the logo svg required manual intervention because simply removing all fill removes the green of the beans.  For this I used a CSS variable to add a replacable color with overrid.
+- the logo svg required manual intervention because simply removing all fill removes the green of the beans.  For this I used a CSS variable to add a replacable color with override variable.
 
 ```css
 fill="var(--_clr-green, hsl(179, 81%, 29%))" 
