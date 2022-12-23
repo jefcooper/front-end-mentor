@@ -53,6 +53,25 @@ function hideDialog(evt) {
   evt.preventDefault();
 }
 
+//
+// toggleAriaExpanded
+//
+//    Use this function in the onclick of a button controlling an
+//    expanding accordion where the aria-expanded attribute is
+//    used to indicate the expanded or collapsed state of the content.
+//
+function toggleAriaExpanded(event) {
+  const toggle = event.target.closest(".accordion__toggle");
+  const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+
+  if (isExpanded) {
+    toggle.setAttribute("aria-expanded", "false");
+  } else {
+    toggle.setAttribute("aria-expanded", "true");
+  }
+}
+
+/*
 function accordionClick(evt) {
   const accordion = evt.target.closest(".accordion");
   const accordionOptions = Array.from(accordion.children).find((el) =>
@@ -82,6 +101,7 @@ function accordionClick(evt) {
     }
   }
 }
+*/
 
 /*
   category: format, type, quantity, grid, frequency.

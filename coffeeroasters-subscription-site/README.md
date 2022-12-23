@@ -99,6 +99,9 @@ fill="var(--_clr-green, hsl(179, 81%, 29%))"
 
 ### Useful resources
 
+https://www.w3.org/WAI/ARIA/apg/example-index/accordion/accordion
+
+Gives detail on how WAI expects an accordion to be implemented for accessibility.  Of particular note, is that the aria-expanded attribute is not used in this example to control the visibility of the accordion content, but instead a separate attribute is added in JS to the content area when the aria-expanded attribute is set.
 
 ## Author
 
