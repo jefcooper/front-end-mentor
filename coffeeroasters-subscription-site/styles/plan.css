@@ -201,6 +201,7 @@ body.modal-dialog {
   margin-inline: 1.5rem;
 
   color: var(--clr-neutral-900);
+
   opacity: 80%;
 }
 .order-confirmation__form-price {
@@ -437,12 +438,13 @@ body.modal-dialog {
   }
   .plan__side-nav li {
     color: var(--clr-neutral-900);
-    opacity: 40%;
     line-height: 3;
 
     user-select: none;
     cursor: pointer;
     counter-increment: plan__side-nav;
+
+    opacity: 40%;
   }
   .plan__side-nav li:is(:focus, :hover) {
     opacity: 60%;

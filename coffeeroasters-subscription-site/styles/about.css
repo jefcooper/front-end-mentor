@@ -189,9 +189,9 @@
     margin-top: 1.5rem;
     margin-inline: 4.625rem;
 
-    opacity: 80%;
-
     text-align: center;
+
+    opacity: 80%;
   }
   .headquarters {
     justify-items: flex-start;
@@ -282,9 +282,9 @@
     margin-top: 2rem;
     margin-left: 5.5rem;
 
-    opacity: 70%;
-
     text-align: left;
+
+    opacity: 70%;
   }
   .headquarters.container {
     --_container-max-width: 1045px;

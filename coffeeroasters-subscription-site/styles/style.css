@@ -38,6 +38,7 @@ h5,
 h6,
 p,
 ul,
+ol,
 li,
 a,
 button,
@@ -47,7 +48,8 @@ body {
 
   font: inherit;
 }
-ul {
+ul,
+ol {
   list-style: none;
 }
 li {
@@ -73,6 +75,7 @@ a {
   text-align: center;
 
   background: linear-gradient(hsl(43, 0%, 60%), hsl(43, 0%, 96%));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

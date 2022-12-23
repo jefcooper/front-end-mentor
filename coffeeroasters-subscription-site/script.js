@@ -54,13 +54,13 @@ function hideDialog(evt) {
 }
 
 //
-// toggleAriaExpanded
+// accordionToggleClicked
 //
 //    Use this function in the onclick of a button controlling an
 //    expanding accordion where the aria-expanded attribute is
 //    used to indicate the expanded or collapsed state of the content.
 //
-function toggleAriaExpanded(event) {
+function accordionToggleClicked(event) {
   const toggle = event.target.closest(".accordion__toggle");
   const isExpanded = toggle.getAttribute("aria-expanded") === "true";
 
@@ -71,72 +71,22 @@ function toggleAriaExpanded(event) {
   }
 }
 
-/*
-function accordionClick(evt) {
-  const accordion = evt.target.closest(".accordion");
-  const accordionOptions = Array.from(accordion.children).find((el) =>
-    el.classList.contains("accordion__option-set")
-  );
-  const sideNavList = document.querySelector(".plan__side-nav ul");
+function accordionOptionClicked(evt) {
+  // ignore all click events not bubbled from the actual input element
+  if (evt.target.tagName !== "INPUT") {
+    return;
+  }
 
-  if (accordion) {
-    if (accordion.hasAttribute("disabled")) {
-      return;
-    }
-    if (accordion.getAttribute("aria-expanded") === "true") {
-      accordion.setAttribute("aria-expanded", "false");
-      const category = accordion.getAttribute("data-category");
-      delete coffeeOptions[category];
+  const name = evt.target.name;
+  const value = evt.target.value;
 
-      // for all options under this accordion, de-select them
-      Array.from(accordionOptions.children).forEach((element) => {
-        element.classList.remove("accordion__option--selected");
-      });
-      updateOrderText();
-      updatePlanOrderSubmit();
+  coffeeOptions[name] = value;
+  if (name === "format") {
+    if (value == "capsule") {
+      coffeeOptions["using"] = "using";
     } else {
-      accordion.setAttribute("aria-expanded", "true");
-      const category = accordion.getAttribute("data-category");
-      updatePlanSideNav(category);
+      coffeeOptions["using"] = "as";
     }
-  }
-}
-*/
-
-/*
-  category: format, type, quantity, grid, frequency.
-
-  format: capsule, filter, espresso.
-  type: single origin, decaf, blended.
-  quantity: 250g, 500g, 1000g.
-  grind: wholebean, filter, Cafetiére.
-  frequency: weekly, bi-weekly, monthly.
-*/
-function coffeeOption(evt, category, selection) {
-  const option = evt.target.closest(".accordion__option");
-  const accordion = evt.target.closest(".accordion");
-  const accordionOptions = Array.from(accordion.children).find((el) =>
-    el.classList.contains("accordion__option-set")
-  );
-
-  if (option.classList.contains("accordion__option--selected")) {
-    // if we're de-selecting, then remove from dictionary
-    delete coffeeOptions[category];
-    option.classList.remove("accordion__option--selected");
-  } else {
-    // if we're selecting, set selected and add to dictionary
-    coffeeOptions[category] = selection;
-    option.classList.add("accordion__option--selected");
-  }
-  // for all other options under this accordion, de-select them
-  Array.from(accordionOptions.children).forEach((element) => {
-    if (element !== option) {
-      element.classList.remove("accordion__option--selected");
-    }
-  });
-
-  if (category === "format") {
-    updateGrindCategory(selection);
   }
   updateOrderText();
   updatePlanOrderSubmit();
