@@ -88,6 +88,18 @@ fill="var(--_clr-green, hsl(179, 81%, 29%))"
 }
 ```
 
+- Accessibility (A11y) was especially challenging.  This design uses many accessibility anti-patterns that make it difficult.  Accordions that serve no direct purpose other than to hide selections and add extra steps when using a screen reader and a pop-up modal dialog for order confirmation all provided roadblocks.
+- For the accordions, @Grace pointed me to attaching the aria-expanded to buttons and suggested the options should be radio buttons.  From there I reworked the html to have semantic meaning and got the accordions and options keyboard navigable.
+- For the dialog, it was a longer journey.  After researching it for a while and learning the correct patterns for accessible dialogs I ended up using a javascript library https://a11y-dialog.netlify.app/.  This library handles the focus switching when launching the dialog and dismissing it along with focus trapping when tabbing between elements within the dialog.
+- In order to use the a11y-dialog library, I needed to learn a little about ES6 module usage from html.  The a11y-dialog library is packaged for import as a module.  However,  HTML script references do not handle modules by default and the ```type='module'``` flag is needed on the script import to make it function.
+
+```html
+<script 
+	type="module" 
+	src="https://cdn.jsdelivr.net/npm/a11y-dialog@7/dist/a11y-dialog.min.js"
+></script>
+```
+
 ### Design Observations
 
 1. The Order Confirmation modal dialog lacks a way to cancel.  I added a close button to the top right since the text of the box refers to cancelling and adding a whole second button disrupted the look too much.

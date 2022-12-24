@@ -15,6 +15,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/plan.css">
+  <script type="module" src="https://cdn.jsdelivr.net/npm/a11y-dialog@7/dist/a11y-dialog.min.js"></script>
+
   <script src="script.js"></script>
 
   <title>Frontend Mentor | Coffeeroasters subscription site</title>
@@ -111,7 +113,7 @@
             </button>
             <fieldset class="accordion" id="accordion-format" onclick="accordionOptionClicked(event);">
               <legend class="visually-hidden">How do you drink your coffee?</legend>
-              <div>
+              <div class="focus-ring">
                 <input class="visually-hidden accordion__option-input" type="radio" name="format"
                   id="plan-format--capsule" value="capsule">
                 <label class="accordion__option heading--5" for="plan-format--capsule">
@@ -122,7 +124,7 @@
                 </label>
               </div>
 
-              <div>
+              <div class="focus-ring">
                 <input class="visually-hidden accordion__option-input" type="radio" name="format"
                   id="plan-format--filter" value="filter">
                 <label class="accordion__option heading--5" for="plan-format--filter">
@@ -133,7 +135,7 @@
                 </label>
               </div>
 
-              <div>
+              <div class="focus-ring">
                 <input type="radio" name="format" id="plan-format--espresso"
                   class="visually-hidden accordion__option-input" value="espresso">
                 <label for="plan-format--espresso" class="accordion__option heading--5">
@@ -154,7 +156,7 @@
             </button>
             <fieldset class="accordion" id="accordion-type" onclick="accordionOptionClicked(event);">
               <legend class="visually-hidden">What type of coffee?</legend>
-              <div>
+              <div class="focus-ring">
                 <input type="radio" name="type" id="plan-type--single-origin"
                   class="visually-hidden accordion__option-input" value="single-origin">
                 <label for="plan-type--single-origin" class="accordion__option heading--5">
@@ -165,7 +167,7 @@
                 </label>
               </div>
 
-              <div>
+              <div class="focus-ring">
                 <input type="radio" name="type" id="plan-type--decaf" value="decaf"
                   class="visually-hidden accordion__option-input">
                 <label for="plan-type--decaf" class="accordion__option heading--5">
@@ -178,7 +180,7 @@
                 </label>
               </div>
 
-              <div>
+              <div class="focus-ring">
                 <input type="radio" name="type" id="plan-type--blended" value="blended"
                   class="visually-hidden accordion__option-input">
                 <label for="plan-type--blended" class="accordion__option heading--5">
@@ -203,7 +205,7 @@
 
               <legend class="visually-hidden">How much would you like?</legend>
 
-              <div>
+              <div class="focus-ring">
                 <input type="radio" name="quantity" id="plan-quantity--250g"
                   class="visually-hidden accordion__option-input" value="250g">
                 <label for="plan-quantity--250g" class="accordion__option heading--5">
@@ -216,7 +218,7 @@
                 </label>
               </div>
 
-              <div>
+              <div class="focus-ring">
                 <input type="radio" name="quantity" id="plan-quantity--500g"
                   class="visually-hidden accordion__option-input" value="500g">
                 <label for="plan-quantity--500g" class="accordion__option heading--5">
@@ -229,7 +231,7 @@
                 </label>
               </div>
 
-              <div>
+              <div class="focus-ring">
                 <input type="radio" name="quantity" id="plan-quantity--1000g"
                   class="visually-hidden accordion__option-input" value="1000g">
                 <label for="plan-quantity--1000g" class="accordion__option heading--5">
@@ -253,7 +255,7 @@
             <fieldset class="accordion" id="accordion-grind" onclick="accordionOptionClicked(event);">
               <legend class="visually-hidden">Want us to grind them?</legend>
 
-              <div>
+              <div class="focus-ring">
                 <input type="radio" name="grind" id="plan-grind--wholebean"
                   class="visually-hidden accordion__option-input" value="wholebean">
                 <label for="plan-grind--wholebean" class="accordion__option heading--5">
@@ -266,7 +268,7 @@
                 </label>
               </div>
 
-              <div>
+              <div class="focus-ring">
                 <input type="radio" name="grind" id="plan-grind--filter" class="visually-hidden accordion__option-input"
                   value="filter">
                 <label for="plan-grind--filter" class="accordion__option heading--5">
@@ -279,7 +281,7 @@
                 </label>
               </div>
 
-              <div>
+              <div class="focus-ring">
                 <input type="radio" name="grind" id="plan-grind--cafetiere"
                   class="visually-hidden accordion__option-input" value="cafetiere">
                 <label for="plan-grind--cafetiere" class="accordion__option heading--5">
@@ -303,7 +305,7 @@
             <fieldset class="accordion" id="accordion-frequency" onclick="accordionOptionClicked(event);">
               <legend class="visually-hidden">How often should we deliver?</legend>
 
-              <div>
+              <div class="focus-ring">
                 <input type="radio" name="frequency" id="plan-frequency--weekly"
                   class="visually-hidden accordion__option-input" value="weekly">
                 <label for="plan-frequency--weekly" class="accordion__option heading--5">
@@ -316,7 +318,7 @@
                 </label>
               </div>
 
-              <div>
+              <div class="focus-ring">
                 <input type="radio" name="frequency" id="plan-frequency--biweekly"
                   class="visually-hidden accordion__option-input" value="biweekly">
                 <label for="plan-frequency--biweekly" class="accordion__option heading--5">
@@ -329,7 +331,7 @@
                 </label>
               </div>
 
-              <div>
+              <div class="focus-ring">
                 <input type="radio" name="frequency" id="plan-frequency--monthly"
                   class="visually-hidden accordion__option-input" value="monthly">
                 <label for="plan-frequency--monthly" class="accordion__option heading--5">
@@ -355,20 +357,18 @@
           </p>
 
         </div>
-        <form class="order-submit" action="submit"
-          onsubmit="console.log('on submit');console.log(event);event.preventDefault();">
-          <button onclick="showDialog(event);" type="submit" class="btn" id="plan__order-submit" disabled>
-            Create my plan!
-          </button>
-        </form>
+        <button type="button" class="btn" id="plan__order-submit" disabled data-a11y-dialog-show="order-confirmation">
+          Create my plan!
+        </button>
       </section>
 
-      <section class="order-confirmation">
-        <form action="#" class="order-confirmation__form" onclick="hideDialog(event);">
+      <section class="order-confirmation" aria-hidden="true" data-a11y-dialog="order-confirmation">
+        <div class="order-confirmation__overlay" data-a11y-dialog-hide></div>
+        <div class="order-confirmation__form" role="document">
           <!-- Modal -->
           <h2 class="order-confirmation__heading">
             <span>Order Summary</span>
-            <span onclick="hideDialog(event);">
+            <span data-a11y-dialog-hide>
               <svg class="icon--close">
                 <use href="assets/images.svg#icon-close"></use>
               </svg>
@@ -390,12 +390,12 @@
               $_____/month
             </h3>
 
-            <button type="submit" class="btn">
+            <button type="button" class="btn" data-a11y-dialog-hide>
               Checkout
               <span class="order-confirmation__button-price order-confirmation__price"> - $_____/month</span>
             </button>
           </div>
-        </form>
+        </div>
         <!-- End modal -->
       </section>
     </section>
