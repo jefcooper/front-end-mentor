@@ -115,6 +115,21 @@ https://www.w3.org/WAI/ARIA/apg/example-index/accordion/accordion
 
 Gives detail on how WAI expects an accordion to be implemented for accessibility.  Of particular note, is that the aria-expanded attribute is not used in this example to control the visibility of the accordion content, but instead a separate attribute is added in JS to the content area when the aria-expanded attribute is set.
 
+Accessible Modal Dialogs
+
+[YouTube Rob Dodson, A11ycast #19](https://youtu.be/JS68faEUduk)
+
+Accessible Modal Dialog Library, (Kitty Giraudel)
+
+[Documentation a11y-dialog](https://a11y-dialog.netlify.app/)
+
+[Github a11y-dialog](https://github.com/KittyGiraudel/a11y-dialog)
+
+[Inert Polyfill Github](https://github.com/WICG/inert)
+
+When to use which landmark semantic element.  This helped me decide to use an aside instead of nav on the plan steps.
+[Good flowchart to decide on aside vs nav etc.](https://superdevresources.com/section-article-nav-aside-html5/)
+
 ## Author
 
 - Website - [Jeff Cooper](https://jefcooper.github.io)

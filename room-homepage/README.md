@@ -26,6 +26,40 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Navigate the slider using either their mouse/trackpad or keyboard
 
+#### Notes:
+
+- The top-half must be aligned with the bottom-half vertical boundaries.  This implies that all elements are in a single grid rather than two sections.
+- 4 column x 2 row grid
+
+Desktop
+
+```
+A A B B
+C D D E
+```
+
+Mobile
+
+```
+A
+B
+C
+D
+E
+```
+
+- A Image Carousel
+- B Description Carousel (note that A and B are synchronized)
+- C Dark Room image
+- D About card
+- E Light Room image
+
+- Should do a Tablet breakpoint where the menu is desktop and the rest is mobile layout.
+- The carousel controls go at start of B, but span the third column which is sized for them (in desktop).
+- In mobile, the carousel controls are bottom-right of A.
+- Automatic movement of the carousel at an interval, say 5 seconds to ensure that viewers see more images.
+- The grid leads to the use of two separate carousel strips, one for the images, the other for the text cards both coordinated by the buttons.
+
 ### Screenshot
 
 ![](./screenshot.jpg)
