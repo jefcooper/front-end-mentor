@@ -12,18 +12,21 @@
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 
   <title>Frontend Mentor | Room homepage</title>
 </head>
 
 <body>
-  <header>
-    <a href="#" class="header__logo">
-      <img src="images/logo.svg" alt="Room Home" class="icon--logo">
-    </a>
-    <nav>
-      <ul>
+  <header class="header">
+    <nav class="header__nav">
+      <div class="header__overlay"></div>
+      <ul class="header__menu">
+        <li>
+          <a href="#" class="header__logo">
+            <img src="images/logo.svg" alt="Room Home" class="icon--logo">
+          </a>
+        </li>
         <li>
           <a href="#">Home</a>
         </li>
@@ -40,7 +43,7 @@
     </nav>
   </header>
   <main>
-    <ul class="carousel carousel--1">
+    <ul class="carousel carousel--1" id="carousel--1">
       <li class="carousel__slide">
         <picture>
           <source media="(min-width: 768px)" srcset="images/desktop-image-hero-1.jpg">
@@ -63,18 +66,18 @@
       </li>
     </ul>
 
-    <nav class="carousel__controls">
-      <button type="button" class="carousel__left">
+    <nav class="carousel__controls" aria-label="carousel left right buttons">
+      <button type="button" class="carousel__left" aria-label="left">
         <span class="visually-hidden">Left</span>
         <img src="images/icon-angle-left.svg" alt="Move Left">
       </button>
-      <button type="button" class="carousel__right">
+      <button type="button" class="carousel__right" aria-label="right">
         <span class="visually-hidden">Right</span>
         <img src="images/icon-angle-right.svg" alt="Move Right">
       </button>
     </nav>
 
-    <ul class="carousel carousel--2">
+    <ul class="carousel carousel--2" id="carousel--2">
       <li>
         <article class="carousel__slide-article">
           <h2 class="heading--1">Discover innovative ways to decorate</h2>
@@ -85,7 +88,7 @@
             own style with our collection and make your property a reflection of you and what you love.
           </p>
 
-          <button type="button" class="btn">Shop now</button>
+          <button type="button" class="btn">Shop now <img src="images/icon-arrow.svg" alt="arrow"></button>
         </article>
       </li>
       <li>
@@ -98,7 +101,7 @@
             store locator. Any questions? Don't hesitate to contact us today.
           </p>
 
-          <button type="button" class="btn">Shop now</button>
+          <button type="button" class="btn">Shop now <img src="images/icon-arrow.svg" alt="arrow"></button>
         </article>
       </li>
       <li>
@@ -112,7 +115,7 @@
             experience in this industry, we understand what customers want for their home and office.
           </p>
 
-          <button type="button" class="btn">Shop now</button>
+          <button type="button" class="btn">Shop now <img src="images/icon-arrow.svg" alt="arrow"></button>
         </article>
       </li>
     </ul>
@@ -120,7 +123,7 @@
     <img src="images/image-about-dark.jpg" alt="dark room" class="about__img about__img--1">
 
     <article class="about__article">
-      <h3 class="heading-2">About our furniture</h3>
+      <h3 class="heading--2">About our furniture</h3>
 
       <p class="p">
         Our multifunctional collection blends design and function to suit your individual taste.
