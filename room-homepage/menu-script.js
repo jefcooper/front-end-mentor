@@ -2,8 +2,8 @@
 // Attach event handlers to elements
 //
 
-addEventListenerForAll(".menu__toggle", "click", menuToggleListener);
-addEventListenerForAll(".menu__overlay", "click", menuToggleListener);
+addEventListenerForAll(".menu__toggle", "click", menuToggleListener());
+addEventListenerForAll(".menu__overlay", "click", menuToggleListener());
 
 //
 // Event Listeners
