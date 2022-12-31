@@ -2,21 +2,17 @@
 // Attach event handlers to elements
 //
 
-// attach click handler to any menu toggle buttons and overlay
-const menuToggleListener = toggleAriaExpandedFor(".menu__toggle");
-
 addEventListenerForAll(".menu__toggle", "click", menuToggleListener);
 addEventListenerForAll(".menu__overlay", "click", menuToggleListener);
 
-addEventListener("click", (evt) => {
-  console.log(evt);
-});
 //
 // Event Listeners
 //
 
 // toggle aria-expanded on click of menu__toggle button
-function toggleAriaExpandedFor(elementSelector) {
+function menuToggleListener() {
+  const elementSelector = ".menu__toggle";
+
   return (evt) => {
     const el = evt.target.closest(elementSelector);
 

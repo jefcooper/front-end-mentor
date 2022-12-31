@@ -63,6 +63,12 @@ ul {
   overflow: hidden;
 }
 
+.icon--arrow {
+  width: 40px;
+  height: 12px;
+
+  fill: var(currentcolor);
+}
 .icon--hamburger {
   width: 20px;
   height: 14px;
@@ -207,9 +213,6 @@ ul {
   font-size: 1rem;
   color: var(--menu-popup-color, black);
 
-  /*
-  color: var(--menu-color);
-  */
   text-transform: lowercase;
   text-decoration: none;
   user-select: none;
@@ -322,6 +325,12 @@ main {
   background-color: var(--clr-neutral-900);
   color: var(--clr-neutral-100);
   border: 0;
+
+  user-select: none;
+  cursor: pointer;
+}
+.carousel__controls button:hover {
+  background-color: var(--clr-neutral-700);
 }
 .carousel__slide {
   width: 100%;
@@ -350,10 +359,16 @@ main {
   font-weight: var(--fw-regular);
   letter-spacing: 12.5px;
   text-transform: uppercase;
+  user-select: none;
+  cursor: pointer;
 
   color: var(--clr-neutral-900);
   background-color: transparent;
   border: none;
+}
+.carousel__slide-article .btn:hover {
+  color: var(--clr-neutral-400);
+  fill: var(--clr-neutral-400);
 }
 
 .p {
