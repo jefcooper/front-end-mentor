@@ -13,19 +13,35 @@
 
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <script type="module" src="menu-script.js"></script>
 
   <title>Frontend Mentor | Room homepage</title>
 </head>
 
 <body>
   <header class="header">
-    <nav class="header__nav">
-      <div class="header__overlay"></div>
-      <ul class="header__menu">
+    <nav class="menu menu--full-top">
+      <a href="#" class="menu__logo">
+        <span class="visually-hidden">Room Home</span>
+        <svg class="icon--logo">
+          <use href="images/icons.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <button type="button" class="menu__toggle" id="menu__toggle">
+        <span class="visually-hidden">Menu Toggle</span>
+        <svg class="icon--hamburger" aria-hidden="true">
+          <use href="images/icons.svg#icon-hamburger"></use>
+        </svg>
+      </button>
+      <div class="header__overlay menu__overlay"></div>
+      <ul class="header__menu menu__options">
         <li>
-          <a href="#" class="header__logo">
-            <img src="images/logo.svg" alt="Room Home" class="icon--logo">
-          </a>
+          <label for="menu__toggle" class="menu__label">
+            <span class="visually-hidden">Menu Toggle</span>
+            <svg class="icon--close" aria-hidden="true">
+              <use href="images/icons.svg#icon-close"></use>
+            </svg>
+          </label>
         </li>
         <li>
           <a href="#">Home</a>
