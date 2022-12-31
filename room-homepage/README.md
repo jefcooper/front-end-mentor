@@ -28,7 +28,7 @@ Users should be able to:
 
 #### Notes:
 
-- The top-half must be aligned with the bottom-half vertical boundaries.  This implies that all elements are in a single grid rather than two sections.
+- The top-half must be aligned with the bottom-half vertical boundaries. This implies that all elements are in a single grid rather than two sections.
 - 4 column x 2 row grid
 
 Desktop
@@ -57,7 +57,7 @@ E
 - Should do a Tablet breakpoint where the menu is desktop and the rest is mobile layout.
 - The carousel controls go at start of B, but span the third column which is sized for them (in desktop).
 - In mobile, the carousel controls are bottom-right of A.
-- Automatic movement of the carousel at an interval, say 5 seconds to ensure that viewers see more images.
+- Automatic movement of the carousel at an interval, say 5 seconds to ensure that viewers see more images (omitted this as it was annoying).
 - The grid leads to the use of two separate carousel strips, one for the images, the other for the text cards both coordinated by the buttons.
 
 ### Screenshot
@@ -81,7 +81,17 @@ E
 
 ### What I learned
 
+- the grid layout was tricky to get right with the correct columns resizing at each breakpoint.
+- grid-area
+- calculated image width for optimal viewing with responsive resizing
+- scrollTimeoutListener
+- scrollBy
+- scrollTo
+
 ### Continued development
+
+- carousels seem very difficult with accessibility. At present, I don't have a good handle on how to represent them.
+- I made the scroll buttons reachable by keyboard, but the headings on off screen content are not hidden from screen readers. Maybe this is a good thing since it's challenging to scroll the carousel with screen reader, but reaching the other content without scrolling would be automatic with SR.
 
 ### Useful resources
 
