@@ -1,0 +1,37 @@
+.main {
+  padding-bottom: 3.5rem;
+
+  background-color: var(--clr-neutral-900);
+}
+.btn--home {
+  position: absolute;
+}
+.our-location {
+  margin-top: 3rem;
+  margin-inline: 1rem;
+
+  color: var(--clr-neutral-100);
+}
+.our-location .text--body-1 {
+  margin-top: 1.25rem;
+}
+.our-location .heading--3 {
+  margin-top: 3rem;
+
+  color: var(--clr-accent-400);
+}
+
+.location-map {
+  width: 375px;
+  height: 550px;
+  background-image: url(assets/mobile/image-map.png);
+  background-size: cover;
+}
+
+.footer--bronze {
+  color: var(--clr-neutral-900);
+  background-color: var(--clr-accent-400);
+}
+.footer--bronze .icon:hover {
+  color: var(--clr-neutral-100);
+}

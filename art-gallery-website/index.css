@@ -1,0 +1,34 @@
+.main {
+  margin-inline: 1rem;
+  padding-bottom: 7.5rem;
+}
+
+.modern-gallery .text--body-1 {
+  margin-block: 2rem;
+}
+
+.your-day {
+  margin-top: 7.5rem;
+}
+.your-day .heading--2 {
+  margin-top: 1.5625rem;
+}
+.your-day .text--body-1 {
+  margin-top: 1.3125rem;
+}
+
+.be-inspired {
+  display: grid;
+  gap: 1rem;
+
+  margin-top: 2rem;
+}
+.be-inspired__card {
+  padding-inline: 1.5rem;
+  padding-block: 3rem;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+}
+.be-inspired__card .text--body-1 {
+  margin-top: 1.5rem;
+}

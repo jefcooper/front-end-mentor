@@ -12,69 +12,88 @@
     href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Outfit:wght@300&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index.css">
   <script type="module" src="script.js"></script>
 
   <title>Frontend Mentor | Art gallery website</title>
 </head>
 
 <body>
-  <main>
-
+  <header class="header">
     <picture>
       <img src="assets/mobile/image-hero.jpg" alt="hero image">
     </picture>
+  </header>
+  <main class="main">
+    <div class="modern-gallery">
+      <h1 class="heading--1">
+        Modern Art Gallery
+      </h1>
 
-    <h1 class="heading--1">
-      Modern Art Gallery
-    </h1>
+      <p class="text--body-1">
+        The arts in the collection of the Modern Art Gallery all started
+        from a spark of inspiration. Will these pieces inspire you? Visit
+        us and find out.
+      </p>
 
-    <p class="text--body-1">
-      The arts in the collection of the Modern Art Gallery all started
-      from a spark of inspiration. Will these pieces inspire you? Visit
-      us and find out.
-    </p>
+      <form action="location.html">
+        <button type="submit" class="btn">
+          <span class="btn__text">
+            Our location
+          </span>
+          <span class="btn__arrow">
+            <svg class="icon--arrow-right">
+              <use href="assets/icons.svg#icon--arrow-right"></use>
+            </svg>
+          </span>
+        </button>
+      </form>
+    </div>
 
-    <form action="location.html">
-      <button type="submit" class="btn">
-        Our location
-      </button>
-    </form>
+    <div class="your-day">
+      <picture>
+        <img src="assets/mobile/image-grid-1.jpg" alt="Gallery Interior">
+      </picture>
 
-    <picture>
-      <img src="assets/mobile/image-grid-1.jpg" alt="Gallery Interior">
-    </picture>
+      <h2 class="heading--2">
+        Your day at the gallery
+      </h2>
 
-    <h2 class="heading--2">
-      Your day at the gallery
-    </h2>
+      <p class="text--body-1">
+        Wander through our distinct collections and find new insights about
+        our artists. Dive into the details of their creative process.
+      </p>
+    </div>
 
-    <p class="text--body-1">
-      Wander through our distinct collections and find new insights about
-      our artists. Dive into the details of their creative process.
-    </p>
+    <div class="be-inspired">
+      <picture>
+        <img src="assets/mobile/image-grid-2.jpg" alt="Gallery Interior">
+      </picture>
 
-    <picture>
-      <img src="assets/mobile/image-grid-2.jpg" alt="Gallery Interior">
-    </picture>
+      <picture>
+        <img src="assets/mobile/image-grid-3.jpg" alt="Gallery Interior">
+      </picture>
 
-    <picture>
-      <img src="assets/mobile/image-grid-3.jpg" alt="Gallery Interior">
-    </picture>
+      <div class="be-inspired__card">
+        <h2 class="heading--2">
+          Come &amp; be inspired
+        </h2>
 
-    <h2 class="heading--2">
-      Come &amp; be inspired
-    </h2>
-
-    <p class="text--body-1">
-      We’re excited to welcome you to our gallery and see how our collections
-      influence you.
-    </p>
+        <p class="text--body-1">
+          We’re excited to welcome you to our gallery and see how our collections
+          influence you.
+        </p>
+      </div>
+    </div>
 
   </main>
-  <footer>
-    <svg class="icon--logo">
-      <use href="/assets/icons.svg#icon--logo"></use>
-    </svg>
+  <footer class="footer">
+    <a href="index.html">
+      <span class="visually-hidden">Home</span>
+      <svg class="icon icon--logo">
+        <use href="/assets/icons.svg#icon--logo"></use>
+      </svg>
+    </a>
 
     <p class="text--body-2">
       The Modern Art Gallery is free to all visitors and open seven days a week
@@ -82,15 +101,24 @@
     </p>
 
     <div class="social-icons">
-      <svg class="icon--facebook">
-        <use href="assets/icons.svg#icon--facebook"></use>
-      </svg>
-      <svg class="icon--instagram">
-        <use href="assets/icons.svg#icon--instagram"></use>
-      </svg>
-      <svg class="icon--twitter">
-        <use href="assets/icons.svg#icon--twitter"></use>
-      </svg>
+      <a href="https://facebook.com">
+        <span class="visually-hidden">Facebook</span>
+        <svg class="icon icon--facebook">
+          <use href="assets/icons.svg#icon--facebook"></use>
+        </svg>
+      </a>
+      <a href="https://instagram.com">
+        <span class="visually-hidden">Instagram</span>
+        <svg class="icon icon--instagram">
+          <use href="assets/icons.svg#icon--instagram"></use>
+        </svg>
+      </a>
+      <a href="https://twitter.com">
+        <span class="visually-hidden">Twitter</span>
+        <svg class="icon icon--twitter">
+          <use href="assets/icons.svg#icon--twitter"></use>
+        </svg>
+      </a>
     </div>
   </footer>
 </body>
