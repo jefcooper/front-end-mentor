@@ -17,3 +17,5 @@ Frontend Mentor Challenges
 [Coffeeroasters Subscription Site](https://jefcooper.github.io/front-end-mentor/coffeeroasters-subscription-site)
 
 [Room homepage](https://jefcooper.github.io/front-end-mentor/room-homepage)
+
+[Art Gallery Website](https://jefcooper.github.io/front-end-mentor/art-gallery-website)
