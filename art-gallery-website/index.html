@@ -19,67 +19,84 @@
 </head>
 
 <body>
-  <header class="header">
-    <picture>
-      <img srcset="
+  <main class="main">
+    <div class="modern-gallery">
+      <picture>
+        <source media="(min-width: 768px)" srcset="
+        assets/tablet/image-hero.jpg,
+        assets/tablet/image-hero@2x.jpg 2x">
+        <img class="modern-gallery__img" srcset="
           assets/mobile/image-hero.jpg,
           assets/mobile/image-hero@2x.jpg 2x,
         " src="assets/mobile/image-hero.jpg" alt="hero image">
-    </picture>
-  </header>
-  <main class="main">
-    <div class="modern-gallery">
-      <h1 class="heading--1">
-        Modern Art Gallery
-      </h1>
+      </picture>
 
-      <p class="text--body-1">
-        The arts in the collection of the Modern Art Gallery all started
-        from a spark of inspiration. Will these pieces inspire you? Visit
-        us and find out.
-      </p>
+      <div class="modern-gallery__card">
+        <h1 class="heading--1">
+          Modern Art Gallery
+        </h1>
 
-      <form action="location.html">
-        <button type="submit" class="btn">
-          <span class="btn__text">
-            Our location
-          </span>
-          <span class="btn__arrow">
-            <svg class="icon--arrow-right">
-              <use href="assets/icons.svg#icon--arrow-right"></use>
-            </svg>
-          </span>
-        </button>
-      </form>
+        <div class="modern-gallery__subsection">
+          <p class="text--body-1">
+            The arts in the collection of the Modern Art Gallery all started
+            from a spark of inspiration. Will these pieces inspire you? Visit
+            us and find out.
+          </p>
+
+          <form action="location.html">
+            <button type="submit" class="btn">
+              <span class="btn__text">
+                Our location
+              </span>
+              <span class="btn__arrow">
+                <svg class="icon--arrow-right">
+                  <use href="assets/icons.svg#icon--arrow-right"></use>
+                </svg>
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
 
     <div class="your-day">
-      <picture>
+      <picture class="your-day__picture">
+        <source media="(min-width: 768px)" srcset="
+          assets/tablet/image-grid-1.jpg,
+          assets/tablet/image-grid-1@2x.jpg 2x">
         <img srcset="
           assets/mobile/image-grid-1.jpg,
           assets/mobile/image-grid-1@2x.jpg 2x
         " src="assets/mobile/image-grid-1.jpg" alt="Gallery Interior">
       </picture>
 
-      <h2 class="heading--2">
-        Your day at the gallery
-      </h2>
+      <div class="your-day__card">
+        <h2 class="heading--2">
+          Your day at the gallery
+        </h2>
 
-      <p class="text--body-1">
-        Wander through our distinct collections and find new insights about
-        our artists. Dive into the details of their creative process.
-      </p>
+        <p class="text--body-1">
+          Wander through our distinct collections and find new insights about
+          our artists. Dive into the details of their creative process.
+        </p>
+      </div>
     </div>
 
     <div class="be-inspired">
-      <picture>
+      <picture class="be-inspired__grid-2">
+        <source media="(min-width: 768px)" srcset="
+          assets/tablet/image-grid-2.jpg,
+          assets/tablet/image-grid-2@2x.jpg 2x">
         <img srcset="
           assets/mobile/image-grid-2.jpg,
           assets/mobile/image-grid-2@2x.jpg 2x,
         " src="assets/mobile/image-grid-2.jpg" alt="Gallery Interior">
       </picture>
 
-      <picture>
+      <picture class="be-inspired__grid-3">
+        <source media="(min-width: 768px)" srcset="
+          assets/tablet/image-grid-3.jpg,
+          assets/tablet/image-grid-3@2x.jpg 2x">
         <img srcset="
           assets/mobile/image-grid-3.jpg,
           assets/mobile/image-grid-3@2x.jpg 2x,
@@ -92,7 +109,7 @@
         </h2>
 
         <p class="text--body-1">
-          We’re excited to welcome you to our gallery and see how our collections
+          We&rsquo;re excited to welcome you to our gallery and see how our collections
           influence you.
         </p>
       </div>
@@ -107,7 +124,7 @@
       </svg>
     </a>
 
-    <p class="text--body-2">
+    <p class="text--body-2 footer__text">
       The Modern Art Gallery is free to all visitors and open seven days a week
       from 8am to 9pm. Find us at 99 King Street, Newport, USA.
     </p>

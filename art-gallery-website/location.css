@@ -7,18 +7,25 @@
   position: absolute;
 }
 .our-location {
+  display: grid;
   margin-top: 3rem;
   margin-inline: 1rem;
 
   color: var(--clr-neutral-100);
 }
-.our-location .text--body-1 {
+.our-location__card {
+  display: grid;
+}
+.our-location__title {
   margin-top: 1.25rem;
 }
-.our-location .heading--3 {
+.our-location__street-address {
   margin-top: 3rem;
 
   color: var(--clr-accent-400);
+}
+.our-location .text--body-1 {
+  margin-top: 1.25rem;
 }
 
 .location-map {
@@ -43,4 +50,40 @@
 }
 .footer--bronze .icon:hover {
   color: var(--clr-neutral-100);
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .main form {
+    margin-left: 2.5rem;
+  }
+  .our-location {
+    grid-auto-flow: column;
+    margin-inline: 2.5rem;
+  }
+  .our-location__card {
+    grid-auto-flow: row;
+  }
+  .our-location__title {
+    margin: 0;
+    width: 10ch;
+  }
+  .our-location__street-address {
+    margin: 0;
+  }
+  .location-map {
+    height: 600px;
+    background-image: -webkit-image-set(
+      url("assets/tablet/image-map.png") 1x,
+      url("assets/tablet/image-map@2x.png") 2x
+    );
+    background-image: image-set(
+      url("assets/tablet/image-map.png") 1x,
+      url("assets/tablet/image-map@2x.png") 2x
+    );
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
 }
