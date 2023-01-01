@@ -110,6 +110,7 @@ h6 {
 
 .heading--1 {
   display: block; /* required for line-height less than 1 */
+
   font-family: var(--ff-display);
   font-weight: var(--fw-black);
   font-size: 3.75rem;
@@ -118,10 +119,20 @@ h6 {
 }
 .heading--2 {
   display: block; /* required for line-height less than 1 */
+
   font-family: var(--ff-display);
   font-weight: var(--fw-black);
   font-size: 3.125rem;
   line-height: 0.9;
+  text-transform: uppercase;
+}
+.heading--3 {
+  display: block; /* required for line-height less than 1 */
+
+  font-family: var(--ff-display);
+  font-weight: var(--fw-black);
+  font-size: 2rem;
+  line-height: 1;
   text-transform: uppercase;
 }
 .text--body-1 {
@@ -153,4 +164,15 @@ body {
   font-weight: var(--fw-light);
   font-size: 1.125rem;
   line-height: 1.56;
+}
+
+.location-map {
+  width: 375px;
+  height: 550px;
+  background-image: url(assets/mobile/image-map.png);
+  background-size: cover;
+}
+
+.btn--back-to-home {
+  position: absolute;
 }
