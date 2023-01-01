@@ -22,10 +22,19 @@
 }
 
 .location-map {
-  width: 375px;
   height: 550px;
-  background-image: url(assets/mobile/image-map.png);
   background-size: cover;
+  background-position: center;
+
+  background-image: url("assets/mobile/image-map.png");
+  background-image: -webkit-image-set(
+    url("assets/mobile/image-map.png") 1x,
+    url("assets/mobile/image-map@2x.png") 2x
+  );
+  background-image: image-set(
+    url("assets/mobile/image-map.png") 1x,
+    url("assets/mobile/image-map@2x.png") 2x
+  );
 }
 
 .footer--bronze {
