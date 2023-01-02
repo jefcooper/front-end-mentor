@@ -131,6 +131,9 @@
     /* ensure that pseudo elements are positioned relative to here. */
     position: relative;
 
+    /* note: set this artificially to get the same line break as in design */
+    width: 450px;
+
     /* this is the white portion of text that gets revealed */
     color: var(--clr-neutral-100);
   }
@@ -184,9 +187,6 @@
       50vw - var(--container-max-width) / 2,
       var(--container-margin)
     );
-  }
-  .modern-gallery__card .heading--1 {
-    white-space: pre-line;
   }
   .modern-gallery__card .text--body-1 {
     width: 24ch;
