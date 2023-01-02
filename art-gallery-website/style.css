@@ -2,7 +2,7 @@
   Global Settings
  *****************************************************************************/
 :root {
-  --ff-display: "Big Shoulders Display", cursive;
+  --ff-display: "Big Shoulders Display", sans-serif;
   --fw-black: 900;
   --fw-extra-bold: 800;
 
@@ -14,7 +14,7 @@
   --clr-neutral-700: hsl(0, 0%, 27%);
   --clr-neutral-900: hsl(0, 0%, 8%);
 
-  --container-max-width: calc(1110px + 5rem);
+  --container-max-width: calc(1110px);
   --container-margin: 1rem;
 }
 
@@ -230,7 +230,20 @@ a {
 }
 
 /* Typography on Desktop */
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
+  .heading--1 {
+    font-size: 6rem;
+    line-height: 0.9167;
+  }
+  .heading--2 {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+  /* Paragraph text */
+  .text--body-1 {
+    font-size: 1.375rem;
+    line-height: 1.4545;
+  }
 }
 
 /*****************************************************************************

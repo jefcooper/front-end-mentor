@@ -119,6 +119,62 @@
 
 /* Desktop */
 @media screen and (min-width: 1024px) {
+  .heading--1 {
+    color: var(--clr-neutral-100);
+  }
+  .modern-gallery {
+    --_modern-gallery__gap: 4rem;
+    position: relative;
+    grid-template-columns: 990px auto;
+  }
+  .modern-gallery__title {
+    position: relative;
+  }
+  .modern-gallery__title::before {
+    position: absolute;
+    content: attr(data-text-before);
+    color: var(--clr-neutral-900);
+    /* note: 450px is the black column width derived from 990px - image width */
+    clip-path: inset(
+      0px 0px 0px
+        calc(
+          450px -
+            max(50vw - var(--container-max-width) / 2, var(--container-margin))
+        )
+    );
+  }
+  .modern-gallery__hero-image {
+    display: inline-block;
+    height: 800px;
+    padding-left: 450px;
+    background-color: var(--clr-neutral-900);
+  }
+  .modern-gallery__card {
+    position: absolute;
+    display: grid;
+    width: calc(100vw - 5rem);
+    max-width: var(--container-max-width);
+    margin-left: max(
+      50vw - var(--container-max-width) / 2,
+      var(--container-margin)
+    );
+    margin-right: max(
+      50vw - var(--container-max-width) / 2,
+      var(--container-margin)
+    );
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 11.875rem;
+  }
+  .modern-gallery__subsection {
+  }
+  .modern-gallery__card .heading--1 {
+    white-space: pre-line;
+  }
+  .modern-gallery__card .text--body-1 {
+    width: 24ch;
+  }
   .be-inspired {
     gap: 1.875rem;
     margin-top: 1.875rem;

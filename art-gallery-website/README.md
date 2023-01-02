@@ -119,3 +119,4 @@ This is where you can give a hat tip to anyone who helped you out on this projec
 - opening the chrome dev tools docked inside to the right side allows narrowing the browser pane to less than 500px without turning on responsive mode (which can have side-effects).
 - whitespace: pre-line, all newlines count, even from the tag to the start of text, so starting the text on a new line for readabilty in html will result in extra space in the layout.
 - use of srcset with multiple image resolutions for low and hidpi, i.e. @2x images within a picture element and in background-image.
+- container at different break-points with differing inline margins.
