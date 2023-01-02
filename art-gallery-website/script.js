@@ -19,8 +19,11 @@ function addMapTo(id, coord) {
   /* create the map object attaching it to the specified id of location-map */
   const map = L.map(id, {
     center: coord,
-    dragging: true,
+    dragging: false,
     zoom: 16,
+    minZoom: 4,
+    touchZoom: false,
+    scrollWheelZoom: "center",
     zoomControl: false,
   });
   L.control

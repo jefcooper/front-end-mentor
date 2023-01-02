@@ -56,6 +56,11 @@ Users should be able to:
 - transition is added to the button hover to make it less jarring. Because the colors are swapping, it has large visual impact. Slowing down and fading from one to another softens the change and makes it better. Also carried this through to hover on other interactive elements because I liked the effect.
 - Testing on Safari, word wrapping is different for my hero title text.  The before is not breaking at the desired spot.  Am using white-space: pre-line to explicitly set.  Since this doesn't work, changing to use a fixed pixel width on the title to get the desired break.
 
+### Bugs and Finishing Steps
+
+- Panning in map makes it impossible to scroll on an iphone.  Look to turn off panning and retain zoom.  Also maybe limit zoom range.
+- Review accessibility with keyboard and voiceover.
+
 ### Useful resources
 
 - https://developer.mozilla.org/en-US/docs/Web/CSS/white-space
