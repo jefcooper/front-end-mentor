@@ -28,9 +28,14 @@ Users should be able to:
 
 ### Screenshot
 
+#### Desktop
 ![Desktop Home](./screenshots/screenshot-desktop-home.webp)
 ![Desktop Location](./screenshots/screenshot-desktop-location.webp)
+
+#### Tablet
 ![Tablet](./screenshots/screenshot-ipad.webp)
+
+#### Mobile
 ![Mobile](./screenshots/screenshot-mobile.webp)
 
 ### Links
