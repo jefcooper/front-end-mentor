@@ -5,9 +5,12 @@
 }
 .button-container.container {
   --_container-margin: 0px;
+  position: absolute;
+  top: 0;
+  z-index: 100;
 }
 .btn--home {
-  position: absolute;
+  z-index: 200;
 }
 .our-location {
   display: grid;
@@ -33,20 +36,12 @@
 
 .location-map {
   height: 550px;
-
-  /*
-  background-size: cover;
-  background-position: center;
-  background-image: url("assets/mobile/image-map.png");
-  background-image: -webkit-image-set(
-    url("assets/mobile/image-map.png") 1x,
-    url("assets/mobile/image-map@2x.png") 2x
-  );
-  background-image: image-set(
-    url("assets/mobile/image-map.png") 1x,
-    url("assets/mobile/image-map@2x.png") 2x
-  );
-  */
+  z-index: 50;
+}
+/* This magic came from a stackoverflow post 
+   it explicitly overrides the css built-in style for leaflet. */
+.leaflet-tile {
+  filter: grayscale(100%) !important;
 }
 
 .footer--bronze {
