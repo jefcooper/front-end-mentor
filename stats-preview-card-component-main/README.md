@@ -26,8 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop Screenshot](./screenshot-desktop.webp)
-![Mobile Screenshot](./screenshot-mobile.webp)
+![Screenshot](./screenshot.webp)
 
 ### Links
 
