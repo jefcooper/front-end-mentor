@@ -34,6 +34,7 @@
 .location-map {
   height: 550px;
 
+  /*
   background-size: cover;
   background-position: center;
   background-image: url("assets/mobile/image-map.png");
@@ -45,6 +46,7 @@
     url("assets/mobile/image-map.png") 1x,
     url("assets/mobile/image-map@2x.png") 2x
   );
+  */
 }
 
 .footer--bronze {
@@ -77,6 +79,7 @@
   .location-map {
     height: 600px;
 
+    /*
     background-image: -webkit-image-set(
       url("assets/tablet/image-map.png") 1x,
       url("assets/tablet/image-map@2x.png") 2x
@@ -85,11 +88,13 @@
       url("assets/tablet/image-map.png") 1x,
       url("assets/tablet/image-map@2x.png") 2x
     );
+    */
   }
 }
 
 /* Desktop */
 @media screen and (min-width: 1024px) {
+  /*
   .location-map {
     background-image: -webkit-image-set(
       url("assets/desktop/image-map.png") 1x,
@@ -100,4 +105,5 @@
       url("assets/desktop/image-map@2x.png") 2x
     );
   }
+  */
 }

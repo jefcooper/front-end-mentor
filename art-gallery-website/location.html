@@ -6,14 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Outfit:wght@300&display=swap"
     rel="stylesheet">
+
+  <!-- Project -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="location.css">
   <script type="module" src="script.js"></script>
+
+  <!-- LeafletJS Library -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="">
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 
   <title>Frontend Mentor | Art gallery website</title>
 </head>
@@ -35,7 +45,7 @@
       </form>
     </div>
 
-    <div class="location-map"></div>
+    <div id="location-map" class="location-map"></div>
 
     <div class="our-location container">
       <h1 class="our-location__title heading--3">
