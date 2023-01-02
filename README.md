@@ -20,4 +20,4 @@ Frontend Mentor Challenges
 
 [Art Gallery Website](https://jefcooper.github.io/front-end-mentor/art-gallery-website)
 
-[Stats Preview Card Component](https://jefcooper.github.io/front-end-mentor/stats-preview-card-main)
+[Stats Preview Card Component](https://jefcooper.github.io/front-end-mentor/stats-preview-card-component-main)
