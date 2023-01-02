@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/jefcooper/front-end-mentor/tree/main/stats-preview-card-component-main)
-- Live Site URL: [Add live site URL here](https://jefcooper.github.io/front-end-mentor/stats-preview-card-main)
+- Solution URL: [Github Repository](https://github.com/jefcooper/front-end-mentor/tree/main/stats-preview-card-component-main)
+- Live Site URL: [Github Pages Site](https://jefcooper.github.io/front-end-mentor/stats-preview-card-component-main)
 
 ### Built with
 
