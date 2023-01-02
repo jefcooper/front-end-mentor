@@ -13,6 +13,9 @@
   --clr-neutral-100: hsl(0, 0%, 100%);
   --clr-neutral-700: hsl(0, 0%, 27%);
   --clr-neutral-900: hsl(0, 0%, 8%);
+
+  --container-max-width: calc(1110px + 5rem);
+  --container-margin: 1rem;
 }
 
 .visually-hidden {
@@ -23,6 +26,26 @@
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+/*----------------------------------------------------------
+  container
+
+    constrain the maximum width on desktop and add a margin
+    when within the max-width.
+------------------------------------------------------------*/
+.container {
+  --_container-margin: var(--container-margin, 1.5rem); /* mobile is default */
+  --_container-max-width: var(
+    --container-max-width,
+    1280px
+  ); /* desktop max width */
+
+  max-width: var(--_container-max-width);
+  margin-inline: max(
+    50vw - var(--_container-max-width) / 2,
+    var(--_container-margin)
+  );
 }
 
 /*****************************************************************************
@@ -213,7 +236,6 @@ a {
 /*****************************************************************************
   Layout
  *****************************************************************************/
-
 body {
   font-family: var(--ff-base);
   font-weight: var(--fw-light);
@@ -269,8 +291,9 @@ img {
   display: grid;
   gap: 2.375rem;
 
-  padding-inline: 2rem;
   padding-block: 3rem;
+}
+.footer--black {
   color: var(--clr-neutral-100);
   background-color: var(--clr-neutral-900);
 }
@@ -283,8 +306,10 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  :root {
+    --container-margin: 2.5rem;
+  }
   .footer {
-    padding-inline: 2.5rem;
     padding-block: 3.5rem;
     grid-auto-flow: column;
     gap: 4rem;
