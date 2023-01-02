@@ -195,7 +195,7 @@ body {
   padding-inline: 2rem;
 }
 .card__picture {
-  background-color: var(--clr-accent-400-70);
+  background-color: var(--clr-accent-400);
 }
 .card__picture img {
   height: 240px;
@@ -203,6 +203,7 @@ body {
   object-fit: cover;
   object-position: top right;
   mix-blend-mode: multiply;
+  opacity: 70%;
 }
 .stats {
   display: grid;
