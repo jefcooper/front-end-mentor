@@ -28,7 +28,10 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Desktop Home](./screenshots/screenshot-desktop-home.webp)
+![Desktop Location](./screenshots/screenshot-desktop-location.webp)
+![Tablet](./screenshots/screenshot-ipad.webp)
+![Mobile](./screenshots/screenshot-mobile.webp)
 
 ### Links
 
@@ -58,8 +61,8 @@ Users should be able to:
 
 ### Bugs and Finishing Steps
 
-- Panning in map makes it impossible to scroll on an iphone.  Look to turn off panning and retain zoom.  Also maybe limit zoom range.
-- Review accessibility with keyboard and voiceover.
+- ~~Panning in map makes it impossible to scroll on an iphone.  Look to turn off panning and retain zoom.  Also maybe limit zoom range.~~
+- ~~Review accessibility with keyboard and voiceover.~~
 
 ### Useful resources
 
