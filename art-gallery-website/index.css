@@ -51,8 +51,6 @@
   color: var(--clr-neutral-100);
   background-color: var(--clr-neutral-900);
 }
-.be-inspired__card .text--body-1 {
-}
 
 /* Tablet */
 @media screen and (min-width: 768px) {
@@ -61,14 +59,16 @@
   }
   .modern-gallery {
     --_modern-gallery__gap: 3rem;
+
     grid-template-columns: 437px auto;
   }
   .modern-gallery__card {
     align-content: center;
+    gap: var(--_modern-gallery__gap);
+
     margin-top: 0;
     margin-left: -3rem;
     margin-right: 2.5rem;
-    gap: var(--_modern-gallery__gap);
   }
   .modern-gallery__subsection {
     gap: var(--_modern-gallery__gap);
@@ -79,8 +79,9 @@
   }
   .your-day {
     --_your-day__gap: 1.5rem;
-    column-gap: 4.25rem;
+
     grid-template-columns: 1fr auto;
+    column-gap: 4.25rem;
   }
   .your-day__picture {
     grid-row: 1 / 2;
@@ -119,41 +120,62 @@
 
 /* Desktop */
 @media screen and (min-width: 1024px) {
-  .heading--1 {
-    color: var(--clr-neutral-100);
-  }
   .modern-gallery {
+    --_modern-gallery__black-padding-left: 450px;
     --_modern-gallery__gap: 4rem;
+
     position: relative;
     grid-template-columns: 990px auto;
   }
   .modern-gallery__title {
+    /* ensure that pseudo elements are positioned relative to here. */
     position: relative;
+
+    /* this is the white portion of text that gets revealed */
+    color: var(--clr-neutral-100);
   }
   .modern-gallery__title::before {
+    /* position at top/left overlapping main text */
     position: absolute;
+
+    /* Pull in the element text as an attribute set by javascript 
+       See script.js data-text-before. */
     content: attr(data-text-before);
+
+    /* note: it is the BLACK text that is placed over top and clipped
+       without this effect, the text remains white and this happens if JS is disabled */
     color: var(--clr-neutral-900);
+
     /* note: 450px is the black column width derived from 990px - image width */
+    /* This is the heart of the white/black text effect.  Here we calculate the
+       difference between the black section width and the container left margin.
+       We then take this amount off of the left side to reveal the white text.
+     */
     clip-path: inset(
       0px 0px 0px
         calc(
-          450px -
+          var(--_modern-gallery__black-padding-left) -
             max(50vw - var(--container-max-width) / 2, var(--container-margin))
         )
     );
   }
   .modern-gallery__hero-image {
-    display: inline-block;
+    padding-left: var(--_modern-gallery__black-padding-left);
+
     height: 800px;
-    padding-left: 450px;
+
     background-color: var(--clr-neutral-900);
   }
   .modern-gallery__card {
     position: absolute;
     display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
     width: calc(100vw - 5rem);
     max-width: var(--container-max-width);
+    margin-top: 11.875rem;
     margin-left: max(
       50vw - var(--container-max-width) / 2,
       var(--container-margin)
@@ -162,12 +184,6 @@
       50vw - var(--container-max-width) / 2,
       var(--container-margin)
     );
-    grid-auto-flow: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 11.875rem;
-  }
-  .modern-gallery__subsection {
   }
   .modern-gallery__card .heading--1 {
     white-space: pre-line;
@@ -177,6 +193,7 @@
   }
   .be-inspired {
     gap: 1.875rem;
+
     margin-top: 1.875rem;
   }
 }

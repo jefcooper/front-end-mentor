@@ -52,16 +52,20 @@ Users should be able to:
 - whitespace: pre-line, all newlines count, even from the tag to the start of text, so starting the text on a new line for readabilty in html will result in extra space in the layout.
 - use of srcset with multiple image resolutions for low and hidpi, i.e. @2x images within a picture element and in background-image.
 - container at different break-points with differing inline margins.
+- transition is added to the button hover to make it less jarring.  Because the colors are swapping, it has large visual impact.  Slowing down and fading from one to another softens the change and makes it better.  Also carried this through to hover on other interactive elements because I liked the effect.
 
 ### Useful resources
 
 - https://developer.mozilla.org/en-US/docs/Web/CSS/white-space
-- https://leafletjs.com/
-- https://www.joshwcomeau.com/css/custom-css-reset/
 - https://stackoverflow.com/questions/35172256/why-cant-we-set-line-height-less-than-1-for-span-element
-- https://medium.com/swlh/better-ways-to-organise-css-properties-9a066e7ded62
 - https://dev.to/ingosteinke/responsive-background-images-with-image-set-the-srcset-for-background-image-259a
 - https://pixboost.com/blog/optimising-images-for-high-dpi-displays/
+
+#### Tooling
+- https://www.joshwcomeau.com/css/custom-css-reset/
+- https://leafletjs.com/
+- https://svg-sprite-generator.vercel.app/
+- https://medium.com/swlh/better-ways-to-organise-css-properties-9a066e7ded62
 
 #### Unsplash
 - https://unsplash.com/@ryanstefan

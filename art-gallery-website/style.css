@@ -19,13 +19,16 @@
 }
 
 .visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
 }
 
 /*----------------------------------------------------------
@@ -73,6 +76,7 @@ video,
 canvas,
 svg {
   display: block;
+
   max-width: 100%;
 }
 input,
@@ -88,9 +92,11 @@ h3,
 h4,
 h5,
 h6 {
-  overflow-wrap: break-word;
-  font: inherit;
   margin: 0;
+
+  font: inherit;
+
+  overflow-wrap: break-word;
 }
 #root,
 #__next {
@@ -112,37 +118,45 @@ a {
 .icon--arrow-left {
   width: 10px;
   height: 24px;
-  fill: currentcolor;
+
+  fill: none;
+  stroke: currentcolor;
 }
 .icon--arrow-right {
   width: 10px;
   height: 24px;
+
   fill: none;
   stroke: currentcolor;
 }
 .icon--facebook {
   width: 20px;
   height: 20px;
+
   fill: currentcolor;
 }
 .icon--instagram {
   width: 20px;
   height: 20px;
+
   fill: currentcolor;
 }
 .icon--twitter {
   width: 20px;
   height: 17px;
+
   fill: currentcolor;
 }
 .icon--location {
   width: 66px;
   height: 88px;
+
   fill: currentcolor;
 }
 .icon--logo {
   width: 111px;
   height: 40px;
+
   fill: currentcolor;
 }
 
@@ -254,7 +268,6 @@ body {
   font-weight: var(--fw-light);
   font-size: 1.125rem;
   line-height: 1.56;
-
   color: var(--clr-neutral-900);
 }
 
@@ -263,18 +276,22 @@ img {
 }
 
 .btn {
+  /* note: using variables here so location page variant is easy to swap */
   --_clr-button-left: var(--clr-neutral-900);
   --_clr-button-right: var(--clr-accent-400);
-  padding: 0;
-  margin: 0;
+
   display: grid;
   grid-auto-flow: column;
   justify-content: stretch;
   align-items: center;
+
+  margin: 0;
+  padding: 0;
   border: 0;
 
-  color: var(--clr-neutral-100);
   background-color: var(--_clr-button-left);
+
+  color: var(--clr-neutral-100);
 
   user-select: none;
   cursor: pointer;
@@ -289,7 +306,9 @@ img {
 
   width: 3.5rem;
   height: 4.5rem;
+
   background-color: var(--_clr-button-right);
+
   transition: 150ms ease-in-out; /* soften hover transition */
 }
 .btn:hover {
@@ -307,8 +326,9 @@ img {
   padding-block: 3rem;
 }
 .footer--black {
-  color: var(--clr-neutral-100);
   background-color: var(--clr-neutral-900);
+
+  color: var(--clr-neutral-100);
 }
 .footer .icon:hover {
   color: var(--clr-accent-400);
@@ -323,9 +343,10 @@ img {
     --container-margin: 2.5rem;
   }
   .footer {
-    padding-block: 3.5rem;
     grid-auto-flow: column;
     gap: 4rem;
+
+    padding-block: 3.5rem;
   }
   .footer__text {
     width: 25ch;
@@ -333,8 +354,4 @@ img {
   .social-icons {
     justify-self: right;
   }
-}
-
-/* Desktop */
-@media screen and (min-width: 1024px) {
 }

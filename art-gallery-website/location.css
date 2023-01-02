@@ -11,6 +11,7 @@
 }
 .our-location {
   display: grid;
+
   margin-top: 3rem;
 
   color: var(--clr-neutral-100);
@@ -32,9 +33,9 @@
 
 .location-map {
   height: 550px;
+
   background-size: cover;
   background-position: center;
-
   background-image: url("assets/mobile/image-map.png");
   background-image: -webkit-image-set(
     url("assets/mobile/image-map.png") 1x,
@@ -47,8 +48,9 @@
 }
 
 .footer--bronze {
-  color: var(--clr-neutral-900);
   background-color: var(--clr-accent-400);
+
+  color: var(--clr-neutral-900);
 }
 .footer--bronze .icon:hover {
   color: var(--clr-neutral-100);
@@ -66,14 +68,15 @@
     grid-auto-flow: row;
   }
   .our-location__title {
-    margin: 0;
     width: 10ch;
+    margin: 0;
   }
   .our-location__street-address {
     margin: 0;
   }
   .location-map {
     height: 600px;
+
     background-image: -webkit-image-set(
       url("assets/tablet/image-map.png") 1x,
       url("assets/tablet/image-map@2x.png") 2x
