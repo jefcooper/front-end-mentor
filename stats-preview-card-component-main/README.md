@@ -44,6 +44,8 @@ Users should be able to:
 
 ### What I learned
 
+From actually doing the challenge, I learned that I didn't fully understand how the colorization effect used by the designer was done.  I thought I had it in a codepen, but when I tried it out here, it was too dark.  Turns out the image has 70% opacity and the color background is 100% opaque.  In the end I got the color match exact.
+
 ### Useful resources
 
 #### Codepen

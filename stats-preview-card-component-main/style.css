@@ -183,6 +183,8 @@ body {
   flex-direction: column;
   border-radius: 0.5rem;
 
+  margin-block: 5.5rem;
+
   background-color: var(--clr-primary-800);
   overflow: hidden;
 }
