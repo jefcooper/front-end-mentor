@@ -207,6 +207,10 @@ body {
 
   padding-block: 2rem;
 }
+.stats__metric {
+  display: flex;
+  flex-direction: column-reverse;
+}
 
 /* Tablet and above */
 @media screen and (min-width: 700px) {
