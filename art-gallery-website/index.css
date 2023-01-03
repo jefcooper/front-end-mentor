@@ -120,6 +120,9 @@
 
 /* Desktop */
 @media screen and (min-width: 1024px) {
+  .main {
+    padding-bottom: 11.25rem;
+  }
   .modern-gallery {
     --_modern-gallery__black-padding-left: 450px;
     --_modern-gallery__gap: 4rem;
@@ -190,6 +193,9 @@
   }
   .modern-gallery__card .text--body-1 {
     width: 24ch;
+  }
+  .your-day {
+    margin-top: 11.25rem;
   }
   .be-inspired {
     gap: 1.875rem;

@@ -13,7 +13,11 @@ Array.from(document.querySelectorAll("[data-text-before]")).forEach((el) => {
 
     add id='location-map' to the element to contain the leaflet map to the gallery.
  */
-addMapTo("location-map", [41.481413, -71.31035]);
+const locationMap = document.getElementById("location-map");
+
+if (locationMap) {
+  addMapTo("location-map", [41.481413, -71.31035]);
+}
 
 function addMapTo(id, coord) {
   /* create the map object attaching it to the specified id of location-map */
