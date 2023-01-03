@@ -104,6 +104,7 @@ h6 {
 }
 a {
   color: currentcolor;
+  text-decoration: none;
 }
 
 /*****************************************************************************
@@ -282,7 +283,8 @@ img {
 
   display: grid;
   grid-auto-flow: column;
-  justify-content: stretch;
+  justify-content: flex-start;
+  justify-self: flex-start;
   align-items: center;
 
   margin: 0;
