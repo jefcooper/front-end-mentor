@@ -357,3 +357,12 @@ img {
     justify-self: right;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding-block: 5rem;
+  }
+  .footer .icon--logo {
+    zoom: 1.45;
+  }
+}
