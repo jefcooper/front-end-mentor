@@ -43,10 +43,11 @@ function addMapTo(id, coord) {
    iconSize matches width/height, iconAnchor is center/bottom os svg */
   const svgIcon = L.divIcon({
     html: `
-<svg width="66" height="88" viewBox="0 0 66 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+<span aria-label="Map Marker for 99 King St">
+<svg aria-hidden="true" width="66" height="88" viewBox="0 0 66 88" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M66 0H0V56H21L33 88L45 56H66V0Z" fill="#151515"/>
 <circle cx="33" cy="28" r="12" fill="#D5966C"/>
-</svg>`,
+</svg></span>`,
     className: "",
     iconSize: [66, 88],
     iconAnchor: [33, 88],
