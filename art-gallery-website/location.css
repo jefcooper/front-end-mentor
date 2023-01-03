@@ -22,6 +22,9 @@
 .our-location__card {
   display: grid;
 }
+.our-location__address {
+  font-style: normal;
+}
 .our-location__title {
   margin-top: 1.25rem;
 }

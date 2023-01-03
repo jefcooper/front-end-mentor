@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Stats preview card component</title>
+</head>
+
+<body>
+  <main>
+    <article class="card container">
+      <picture class="card__picture">
+        <source media="(min-width: 700px)" srcset="assets/image-header-desktop.jpg">
+        <img src="assets/image-header-mobile.jpg" alt="People in a meeting room" class="card__img">
+      </picture>
+      <div class="card__description">
+        <h1 class="heading--1">Get <span class="text--purple">insights</span> that help your business grow.</h1>
+
+        <p class="text--body">
+          Discover the benefits of data analytics and make better decisions regarding revenue, customer
+          experience, and overall efficiency.
+        </p>
+
+        <div class="stats">
+          <div class="stats__metric">
+            <h2 class="heading--2">companies</h2>
+            <p class="text--stat">10k+</p>
+          </div>
+          <div class="stats__metric">
+            <h2 class="heading--2">templates</h2>
+            <p class="text--stat">314</p>
+          </div>
+          <div class="stats__metric">
+            <h2 class="heading--2">queries</h2>
+            <p class="text--stat">12m+</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/jefcooper">Jeff Cooper</a>.
+  </div>
+</body>
+
+</html>
